@@ -1,0 +1,23 @@
+[gd_resource type="Theme" format=3 uid="uid://c4kmtylhg822m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ciopv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.85884875, 0.49257928, 0.4736181, 1)
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_detail = 16
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hayk2"]
+bg_color = Color(0.54470235, 0.643937, 0.36352593, 1)
+
+[resource]
+CategoryPanel/base_type = &"Panel"
+CategoryPanel/styles/panel = SubResource("StyleBoxFlat_ciopv")
+GridContainer/constants/h_separation = 50
+GridContainer/constants/v_separation = 50
+Panel/styles/panel = SubResource("StyleBoxFlat_hayk2")
+VBoxContainer/constants/separation = 8

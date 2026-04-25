@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cibwogvky1ggo"]
+
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/shop_theme.tres" id="1_d3ese"]
+[ext_resource type="PackedScene" uid="uid://dqcdl2oku0ey0" path="res://pc_parts/pc_part.tscn" id="2_dl1a4"]
+
+[node name="ShopMenu" type="Control" unique_id=360702051]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1346786998]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_d3ese")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1583629462]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = 0.1
+anchor_right = 0.15
+anchor_bottom = 0.9
+grow_vertical = 2
+theme = ExtResource("1_d3ese")
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer" unique_id=1744339102]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_d3ese")
+theme_type_variation = &"CategoryPanel"
+
+[node name="Panel2" type="Panel" parent="Panel/VBoxContainer" unique_id=2107111531]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"CategoryPanel"
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer" unique_id=164472263]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"CategoryPanel"
+
+[node name="Panel4" type="Panel" parent="Panel/VBoxContainer" unique_id=1493367060]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"CategoryPanel"
+
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=610050586]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19
+anchor_top = 0.08
+anchor_right = 0.92
+anchor_bottom = 0.92
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_d3ese")
+columns = 4
+
+[node name="PcPart" parent="Panel/GridContainer" unique_id=1079286176 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PcPart2" parent="Panel/GridContainer" unique_id=477708190 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PcPart3" parent="Panel/GridContainer" unique_id=541864459 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PcPart4" parent="Panel/GridContainer" unique_id=1253208131 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PcPart5" parent="Panel/GridContainer" unique_id=824906504 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
