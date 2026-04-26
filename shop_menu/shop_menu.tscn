@@ -67,11 +67,19 @@ columns = 4
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+part_name = "Ryzen 5 5600"
+part_description = "A powerful CPU"
+part_price = "100$"
+part_key_specs = "4 Cores, 8 Threads"
 
 [node name="PcPart2" parent="Panel/GridContainer" unique_id=477708190 instance=ExtResource("2_dl1a4")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+part_name = "Ryzen 5 6600"
+part_description = "An even more powerful CPU"
+part_price = "150$"
+part_key_specs = "6 Cores, 12 Threads"
 
 [node name="PcPart3" parent="Panel/GridContainer" unique_id=541864459 instance=ExtResource("2_dl1a4")]
 layout_mode = 2
