@@ -1,0 +1,29 @@
+[
+  {
+    "id": "gpu_rx6600",
+    "name": "AMD Radeon RX 6600",
+    "price": 180,
+    "description": "A mid-range graphics card that handles 1080p gaming well at medium to high settings.",
+    "power_draw": 132,
+    "performance_tier": 2,
+    "vram": 8
+  },
+  {
+    "id": "gpu_rtx3060",
+    "name": "NVIDIA GeForce RTX 3060",
+    "price": 260,
+    "description": "A versatile graphics card with 12GB of memory, capable of smooth 1080p and 1440p gaming.",
+    "power_draw": 170,
+    "performance_tier": 3,
+    "vram": 12
+  },
+  {
+    "id": "gpu_rtx4070",
+    "name": "NVIDIA GeForce RTX 4070",
+    "price": 520,
+    "description": "A high-end graphics card for demanding games and creative applications at 1440p and above.",
+    "power_draw": 200,
+    "performance_tier": 5,
+    "vram": 12
+  }
+]
