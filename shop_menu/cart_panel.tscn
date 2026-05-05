@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://digmyfamy70yk"]
+
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/shop_theme.tres" id="1_2c3qn"]
+[ext_resource type="Texture2D" uid="uid://bqhd5yumf3ka1" path="res://assets/shopping_cart.svg" id="1_yvwst"]
+[ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="2_70nju"]
+
+[node name="cart_panel" type="Panel" unique_id=555252501]
+anchors_preset = -1
+anchor_right = 0.034722224
+anchor_bottom = 0.061728396
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_2c3qn")
+theme_type_variation = &"CartPanel"
+metadata/_edit_use_anchors_ = true
+
+[node name="ScaleOnHoverAnimator" parent="." unique_id=106302802 node_paths=PackedStringArray("target") instance=ExtResource("2_70nju")]
+target = NodePath("..")
+to = Vector2(1.1, 1.1)
+duration = 0.15
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1491446917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yvwst")
+metadata/_edit_use_anchors_ = true

@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dw6sndqqdpb6l"]
-
-[ext_resource type="Script" uid="uid://brtr8vppbm5h2" path="res://ui_animators/control_animator.gd" id="1_3m1vs"]
-
-[node name="ControlAnimator" type="Node" unique_id=2031536641]
-script = ExtResource("1_3m1vs")

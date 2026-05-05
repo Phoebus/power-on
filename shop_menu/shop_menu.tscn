@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/shop_theme.tres" id="1_d3ese"]
 [ext_resource type="PackedScene" uid="uid://dqcdl2oku0ey0" path="res://pc_parts/pc_part.tscn" id="2_dl1a4"]
+[ext_resource type="PackedScene" uid="uid://cpln3k7i4f1nl" path="res://shop_menu/category_panel.tscn" id="2_pjsta"]
+[ext_resource type="PackedScene" uid="uid://digmyfamy70yk" path="res://shop_menu/cart_panel.tscn" id="4_ihr8w"]
 
 [node name="ShopMenu" type="Control" unique_id=360702051]
 layout_mode = 3
@@ -30,34 +32,31 @@ anchor_bottom = 0.9
 grow_vertical = 2
 theme = ExtResource("1_d3ese")
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer" unique_id=1744339102]
+[node name="category_panel" parent="Panel/VBoxContainer" unique_id=1333305782 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("1_d3ese")
-theme_type_variation = &"CategoryPanel"
 
-[node name="Panel2" type="Panel" parent="Panel/VBoxContainer" unique_id=2107111531]
+[node name="category_panel2" parent="Panel/VBoxContainer" unique_id=952855746 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-theme_type_variation = &"CategoryPanel"
 
-[node name="Panel3" type="Panel" parent="Panel/VBoxContainer" unique_id=164472263]
+[node name="category_panel3" parent="Panel/VBoxContainer" unique_id=802583833 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-theme_type_variation = &"CategoryPanel"
 
-[node name="Panel4" type="Panel" parent="Panel/VBoxContainer" unique_id=1493367060]
+[node name="category_panel4" parent="Panel/VBoxContainer" unique_id=1376773861 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-theme_type_variation = &"CategoryPanel"
 
 [node name="GridContainer" type="GridContainer" parent="Panel" unique_id=610050586]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.19
-anchor_top = 0.08
-anchor_right = 0.92
-anchor_bottom = 0.92
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.85
+anchor_bottom = 0.9
+offset_top = -0.40000916
+offset_right = -0.6760254
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_d3ese")
@@ -95,3 +94,10 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="cart_panel" parent="Panel" unique_id=555252501 instance=ExtResource("4_ihr8w")]
+layout_mode = 1
+anchor_left = 0.9131944
+anchor_top = 0.47685185
+anchor_right = 0.9626736
+anchor_bottom = 0.5648148

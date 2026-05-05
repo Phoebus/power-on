@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_card_theme.tres" id="1_vd2p5"]
 [ext_resource type="Script" uid="uid://d2ywatx8ph3nf" path="res://pc_parts/pc_part.gd" id="2_4jsql"]
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="2_fdtq2"]
+[ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="4_qh2tg"]
 
 [node name="PcPart" type="PanelContainer" unique_id=1079286176]
 anchors_preset = -1
@@ -12,6 +13,7 @@ anchor_right = 0.5885417
 anchor_bottom = 0.8009259
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("1_vd2p5")
 script = ExtResource("2_4jsql")
 metadata/_edit_use_anchors_ = true
@@ -72,5 +74,7 @@ text = "[Specs. . .]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="ScaleOnHoverAnimator" parent="." unique_id=106302802 node_paths=PackedStringArray("target") instance=ExtResource("4_qh2tg")]
+target = NodePath("..")
+to = Vector2(1.1, 1.1)
+duration = 0.15

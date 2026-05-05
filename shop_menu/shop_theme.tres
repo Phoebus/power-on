@@ -1,5 +1,13 @@
 [gd_resource type="Theme" format=3 uid="uid://c4kmtylhg822m"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04mib"]
+bg_color = Color(0.92611, 0.88577497, 0.83163553, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 16
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ciopv"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -15,6 +23,8 @@ shadow_size = 4
 bg_color = Color(0.54470235, 0.643937, 0.36352593, 1)
 
 [resource]
+CartPanel/base_type = &"Panel"
+CartPanel/styles/panel = SubResource("StyleBoxFlat_04mib")
 CategoryPanel/base_type = &"Panel"
 CategoryPanel/styles/panel = SubResource("StyleBoxFlat_ciopv")
 GridContainer/constants/h_separation = 50
