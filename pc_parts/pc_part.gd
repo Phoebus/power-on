@@ -1,10 +1,12 @@
 extends PanelContainer
+class_name PcPart
 
 @export var part_image : CompressedTexture2D
 @export var part_name : String
 @export var part_description : String
 @export var part_price : String
 @export var part_key_specs : String
+@export var part_id : Globals.PART_TYPE
 
 @onready var card_image : TextureRect = $Panel/VBoxContainer/Image
 @onready var card_name : Label = $Panel/VBoxContainer/Name

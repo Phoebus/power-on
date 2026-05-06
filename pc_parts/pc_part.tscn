@@ -1,21 +1,18 @@
 [gd_scene format=3 uid="uid://dqcdl2oku0ey0"]
 
 [ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_card_theme.tres" id="1_vd2p5"]
-[ext_resource type="Script" uid="uid://d2ywatx8ph3nf" path="res://pc_parts/pc_part.gd" id="2_4jsql"]
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="2_fdtq2"]
+[ext_resource type="Script" uid="uid://ccnk7a2dpwa7a" path="res://pc_parts/pc_part.gd" id="2_qh2tg"]
 [ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="4_qh2tg"]
 
-[node name="PcPart" type="PanelContainer" unique_id=1079286176]
+[node name="PcPart" type="PanelContainer" unique_id=1571468425]
 anchors_preset = -1
-anchor_left = 0.41493055
-anchor_top = 0.18364197
-anchor_right = 0.5885417
-anchor_bottom = 0.8009259
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 0.1736111
+anchor_bottom = 0.61728394
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("1_vd2p5")
-script = ExtResource("2_4jsql")
+script = ExtResource("2_qh2tg")
+metadata/_custom_type_script = "uid://ccnk7a2dpwa7a"
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="." unique_id=1976124586]

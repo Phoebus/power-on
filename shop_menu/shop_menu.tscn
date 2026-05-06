@@ -3,7 +3,11 @@
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/shop_theme.tres" id="1_d3ese"]
 [ext_resource type="PackedScene" uid="uid://dqcdl2oku0ey0" path="res://pc_parts/pc_part.tscn" id="2_dl1a4"]
 [ext_resource type="PackedScene" uid="uid://cpln3k7i4f1nl" path="res://shop_menu/category_panel.tscn" id="2_pjsta"]
+[ext_resource type="Texture2D" uid="uid://dwkm3t22g7b6t" path="res://assets/placeholder/cpu.png" id="3_8wcmf"]
+[ext_resource type="Texture2D" uid="uid://bnlpa2uw2ys6f" path="res://assets/placeholder/gpu.png" id="4_camqv"]
 [ext_resource type="PackedScene" uid="uid://digmyfamy70yk" path="res://shop_menu/cart_panel.tscn" id="4_ihr8w"]
+[ext_resource type="Texture2D" uid="uid://c80x4lwdtqkw1" path="res://assets/placeholder/ram.png" id="5_rdanw"]
+[ext_resource type="Script" uid="uid://64hyaaahb8au" path="res://shop_menu/part_display_handler.gd" id="6_camqv"]
 
 [node name="ShopMenu" type="Control" unique_id=360702051]
 layout_mode = 3
@@ -35,20 +39,23 @@ theme = ExtResource("1_d3ese")
 [node name="category_panel" parent="Panel/VBoxContainer" unique_id=1333305782 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
+category_image = ExtResource("3_8wcmf")
 
 [node name="category_panel2" parent="Panel/VBoxContainer" unique_id=952855746 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
+category_image = ExtResource("4_camqv")
 
 [node name="category_panel3" parent="Panel/VBoxContainer" unique_id=802583833 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
+category_image = ExtResource("5_rdanw")
 
 [node name="category_panel4" parent="Panel/VBoxContainer" unique_id=1376773861 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=610050586]
+[node name="PartDisplayHandler" type="GridContainer" parent="Panel" unique_id=610050586]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
@@ -61,8 +68,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_d3ese")
 columns = 4
+script = ExtResource("6_camqv")
 
-[node name="PcPart" parent="Panel/GridContainer" unique_id=1079286176 instance=ExtResource("2_dl1a4")]
+[node name="PcPart" parent="Panel/PartDisplayHandler" unique_id=1079286176 instance=ExtResource("2_dl1a4")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -71,7 +79,7 @@ part_description = "A powerful CPU"
 part_price = "100$"
 part_key_specs = "4 Cores, 8 Threads"
 
-[node name="PcPart2" parent="Panel/GridContainer" unique_id=477708190 instance=ExtResource("2_dl1a4")]
+[node name="PcPart2" parent="Panel/PartDisplayHandler" unique_id=477708190 instance=ExtResource("2_dl1a4")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -80,24 +88,94 @@ part_description = "An even more powerful CPU"
 part_price = "150$"
 part_key_specs = "6 Cores, 12 Threads"
 
-[node name="PcPart3" parent="Panel/GridContainer" unique_id=541864459 instance=ExtResource("2_dl1a4")]
+[node name="PcPart3" parent="Panel/PartDisplayHandler" unique_id=541864459 instance=ExtResource("2_dl1a4")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PcPart4" parent="Panel/GridContainer" unique_id=1253208131 instance=ExtResource("2_dl1a4")]
+[node name="PcPart4" parent="Panel/PartDisplayHandler" unique_id=1253208131 instance=ExtResource("2_dl1a4")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PcPart5" parent="Panel/GridContainer" unique_id=824906504 instance=ExtResource("2_dl1a4")]
+[node name="PcPart5" parent="Panel/PartDisplayHandler" unique_id=824906504 instance=ExtResource("2_dl1a4")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="PcPart6" parent="Panel/PartDisplayHandler" unique_id=1874506771 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "GPU"
+part_id = 2
+
+[node name="PcPart7" parent="Panel/PartDisplayHandler" unique_id=816924090 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "GPU"
+part_id = 2
+
+[node name="PcPart8" parent="Panel/PartDisplayHandler" unique_id=2042822271 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "GPU"
+part_id = 2
+
+[node name="PcPart9" parent="Panel/PartDisplayHandler" unique_id=1306016843 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "GPU"
+part_id = 2
+
+[node name="PcPart10" parent="Panel/PartDisplayHandler" unique_id=1133227310 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "GPU"
+part_id = 2
+
+[node name="PcPart11" parent="Panel/PartDisplayHandler" unique_id=2043798862 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "RAM"
+part_id = 1
+
+[node name="PcPart12" parent="Panel/PartDisplayHandler" unique_id=716468940 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "RAM"
+part_id = 1
+
+[node name="PcPart13" parent="Panel/PartDisplayHandler" unique_id=353249820 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "RAM"
+part_id = 1
+
+[node name="PcPart14" parent="Panel/PartDisplayHandler" unique_id=209184752 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "RAM"
+part_id = 1
+
+[node name="PcPart15" parent="Panel/PartDisplayHandler" unique_id=1698351595 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+part_name = "RAM"
+part_id = 1
 
 [node name="cart_panel" parent="Panel" unique_id=555252501 instance=ExtResource("4_ihr8w")]
 layout_mode = 1
-anchor_left = 0.9131944
-anchor_top = 0.47685185
-anchor_right = 0.9626736
-anchor_bottom = 0.5648148
+anchor_left = 0.9157986
+anchor_top = 0.1
+anchor_right = 0.9652778
+anchor_bottom = 0.2

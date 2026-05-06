@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="PowerOn"
-run/main_scene="uid://digmyfamy70yk"
+run/main_scene="uid://cibwogvky1ggo"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*uid://ha2shki7lxlo"
 
 [physics]
 
