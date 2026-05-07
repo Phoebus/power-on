@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PcPartResource" format=3 uid="uid://ddcj6ro6o3830"]
+
+[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://data/part_resources/pc_part_res.gd" id="1_eqdyq"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_uansa"]
+
+[resource]
+script = ExtResource("1_eqdyq")
+name = "Intel Celeron G6900"
+price = 100
+description = "sdgsdgsdgdfg"
+id = "intel_celeron"
+image = ExtResource("1_uansa")
+metadata/_custom_type_script = "uid://brxi1qgijt6s2"

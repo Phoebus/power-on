@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PcPartResource" format=3 uid="uid://hlijhx1ydekc"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_6vu0j"]
+[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://data/part_resources/pc_part_res.gd" id="1_yp37w"]
+
+[resource]
+script = ExtResource("1_yp37w")
+name = "NVIDIA GeForce RTX 4070"
+price = 520
+description = "dfgdfgdfg"
+type = 1
+id = "rtx_4070"
+image = ExtResource("1_6vu0j")
+metadata/_custom_type_script = "uid://brxi1qgijt6s2"

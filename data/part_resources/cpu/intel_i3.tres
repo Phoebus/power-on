@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PcPartResource" format=3 uid="uid://1tw534qqmme"]
+
+[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://data/part_resources/pc_part_res.gd" id="1_i85hp"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_o8aoo"]
+
+[resource]
+script = ExtResource("1_i85hp")
+name = "Intel Core i3-12100"
+price = 95
+description = "sdfsdgfsdgfdfg"
+id = "intel_i3"
+image = ExtResource("1_o8aoo")
+metadata/_custom_type_script = "uid://brxi1qgijt6s2"

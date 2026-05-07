@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PcPartResource" format=3 uid="uid://b4amm8yfakbyd"]
+
+[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://data/part_resources/pc_part_res.gd" id="1_5u5om"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_opcd8"]
+
+[resource]
+script = ExtResource("1_5u5om")
+name = "NVIDIA GeForce RTX 3060"
+price = 260
+description = "sdsgdfgdfg"
+type = 1
+id = "rtx_3060"
+image = ExtResource("1_opcd8")
+metadata/_custom_type_script = "uid://brxi1qgijt6s2"
