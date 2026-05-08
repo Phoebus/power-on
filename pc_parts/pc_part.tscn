@@ -9,6 +9,8 @@
 anchors_preset = -1
 anchor_right = 0.1736111
 anchor_bottom = 0.61728394
+offset_right = -50.0
+offset_bottom = -160.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("1_vd2p5")
 script = ExtResource("2_qh2tg")
@@ -48,28 +50,38 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Description" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=611398627]
-layout_mode = 2
-size_flags_vertical = 3
-mouse_filter = 1
-text = "[CPU Description. . .]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Price" type="Label" parent="Panel/VBoxContainer" unique_id=760707591]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
-mouse_filter = 1
-text = "100$"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="KeySpecs" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=1522678801]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 1
 text = "[Specs. . .]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel" unique_id=1660330193]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.053333282
+anchor_top = 0.116000004
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 118.0
+offset_top = -56.840004
+offset_right = 48.0
+offset_bottom = -228.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.49385327
+theme = ExtResource("1_vd2p5")
+theme_type_variation = &"PricePanelContainer"
+metadata/_edit_use_anchors_ = true
+
+[node name="Price" type="RichTextLabel" parent="Panel/PanelContainer" unique_id=994473120]
+clip_contents = false
+custom_minimum_size = Vector2(50, 15)
+layout_mode = 2
+theme = ExtResource("1_vd2p5")
+text = "100$"
 horizontal_alignment = 1
 vertical_alignment = 1
 

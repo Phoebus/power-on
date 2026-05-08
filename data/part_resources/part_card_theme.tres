@@ -1,5 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://c30jlkqnsilg5"]
 
+[ext_resource type="FontFile" uid="uid://bbnjjo0tsxht0" path="res://assets/joystix_monospace.ttf" id="1_2d3fp"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1omkr"]
 bg_color = Color(0.6863316, 0.5843762, 0.42629787, 1)
 
@@ -15,6 +17,27 @@ expand_margin_right = 20.0
 expand_margin_bottom = 20.0
 shadow_size = 4
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px7sq"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3454637, 0.65652, 0.76555175, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 3
+
 [resource]
 Panel/styles/panel = SubResource("StyleBoxFlat_1omkr")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_ylmcr")
+PricePanelContainer/base_type = &"PanelContainer"
+PricePanelContainer/styles/panel = SubResource("StyleBoxFlat_px7sq")
+RichTextLabel/font_sizes/normal_font_size = 18
+RichTextLabel/fonts/normal_font = ExtResource("1_2d3fp")
