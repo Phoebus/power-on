@@ -11,6 +11,8 @@
 [ext_resource type="Resource" uid="uid://bjsd54xhtmx8q" path="res://data/part_resources/cpu/ryzen_5.tres" id="8_beuek"]
 [ext_resource type="Resource" uid="uid://ddcj6ro6o3830" path="res://data/part_resources/cpu/intel_celeron.tres" id="9_et0ya"]
 [ext_resource type="Resource" uid="uid://1tw534qqmme" path="res://data/part_resources/cpu/intel_i3.tres" id="10_t3drk"]
+[ext_resource type="Resource" uid="uid://hlijhx1ydekc" path="res://data/part_resources/gpu/rtx_4070.tres" id="11_t3drk"]
+[ext_resource type="Resource" uid="uid://b4amm8yfakbyd" path="res://data/part_resources/gpu/rtx_3060.tres" id="12_hdiyv"]
 
 [node name="ShopMenu" type="Control" unique_id=360702051]
 layout_mode = 3
@@ -48,11 +50,13 @@ category_image = ExtResource("3_8wcmf")
 layout_mode = 2
 size_flags_vertical = 3
 category_image = ExtResource("4_camqv")
+category_type = 1
 
 [node name="category_panel3" parent="Panel/VBoxContainer" unique_id=802583833 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
 category_image = ExtResource("5_rdanw")
+category_type = 2
 
 [node name="category_panel4" parent="Panel/VBoxContainer" unique_id=1376773861 instance=ExtResource("2_pjsta")]
 layout_mode = 2
@@ -102,6 +106,60 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 data = ExtResource("10_t3drk")
+
+[node name="PcPart6" parent="Panel/PartDisplayHandler" unique_id=1571468425 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("11_t3drk")
+
+[node name="PcPart7" parent="Panel/PartDisplayHandler" unique_id=2054056509 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("11_t3drk")
+
+[node name="PcPart8" parent="Panel/PartDisplayHandler" unique_id=402058696 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("11_t3drk")
+
+[node name="PcPart9" parent="Panel/PartDisplayHandler" unique_id=1254697857 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("11_t3drk")
+
+[node name="PcPart10" parent="Panel/PartDisplayHandler" unique_id=1264303997 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("11_t3drk")
+
+[node name="PcPart11" parent="Panel/PartDisplayHandler" unique_id=2106526128 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("12_hdiyv")
+
+[node name="PcPart12" parent="Panel/PartDisplayHandler" unique_id=1073452318 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("12_hdiyv")
+
+[node name="PcPart13" parent="Panel/PartDisplayHandler" unique_id=898045978 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("12_hdiyv")
+
+[node name="PcPart14" parent="Panel/PartDisplayHandler" unique_id=1904534792 instance=ExtResource("2_dl1a4")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+data = ExtResource("12_hdiyv")
 
 [node name="cart_panel" parent="Panel" unique_id=555252501 instance=ExtResource("4_ihr8w")]
 layout_mode = 1

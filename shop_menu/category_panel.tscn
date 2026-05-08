@@ -33,3 +33,5 @@ metadata/_edit_use_anchors_ = true
 target = NodePath("..")
 to = Vector2(1.1, 1.1)
 duration = 0.25
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
