@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/shop_theme.tres" id="1_2c3qn"]
 [ext_resource type="Texture2D" uid="uid://bqhd5yumf3ka1" path="res://assets/shopping_cart.svg" id="1_yvwst"]
 [ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="2_70nju"]
+[ext_resource type="Script" uid="uid://defw0icsnqgb0" path="res://shop_menu/cart.gd" id="2_htk5j"]
 
 [node name="cart_panel" type="Panel" unique_id=555252501]
 anchors_preset = -1
@@ -11,6 +12,7 @@ anchor_bottom = 0.061728396
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("1_2c3qn")
 theme_type_variation = &"CartPanel"
+script = ExtResource("2_htk5j")
 metadata/_edit_use_anchors_ = true
 
 [node name="ScaleOnHoverAnimator" parent="." unique_id=106302802 node_paths=PackedStringArray("target") instance=ExtResource("2_70nju")]
@@ -27,3 +29,24 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_yvwst")
 metadata/_edit_use_anchors_ = true
+
+[node name="PopupPanel" type="PopupPanel" parent="." unique_id=936534281]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(900, 664)
+visible = true
+theme = ExtResource("1_2c3qn")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PopupPanel" unique_id=2130642040]
+anchors_preset = -1
+anchor_left = 0.026666667
+anchor_top = 0.036144577
+anchor_right = 0.97333336
+anchor_bottom = 0.96385545
+metadata/_edit_use_anchors_ = true
+
+[node name="PartListContainer" type="VBoxContainer" parent="PopupPanel/ScrollContainer" unique_id=832783847]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

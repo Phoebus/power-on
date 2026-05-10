@@ -7,10 +7,9 @@
 
 [node name="PcPart" type="PanelContainer" unique_id=1571468425]
 anchors_preset = -1
-anchor_right = 0.1736111
-anchor_bottom = 0.61728394
-offset_right = -50.0
-offset_bottom = -160.0
+anchor_right = 0.13020833
+anchor_bottom = 0.37037036
+offset_bottom = 1.5258789e-05
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("1_vd2p5")
 script = ExtResource("2_qh2tg")
@@ -89,3 +88,5 @@ vertical_alignment = 1
 target = NodePath("..")
 to = Vector2(1.1, 1.1)
 duration = 0.15
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
