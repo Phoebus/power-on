@@ -3,11 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_fqw7a"]
 [ext_resource type="Script" uid="uid://dr7nklc5f03w0" path="res://shop_menu/in_cart_part_row.gd" id="1_psprt"]
 
-[node name="InCartPartRow" type="HBoxContainer" unique_id=1598150378]
+[node name="InCartPartRow" type="HBoxContainer" unique_id=807783004]
 anchors_preset = -1
 anchor_right = 0.7074653
 anchor_bottom = 0.10339506
 script = ExtResource("1_psprt")
+metadata/_custom_type_script = "uid://dr7nklc5f03w0"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="." unique_id=639003072]
@@ -15,6 +16,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 size_flags_stretch_ratio = 3.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 vertical_alignment = 1
 
@@ -30,3 +32,5 @@ size_flags_vertical = 5
 size_flags_stretch_ratio = 0.25
 icon = ExtResource("1_fqw7a")
 expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
