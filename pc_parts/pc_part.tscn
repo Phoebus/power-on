@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="4_qh2tg"]
 
 [node name="PcPart" type="PanelContainer" unique_id=1571468425]
+custom_minimum_size = Vector2(150, 240)
 anchors_preset = -1
 anchor_right = 0.13020833
 anchor_bottom = 0.37037036
