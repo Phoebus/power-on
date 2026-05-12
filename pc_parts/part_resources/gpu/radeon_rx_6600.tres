@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PcPartResource" format=3 uid="uid://d1yd7wfc87jsm"]
 
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_0rsrq"]
-[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://data/part_resources/pc_part_res.gd" id="1_2m2a0"]
+[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://pc_parts/part_resources/pc_part_res.gd" id="1_2m2a0"]
 
 [resource]
 script = ExtResource("1_2m2a0")

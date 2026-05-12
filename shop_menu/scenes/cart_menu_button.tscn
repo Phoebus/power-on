@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dehr0fapcd46m"]
 
 [ext_resource type="Texture2D" uid="uid://bqhd5yumf3ka1" path="res://assets/shopping_cart.svg" id="1_l0k55"]
-[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/shop_theme.tres" id="1_n6oo3"]
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="1_n6oo3"]
 
 [node name="CartMenuButton" type="MenuButton" unique_id=1003011796]
 anchors_preset = -1

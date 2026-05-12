@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqcdl2oku0ey0"]
 
-[ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://data/part_resources/part_card_theme.tres" id="1_vd2p5"]
+[ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="1_vd2p5"]
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="2_fdtq2"]
 [ext_resource type="Script" uid="uid://ccnk7a2dpwa7a" path="res://pc_parts/pc_part.gd" id="2_qh2tg"]
 [ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="4_qh2tg"]

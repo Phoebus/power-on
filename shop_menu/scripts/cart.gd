@@ -3,7 +3,7 @@ extends Panel
 # Idk if this is correct but i am storing this here for now
 var part_list_part_min_x : float = 700.0
 var part_list_part_min_y : float = 70.0
-var in_cart_part_row : PackedScene = load("res://shop_menu/in_cart_part_row.tscn")
+var in_cart_part_row : PackedScene = load("res://shop_menu/scenes/in_cart_part_row.tscn")
 
 var selected_parts : Array[PcPartResource]
 
