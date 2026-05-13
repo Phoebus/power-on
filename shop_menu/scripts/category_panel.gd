@@ -5,7 +5,7 @@ extends Panel
 @export var category_image : Texture2D
 @export var category_type : Globals.PART_TYPE
 
-@onready var texture_rect : TextureRect = $category_image
+@onready var texture_rect : TextureRect = $CategoryImage
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

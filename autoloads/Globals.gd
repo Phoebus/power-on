@@ -3,7 +3,7 @@ extends Node
 enum PART_TYPE {CPU, GPU, RAM}
 
 signal category_panel_clicked(type : PART_TYPE)
-signal part_panel_clicked(data : PcPartResource)
+signal part_panel_clicked(data : PartGeneralData)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,5 +12,5 @@ func _ready() -> void:
 func emit_category_clicked_signal(type : PART_TYPE) -> void:
 	category_panel_clicked.emit(type)
 
-func emit_part_panel_clicked_signal(data : PcPartResource) -> void:
+func emit_part_panel_clicked_signal(data : PartGeneralData) -> void:
 	part_panel_clicked.emit(data)

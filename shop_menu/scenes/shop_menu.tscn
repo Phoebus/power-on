@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://hlijhx1ydekc" path="res://pc_parts/part_resources/gpu/rtx_4070.tres" id="11_t3drk"]
 [ext_resource type="Resource" uid="uid://b4amm8yfakbyd" path="res://pc_parts/part_resources/gpu/rtx_3060.tres" id="12_hdiyv"]
 [ext_resource type="Script" uid="uid://uwej0ruufnrx" path="res://shop_menu/scripts/money_spent_label.gd" id="14_m2ei0"]
+[ext_resource type="Script" uid="uid://rrngjes84ki2" path="res://shop_menu/scripts/budget_label.gd" id="15_hk5il"]
 
 [node name="ShopMenu" type="Control" unique_id=360702051]
 layout_mode = 3
@@ -67,8 +68,9 @@ size_flags_vertical = 3
 layout_mode = 1
 anchor_left = 0.9
 anchor_top = 0.1
-anchor_right = 0.95
-anchor_bottom = 0.2
+anchor_right = 0.9380208
+anchor_bottom = 0.17604166
+metadata/_edit_use_anchors_ = true
 
 [node name="PartDisplayHandler" type="GridContainer" parent="Panel" unique_id=610050586]
 layout_mode = 1
@@ -80,7 +82,7 @@ anchor_bottom = 0.9179012
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme = ExtResource("1_d3ese")
-columns = 4
+columns = 5
 script = ExtResource("6_camqv")
 metadata/_edit_use_anchors_ = true
 
@@ -123,9 +125,16 @@ anchor_left = 0.8784722
 anchor_top = 0.23148148
 anchor_right = 1.0
 anchor_bottom = 0.29475307
+offset_left = 3.333374
+offset_top = -10.0
+offset_bottom = 11.666687
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 32
+text = "Placeholder :
+100"
+fit_content = true
+scroll_active = false
 vertical_alignment = 1
 script = ExtResource("14_m2ei0")
 metadata/_edit_use_anchors_ = true
@@ -134,11 +143,19 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8784722
-anchor_top = 0.23148148
+anchor_top = 0.2962963
 anchor_right = 1.0
-anchor_bottom = 0.29475307
+anchor_bottom = 0.35956788
+offset_left = 3.333374
+offset_top = 30.0
+offset_bottom = 51.666687
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 32
+text = "Placeholder :
+100"
+fit_content = true
+scroll_active = false
 vertical_alignment = 1
+script = ExtResource("15_hk5il")
 metadata/_edit_use_anchors_ = true

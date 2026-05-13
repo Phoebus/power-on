@@ -1,13 +1,13 @@
 class_name CartPartRow
 extends HBoxContainer
 
-signal remove_item(data : PcPartResource)
-
-var part_data : PcPartResource
+signal on_item_removal(data : PartGeneralData)
 
 @onready var data_label : Label = $Label
 
-func with_data(data : PcPartResource) -> CartPartRow:
+var part_data : PartGeneralData
+
+func with_data(data : PartGeneralData) -> CartPartRow:
 	part_data = data
 	return self
 
@@ -16,5 +16,5 @@ func _ready() -> void:
 	pass
 
 func _on_button_pressed() -> void:
-	remove_item.emit(part_data)
+	on_item_removal.emit(part_data)
 	queue_free()

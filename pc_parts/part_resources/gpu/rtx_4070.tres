@@ -1,13 +1,12 @@
-[gd_resource type="Resource" script_class="PcPartResource" format=3 uid="uid://hlijhx1ydekc"]
+[gd_resource type="Resource" script_class="GpuSpecs" format=3 uid="uid://hlijhx1ydekc"]
 
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_6vu0j"]
-[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://pc_parts/part_resources/pc_part_res.gd" id="1_yp37w"]
+[ext_resource type="Script" uid="uid://c0x4k4iylv78" path="res://pc_parts/part_resources/gpu_res.gd" id="2_yvd0a"]
 
 [resource]
-script = ExtResource("1_yp37w")
+script = ExtResource("2_yvd0a")
 name = "NVIDIA GeForce RTX 4070"
 price = 520
-description = "dfgdfgdfg"
 type = 1
 id = "rtx_4070"
 image = ExtResource("1_6vu0j")

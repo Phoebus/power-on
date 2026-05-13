@@ -17,6 +17,13 @@ expand_margin_right = 20.0
 expand_margin_bottom = 20.0
 shadow_size = 4
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83jrn"]
+bg_color = Color(0.89145625, 0.89145625, 0.8914562, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px7sq"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -37,6 +44,7 @@ shadow_size = 3
 [resource]
 Panel/styles/panel = SubResource("StyleBoxFlat_1omkr")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_ylmcr")
+PopupPanel/styles/panel = SubResource("StyleBoxFlat_83jrn")
 PricePanelContainer/base_type = &"PanelContainer"
 PricePanelContainer/styles/panel = SubResource("StyleBoxFlat_px7sq")
 RichTextLabel/font_sizes/normal_font_size = 18

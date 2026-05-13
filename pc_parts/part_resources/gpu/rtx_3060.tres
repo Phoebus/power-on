@@ -1,13 +1,12 @@
-[gd_resource type="Resource" script_class="PcPartResource" format=3 uid="uid://b4amm8yfakbyd"]
+[gd_resource type="Resource" script_class="GpuSpecs" format=3 uid="uid://b4amm8yfakbyd"]
 
-[ext_resource type="Script" uid="uid://brxi1qgijt6s2" path="res://pc_parts/part_resources/pc_part_res.gd" id="1_5u5om"]
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_opcd8"]
+[ext_resource type="Script" uid="uid://c0x4k4iylv78" path="res://pc_parts/part_resources/gpu_res.gd" id="2_glbim"]
 
 [resource]
-script = ExtResource("1_5u5om")
+script = ExtResource("2_glbim")
 name = "NVIDIA GeForce RTX 3060"
 price = 260
-description = "sdsgdfgdfg"
 type = 1
 id = "rtx_3060"
 image = ExtResource("1_opcd8")

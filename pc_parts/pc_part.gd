@@ -1,7 +1,7 @@
 extends PanelContainer
 class_name PcPart
 
-@export var data : PcPartResource
+@export var data : PartGeneralData
 
 @onready var card_image : TextureRect = $Panel/VBoxContainer/Image
 @onready var card_name : Label = $Panel/VBoxContainer/Name

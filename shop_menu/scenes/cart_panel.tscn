@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="2_70nju"]
 [ext_resource type="Script" uid="uid://defw0icsnqgb0" path="res://shop_menu/scripts/cart.gd" id="2_htk5j"]
 
-[node name="cart_panel" type="Panel" unique_id=357710217]
+[node name="CartPanel" type="Panel" unique_id=357710217]
 anchors_preset = -1
 anchor_right = 0.034722224
 anchor_bottom = 0.061728396
@@ -35,7 +35,7 @@ metadata/_edit_use_anchors_ = true
 [node name="PopupPanel" type="PopupPanel" parent="." unique_id=936534281]
 oversampling_override = 1.0
 initial_position = 2
-size = Vector2i(900, 500)
+size = Vector2i(800, 500)
 theme = ExtResource("1_2c3qn")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PopupPanel" unique_id=2130642040]
@@ -44,10 +44,10 @@ anchor_left = 0.026666667
 anchor_top = 0.048
 anchor_right = 0.97333336
 anchor_bottom = 0.952
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 884.0
-offset_bottom = 484.0
+offset_left = -5.333334
+offset_top = -8.0
+offset_right = 5.333313
+offset_bottom = 8.0
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 

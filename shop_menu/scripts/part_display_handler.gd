@@ -1,8 +1,8 @@
 extends GridContainer
 
-var display_mode : Globals.PART_TYPE
-
 @onready var all_parts : Array[Node] = get_children()
+
+var display_mode : Globals.PART_TYPE
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +10,6 @@ func _ready() -> void:
 
 	# Connect signals.
 	Globals.category_panel_clicked.connect(on_category_changed)
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

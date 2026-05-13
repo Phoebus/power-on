@@ -1,38 +1,38 @@
 [
   {
-    "id": "cpu_celeron",
-    "name": "Intel Celeron G6900",
-    "price": 55,
-    "description": "An entry-level dual-core processor suited for very basic tasks like web browsing and document editing.",
-    "power_draw": 46,
-    "performance_tier": 1,
-    "has_integrated_graphics": true
+	"id": "cpu_celeron",
+	"name": "Intel Celeron G6900",
+	"price": 55,
+	"description": "An entry-level dual-core processor suited for very basic tasks like web browsing and document editing.",
+	"power_draw": 46,
+	"performance_tier": 1,
+	"has_integrated_graphics": true
   },
   {
-    "id": "cpu_i3",
-    "name": "Intel Core i3-12100",
-    "price": 95,
-    "description": "A capable quad-core processor that handles everyday computing comfortably, with built-in graphics.",
-    "power_draw": 89,
-    "performance_tier": 2,
-    "has_integrated_graphics": true
+	"id": "cpu_i3",
+	"name": "Intel Core i3-12100",
+	"price": 95,
+	"description": "A capable quad-core processor that handles everyday computing comfortably, with built-in graphics.",
+	"power_draw": 89,
+	"performance_tier": 2,
+	"has_integrated_graphics": true
   },
   {
-    "id": "cpu_r5",
-    "name": "AMD Ryzen 5 5600",
-    "price": 120,
-    "description": "A fast six-core processor popular for gaming and multitasking, but requires a dedicated graphics card.",
-    "power_draw": 65,
-    "performance_tier": 3,
-    "has_integrated_graphics": false
+	"id": "cpu_r5",
+	"name": "AMD Ryzen 5 5600",
+	"price": 120,
+	"description": "A fast six-core processor popular for gaming and multitasking, but requires a dedicated graphics card.",
+	"power_draw": 65,
+	"performance_tier": 3,
+	"has_integrated_graphics": false
   },
   {
-    "id": "cpu_i5",
-    "name": "Intel Core i5-13400",
-    "price": 190,
-    "description": "A powerful ten-core processor that excels at demanding workloads and gaming, with built-in graphics.",
-    "power_draw": 65,
-    "performance_tier": 4,
-    "has_integrated_graphics": true
+	"id": "cpu_i5",
+	"name": "Intel Core i5-13400",
+	"price": 190,
+	"description": "A powerful ten-core processor that excels at demanding workloads and gaming, with built-in graphics.",
+	"power_draw": 65,
+	"performance_tier": 4,
+	"has_integrated_graphics": true
   }
 ]
