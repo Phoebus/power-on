@@ -40,6 +40,10 @@ corner_detail = 16
 shadow_size = 6
 
 [resource]
+MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 20
 Panel/styles/panel = SubResource("StyleBoxFlat_1omkr")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_ylmcr")
 PopupPanel/styles/panel = SubResource("StyleBoxFlat_83jrn")

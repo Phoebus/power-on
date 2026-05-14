@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bajd6w3e31emm" path="res://pc_parts/scenes/part_card.tscn" id="2_ou546"]
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="2_qfc2x"]
 [ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="3_xk15b"]
+[ext_resource type="Texture2D" uid="uid://if2byjdjwg20" path="res://assets/blue_plus.png" id="6_yh8xq"]
 
 [node name="CpuPart" type="Control" unique_id=707776067]
 layout_mode = 3
@@ -22,40 +23,63 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 1
 
 [node name="PopupPanel" type="PopupPanel" parent="." unique_id=603784532]
 oversampling_override = 1.0
 initial_position = 2
 size = Vector2i(800, 500)
+visible = true
 theme = ExtResource("2_qfc2x")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel" unique_id=1171913522]
+[node name="MarginContainer" type="MarginContainer" parent="PopupPanel" unique_id=706372793]
 anchors_preset = -1
 anchor_left = 0.03
 anchor_top = 0.048
 anchor_right = 0.97
 anchor_bottom = 0.952
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 784.0
-offset_bottom = 484.0
+theme = ExtResource("3_xk15b")
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PopupPanel/VBoxContainer" unique_id=1550681598]
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/MarginContainer" unique_id=1171913522]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1550681598]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.25
+size_flags_stretch_ratio = 1.4
 theme = ExtResource("3_xk15b")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="PopupPanel/VBoxContainer" unique_id=397476539]
+[node name="SpecificationsTitle" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=397476539]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.15
 theme = ExtResource("3_xk15b")
 theme_type_variation = &"PopupText"
 text = "Specifications"
 
+[node name="PowerDraw" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1614617045]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_xk15b")
+theme_type_variation = &"PopupText"
+text = "Power Draw : "
+
+[node name="IntegratedGraphics" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=2146826682]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_xk15b")
+theme_type_variation = &"PopupText"
+text = "Integrated Graphics : "
+
+[node name="Button" type="Button" parent="PopupPanel/MarginContainer" unique_id=975374063]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+icon = ExtResource("6_yh8xq")
+flat = true
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="PopupPanel/MarginContainer/Button" to="." method="_on_button_pressed"]

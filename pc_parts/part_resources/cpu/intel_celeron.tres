@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_6pa28")
+has_integrated_graphics = true
+power_draw = 15
 name = "Intel Celeron G6900"
 price = 100
 id = "intel_celeron"
 image = ExtResource("1_uansa")
-key_specs = "Has Integrated Graphics\\nQuad Cores"
+description = "An entry-level dual-core processor suited for very basic tasks like web browsing and document editing."
 metadata/_custom_type_script = "uid://brxi1qgijt6s2"
