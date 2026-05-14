@@ -1,6 +1,6 @@
 extends Node
 
-enum PART_TYPE {CPU, GPU, RAM}
+enum PART_TYPE {CPU, GPU, RAM, NONE}
 
 signal category_panel_clicked(type : PART_TYPE)
 signal part_panel_clicked(data : PartGeneralData)

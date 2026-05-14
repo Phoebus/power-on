@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://cibwogvky1ggo"]
 
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="1_d3ese"]
-[ext_resource type="PackedScene" uid="uid://dqcdl2oku0ey0" path="res://pc_parts/pc_part.tscn" id="2_dl1a4"]
 [ext_resource type="PackedScene" uid="uid://cpln3k7i4f1nl" path="res://shop_menu/scenes/category_panel.tscn" id="2_pjsta"]
 [ext_resource type="Texture2D" uid="uid://dwkm3t22g7b6t" path="res://assets/placeholder/cpu.png" id="3_8wcmf"]
 [ext_resource type="Texture2D" uid="uid://bnlpa2uw2ys6f" path="res://assets/placeholder/gpu.png" id="4_camqv"]
 [ext_resource type="PackedScene" uid="uid://digmyfamy70yk" path="res://shop_menu/scenes/cart_panel.tscn" id="4_ihr8w"]
 [ext_resource type="Texture2D" uid="uid://c80x4lwdtqkw1" path="res://assets/placeholder/ram.png" id="5_rdanw"]
 [ext_resource type="Script" uid="uid://64hyaaahb8au" path="res://shop_menu/scripts/part_display_handler.gd" id="6_camqv"]
-[ext_resource type="Resource" uid="uid://bjsd54xhtmx8q" path="res://pc_parts/part_resources/cpu/ryzen_5.tres" id="8_beuek"]
-[ext_resource type="Resource" uid="uid://ddcj6ro6o3830" path="res://pc_parts/part_resources/cpu/intel_celeron.tres" id="9_et0ya"]
-[ext_resource type="Resource" uid="uid://1tw534qqmme" path="res://pc_parts/part_resources/cpu/intel_i3.tres" id="10_t3drk"]
-[ext_resource type="Resource" uid="uid://hlijhx1ydekc" path="res://pc_parts/part_resources/gpu/rtx_4070.tres" id="11_t3drk"]
-[ext_resource type="Resource" uid="uid://b4amm8yfakbyd" path="res://pc_parts/part_resources/gpu/rtx_3060.tres" id="12_hdiyv"]
+[ext_resource type="PackedScene" uid="uid://bnibnak55b0pa" path="res://pc_parts/scenes/cpu_part.tscn" id="8_t1g3y"]
+[ext_resource type="PackedScene" uid="uid://dmw6qwiwcishh" path="res://pc_parts/scenes/gpu_part.tscn" id="10_hk5il"]
+[ext_resource type="Resource" uid="uid://1tw534qqmme" path="res://pc_parts/part_resources/cpu/intel_i3.tres" id="10_rplfg"]
+[ext_resource type="Resource" uid="uid://b4amm8yfakbyd" path="res://pc_parts/part_resources/gpu/rtx_3060.tres" id="11_dwk53"]
+[ext_resource type="Resource" uid="uid://hlijhx1ydekc" path="res://pc_parts/part_resources/gpu/rtx_4070.tres" id="12_7vxou"]
+[ext_resource type="Resource" uid="uid://d1yd7wfc87jsm" path="res://pc_parts/part_resources/gpu/radeon_rx_6600.tres" id="13_21imm"]
 [ext_resource type="Script" uid="uid://uwej0ruufnrx" path="res://shop_menu/scripts/money_spent_label.gd" id="14_m2ei0"]
 [ext_resource type="Script" uid="uid://rrngjes84ki2" path="res://shop_menu/scripts/budget_label.gd" id="15_hk5il"]
 
@@ -77,7 +77,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
 anchor_top = 0.1
-anchor_right = 0.8510417
+anchor_right = 0.8666667
 anchor_bottom = 0.9179012
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -86,37 +86,76 @@ columns = 5
 script = ExtResource("6_camqv")
 metadata/_edit_use_anchors_ = true
 
-[node name="PcPart" parent="Panel/PartDisplayHandler" unique_id=1079286176 instance=ExtResource("2_dl1a4")]
+[node name="CpuPart" parent="Panel/PartDisplayHandler" unique_id=707776067 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("8_beuek")
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="PcPart2" parent="Panel/PartDisplayHandler" unique_id=477708190 instance=ExtResource("2_dl1a4")]
+[node name="CpuPart2" parent="Panel/PartDisplayHandler" unique_id=222481689 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("8_beuek")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+data = ExtResource("10_rplfg")
 
-[node name="PcPart3" parent="Panel/PartDisplayHandler" unique_id=541864459 instance=ExtResource("2_dl1a4")]
+[node name="CpuPart3" parent="Panel/PartDisplayHandler" unique_id=1527640412 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("9_et0ya")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+data = ExtResource("10_rplfg")
 
-[node name="PcPart4" parent="Panel/PartDisplayHandler" unique_id=1253208131 instance=ExtResource("2_dl1a4")]
+[node name="CpuPart4" parent="Panel/PartDisplayHandler" unique_id=872469826 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("10_t3drk")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+data = ExtResource("10_rplfg")
 
-[node name="PcPart5" parent="Panel/PartDisplayHandler" unique_id=824906504 instance=ExtResource("2_dl1a4")]
+[node name="CpuPart5" parent="Panel/PartDisplayHandler" unique_id=145221874 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("10_t3drk")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+data = ExtResource("10_rplfg")
 
-[node name="PcPart6" parent="Panel/PartDisplayHandler" unique_id=1571468425 instance=ExtResource("2_dl1a4")]
+[node name="CpuPart6" parent="Panel/PartDisplayHandler" unique_id=655732030 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("11_t3drk")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+data = ExtResource("10_rplfg")
 
-[node name="PcPart7" parent="Panel/PartDisplayHandler" unique_id=2054056509 instance=ExtResource("2_dl1a4")]
+[node name="GpuPart" parent="Panel/PartDisplayHandler" unique_id=753525489 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("11_t3drk")
+size_flags_horizontal = 4
+data = ExtResource("11_dwk53")
 
-[node name="PcPart8" parent="Panel/PartDisplayHandler" unique_id=402058696 instance=ExtResource("2_dl1a4")]
+[node name="GpuPart2" parent="Panel/PartDisplayHandler" unique_id=1635823749 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-data = ExtResource("12_hdiyv")
+size_flags_horizontal = 4
+data = ExtResource("12_7vxou")
+
+[node name="GpuPart3" parent="Panel/PartDisplayHandler" unique_id=1903973457 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+data = ExtResource("11_dwk53")
+
+[node name="GpuPart4" parent="Panel/PartDisplayHandler" unique_id=1079240683 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+data = ExtResource("11_dwk53")
+
+[node name="GpuPart5" parent="Panel/PartDisplayHandler" unique_id=704450245 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+data = ExtResource("13_21imm")
 
 [node name="MoneySpent" type="RichTextLabel" parent="Panel" unique_id=1700341537]
 layout_mode = 1

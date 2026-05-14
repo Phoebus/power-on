@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://ddcj6ro6o3830"]
 
 [ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_uansa"]
-[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_res.gd" id="2_6pa28"]
+[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="2_6pa28"]
 
 [resource]
 script = ExtResource("2_6pa28")
@@ -9,4 +9,5 @@ name = "Intel Celeron G6900"
 price = 100
 id = "intel_celeron"
 image = ExtResource("1_uansa")
+key_specs = "Has Integrated Graphics\\nQuad Cores"
 metadata/_custom_type_script = "uid://brxi1qgijt6s2"

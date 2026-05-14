@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bajd6w3e31emm"]
+
+[ext_resource type="Script" uid="uid://crb0ae8epim70" path="res://pc_parts/scripts/part_card.gd" id="1_t35qo"]
+[ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="1_u3g6n"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="2_t35qo"]
+[ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="4_l7nal"]
+
+[node name="PartCard" type="Control" unique_id=1488749326]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchor_right = 0.104166664
+anchor_bottom = 0.18518518
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+script = ExtResource("1_t35qo")
+metadata/_edit_use_anchors_ = true
+
+[node name="CardContainer" type="PanelContainer" parent="." unique_id=1978732498]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+theme = ExtResource("1_u3g6n")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardContainer" unique_id=1535722585]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="CardContainer/VBoxContainer" unique_id=322842902]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("2_t35qo")
+expand_mode = 1
+
+[node name="Name" type="RichTextLabel" parent="CardContainer/VBoxContainer" unique_id=257909990]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 1
+theme = ExtResource("1_u3g6n")
+text = "PlaceholderPlaceholderPlaceholderP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PriceTagContainer" type="PanelContainer" parent="." unique_id=1890857790]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.745
+anchor_top = -0.305
+anchor_right = 1.064359
+anchor_bottom = 0.35079086
+offset_right = 65.39975
+offset_bottom = -63.54946
+rotation = 0.6357404
+mouse_filter = 1
+theme = ExtResource("1_u3g6n")
+theme_type_variation = &"PriceTag"
+metadata/_edit_use_anchors_ = true
+
+[node name="Price" type="RichTextLabel" parent="PriceTagContainer" unique_id=2122360805]
+layout_mode = 2
+theme = ExtResource("1_u3g6n")
+theme_type_variation = &"PriceTagText"
+text = "100$"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScaleOnHoverAnimator" parent="." unique_id=106302802 node_paths=PackedStringArray("target") instance=ExtResource("4_l7nal")]
+target = NodePath("..")
+to = Vector2(1.1, 1.1)
+duration = 0.15
