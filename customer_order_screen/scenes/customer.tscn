@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dthngd20ayvus"]
+
+[ext_resource type="Texture2D" uid="uid://c7whvjta5wp7v" path="res://assets/placeholder/customers/elvis.png" id="1_ban2t"]
+[ext_resource type="Script" uid="uid://cjd673bq4yiob" path="res://customer_order_screen/scripts/customer.gd" id="2_lgcnv"]
+[ext_resource type="Theme" uid="uid://c22x4tej8h8ow" path="res://customer_order_screen/resources/order_screen.tres" id="3_pdaxs"]
+[ext_resource type="Script" uid="uid://dr4qsh3805m2i" path="res://customer_order_screen/scripts/take_order_label.gd" id="4_e3nut"]
+[ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="5_asj1q"]
+
+[node name="Customer" type="TextureRect" unique_id=598218833]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 539.0
+offset_top = 314.0
+offset_right = -1006.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_ban2t")
+expand_mode = 1
+script = ExtResource("2_lgcnv")
+metadata/_custom_type_script = "uid://cjd673bq4yiob"
+
+[node name="TakeOrderLabel" type="RichTextLabel" parent="." unique_id=487968741]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.192
+anchor_top = -0.21954887
+anchor_right = 1.008
+anchor_bottom = -0.016541352
+theme = ExtResource("3_pdaxs")
+theme_type_variation = &"TakeOrderLabel"
+text = "TAKE ORDER!!!"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_e3nut")
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="TakeOrderLabel" unique_id=1886753718]
+wait_time = 0.4
+autostart = true
+
+[node name="ScaleOnHoverAnimator" parent="." unique_id=106302802 node_paths=PackedStringArray("target") instance=ExtResource("5_asj1q")]
+target = NodePath("..")
+to = Vector2(1.1, 1.1)
+duration = 0.25
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="timeout" from="TakeOrderLabel/Timer" to="TakeOrderLabel" method="_on_timer_timeout"]

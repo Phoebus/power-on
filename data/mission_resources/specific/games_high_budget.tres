@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://dyoe1lweijmed"]
+
+[ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order_res.gd" id="1_pn3ex"]
+
+[resource]
+script = ExtResource("1_pn3ex")
+description = "Hey I want a PC to play all the newest games!"
+budget = 2000
+cpu_cores = 6
+gpu_vram = 8
+ram_size = 16
+storage_type = 1
+metadata/_custom_type_script = "uid://dg8o68jfl5nq"

@@ -28,3 +28,7 @@ func on_parent_mouse_exited() -> void:
 	tween.tween_property(target, property, from, duration).set_trans(Tween.TRANS_SINE)
 	target.z_index = order_index
 	pass
+
+func delete_self() -> void:
+	on_parent_mouse_exited()
+	queue_free()

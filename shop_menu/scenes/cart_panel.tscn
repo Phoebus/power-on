@@ -36,6 +36,7 @@ metadata/_edit_use_anchors_ = true
 oversampling_override = 1.0
 initial_position = 2
 size = Vector2i(800, 500)
+visible = true
 theme = ExtResource("1_2c3qn")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PopupPanel" unique_id=2130642040]
@@ -44,10 +45,8 @@ anchor_left = 0.026666667
 anchor_top = 0.048
 anchor_right = 0.97333336
 anchor_bottom = 0.952
-offset_left = -5.333334
-offset_top = -8.0
-offset_right = 5.333313
-offset_bottom = 8.0
+offset_left = 2.666666
+offset_right = -2.666687
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 

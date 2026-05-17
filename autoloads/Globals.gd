@@ -1,6 +1,8 @@
 extends Node
 
 enum PART_TYPE {CPU, GPU, RAM, NONE}
+enum REQUIREMENT_TYPE {VIDEO_EDITING, GAMES, EVERYDAY}
+enum STORAGE_TYPE {HDD, SSD, BOTH}
 
 signal category_panel_clicked(type : PART_TYPE)
 signal part_panel_clicked(data : PartGeneralData)
