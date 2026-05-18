@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://d1yd7wfc87jsm" path="res://pc_parts/part_resources/gpu/radeon_rx_6600.tres" id="13_21imm"]
 [ext_resource type="Script" uid="uid://uwej0ruufnrx" path="res://shop_menu/scripts/money_spent_label.gd" id="14_m2ei0"]
 [ext_resource type="Script" uid="uid://rrngjes84ki2" path="res://shop_menu/scripts/budget_label.gd" id="15_hk5il"]
+[ext_resource type="Script" uid="uid://cadjkxjm0ings" path="res://shop_menu/scripts/build_button.gd" id="16_dwk53"]
 
 [node name="ShopMenu" type="Control" unique_id=360702051]
 layout_mode = 3
@@ -203,4 +204,33 @@ anchor_right = 0.9706771
 anchor_bottom = 0.93333334
 theme = ExtResource("1_d3ese")
 text = "Build!"
+script = ExtResource("16_dwk53")
 metadata/_edit_use_anchors_ = true
+
+[node name="PopupPanel" type="PopupPanel" parent="Panel/BuildButton" unique_id=1960062678]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(800, 200)
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/BuildButton/PopupPanel" unique_id=1636849100]
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.12
+anchor_right = 0.97
+anchor_bottom = 0.88
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("1_d3ese")
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorMessage" type="RichTextLabel" parent="Panel/BuildButton/PopupPanel/MarginContainer" unique_id=869140264]
+layout_mode = 2
+theme = ExtResource("1_d3ese")
+theme_type_variation = &"PopupText"
+text = "Error!!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/BuildButton" to="Panel/BuildButton" method="_on_pressed"]
