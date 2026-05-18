@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="PowerOn"
-run/main_scene="uid://cibwogvky1ggo"
+run/main_scene="uid://wkww0n1bimqa"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Globals="*uid://ha2shki7lxlo"
+OrderHandler="*uid://cms0foc8l7dkx"
 
 [display]
 

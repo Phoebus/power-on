@@ -68,7 +68,7 @@ fit_content = true
 autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="OrderPanel/MarginContainer/VBoxContainer" unique_id=907433022]
+[node name="StartOrder" type="Button" parent="OrderPanel/MarginContainer/VBoxContainer" unique_id=907433022]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -80,3 +80,5 @@ text = "START!"
 [node name="Customer" parent="." unique_id=1267655347 instance=ExtResource("1_70lk0")]
 layout_mode = 1
 order = ExtResource("5_oo6dj")
+
+[connection signal="pressed" from="OrderPanel/MarginContainer/VBoxContainer/StartOrder" to="OrderPanel" method="_on_start_order_pressed"]

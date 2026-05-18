@@ -6,6 +6,7 @@ extends Control
 
 func _ready() -> void:
 	gui_input.connect(_on_gui_input)
+	popup.hide()
 
 func _on_gui_input(event: InputEvent) -> void:	
 	if event is InputEventMouseButton:
