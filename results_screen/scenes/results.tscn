@@ -57,7 +57,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 0.22
 theme = ExtResource("1_jab16")
 bbcode_enabled = true
 text = "[indent]Cores:[/indent]"
@@ -87,7 +87,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 0.22
 bbcode_enabled = true
 text = "[indent]Vram:[indent]"
 vertical_alignment = 1
@@ -117,7 +117,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 0.22
 bbcode_enabled = true
 text = "[indent]Size:[/indent]"
 vertical_alignment = 1
@@ -128,3 +128,18 @@ size_flags_horizontal = 3
 bbcode_enabled = true
 text = "You ddint pass because blah blah blah blah blah"
 vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1423432620]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Retry" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1489774165]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Continue" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1412501093]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
