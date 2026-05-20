@@ -5,6 +5,10 @@ var player_build : Array[PartGeneralData]
 var player_cpus : Array[CpuSpecs]
 var player_gpus : Array[GpuSpecs]
 
+var cpu_cores_msg : String = ""
+var gpu_vram_msg : String = ""
+var ram_size_msg : String = ""
+
 const BUDGET_ERROR : String = "You have exceeded the given budget!"
 const SINGLE_PART_ERROR : String = "You can only have 1 of each type of item!"
 
@@ -48,3 +52,12 @@ func check_single_items() -> bool:
 		return false
 	else:
 		return true
+
+func perform_checks() -> void:
+	if player_cpus.get(0).cores < current_order.cpu_cores:
+		cpu_cores_msg = current_order.cpu_cores_fail_message
+	
+	if player_gpus.get(0).vram < current_order.gpu_vram:
+		gpu_vram_msg = current_order.gpu_vram_fail_message
+	
+	# TODO Add more checks for all the parts.

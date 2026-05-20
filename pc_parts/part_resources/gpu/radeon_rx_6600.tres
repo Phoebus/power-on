@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource("2_806ov")
+vram = 4
 name = "AMD Radeon RX 6600"
 price = 180
-type = 1
 id = "radeon_rx_6600"
 image = ExtResource("1_0rsrq")
 description = "sdfsdfdsf"

@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("2_v7du2")
+cores = 16
 name = "Intel Core i3-12100"
 price = 95
 id = "intel_i3"

@@ -7,6 +7,7 @@
 script = ExtResource("2_6pa28")
 has_integrated_graphics = true
 power_draw = 15
+cores = 2
 name = "Intel Celeron G6900"
 price = 100
 id = "intel_celeron"

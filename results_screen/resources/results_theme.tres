@@ -1,0 +1,22 @@
+[gd_resource type="Theme" format=3 uid="uid://cqpw8xohhwxfo"]
+
+[ext_resource type="FontFile" uid="uid://bbnjjo0tsxht0" path="res://assets/joystix_monospace.ttf" id="1_2fbsj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u68kd"]
+bg_color = Color(0.9254902, 0.8862745, 0.83137256, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.54509807, 0.6431373, 0.3647059, 1)
+border_blend = true
+
+[resource]
+MarginContainer/constants/margin_bottom = 50
+MarginContainer/constants/margin_left = 50
+MarginContainer/constants/margin_right = 50
+MarginContainer/constants/margin_top = 50
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_u68kd")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/normal_font_size = 32
+RichTextLabel/fonts/normal_font = ExtResource("1_2fbsj")
