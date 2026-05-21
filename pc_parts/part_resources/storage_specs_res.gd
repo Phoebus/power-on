@@ -1,3 +1,4 @@
+class_name StorageSpecs
 extends PartGeneralData
 
 @export var storage_type : Globals.STORAGE_TYPE

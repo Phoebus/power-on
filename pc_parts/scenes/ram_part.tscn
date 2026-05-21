@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://ccuq7mc3xetvp"]
+
+[ext_resource type="Script" uid="uid://dch2dfluhelxr" path="res://pc_parts/scripts/ram_part.gd" id="1_7qkva"]
+[ext_resource type="PackedScene" uid="uid://bajd6w3e31emm" path="res://pc_parts/scenes/part_card.tscn" id="2_dueg4"]
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="3_chtp4"]
+[ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="4_do836"]
+[ext_resource type="Texture2D" uid="uid://if2byjdjwg20" path="res://assets/blue_plus.png" id="5_e13fk"]
+
+[node name="RamPart" type="Control" unique_id=1724671838]
+layout_mode = 3
+anchor_right = 0.104166664
+anchor_bottom = 0.18518518
+script = ExtResource("1_7qkva")
+metadata/_custom_type_script = "uid://dch2dfluhelxr"
+metadata/_edit_use_anchors_ = true
+
+[node name="PartCard" parent="." unique_id=1488749326 instance=ExtResource("2_dueg4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PopupPanel" type="PopupPanel" parent="." unique_id=1535013121]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(800, 500)
+visible = true
+theme = ExtResource("3_chtp4")
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupPanel" unique_id=1518867444]
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.048
+anchor_right = 0.97
+anchor_bottom = 0.952
+theme = ExtResource("4_do836")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/MarginContainer" unique_id=74559809]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=596965661]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.4
+theme = ExtResource("4_do836")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
+
+[node name="SpecificationsTitle" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=993647659]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_do836")
+theme_type_variation = &"PopupText"
+text = "Specifications"
+vertical_alignment = 1
+
+[node name="PowerDraw" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1219920839]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_do836")
+theme_type_variation = &"PopupText"
+text = "Power Draw : "
+vertical_alignment = 1
+
+[node name="SpeedTier" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=5164339]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_do836")
+theme_type_variation = &"PopupText"
+text = "VRAM : "
+vertical_alignment = 1
+
+[node name="Capacity" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1659241940]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_do836")
+theme_type_variation = &"PopupText"
+text = "Performance Tier : "
+vertical_alignment = 1
+
+[node name="Generation" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1581430506]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_do836")
+theme_type_variation = &"PopupText"
+text = "Performance Tier : "
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="PopupPanel/MarginContainer" unique_id=1391545983]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+icon = ExtResource("5_e13fk")
+flat = true
+
+[connection signal="pressed" from="PopupPanel/MarginContainer/Button" to="." method="_on_button_pressed"]

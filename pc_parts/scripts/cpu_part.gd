@@ -4,6 +4,7 @@ extends PartBase
 @export var data : CpuSpecs
 
 @onready var power : RichTextLabel = $PopupPanel/MarginContainer/VBoxContainer/PowerDraw
+@onready var cores : RichTextLabel = $PopupPanel/MarginContainer/VBoxContainer/Cores
 @onready var integraphics : RichTextLabel = $PopupPanel/MarginContainer/VBoxContainer/IntegratedGraphics
 @onready var description : RichTextLabel = $PopupPanel/MarginContainer/VBoxContainer/Description
 
@@ -12,9 +13,10 @@ func _ready() -> void:
 	popup_init()
 	
 func popup_init() -> void:
-	power.text = "Power Draw : " + str(data.power_draw)
-	integraphics.text = "Integrated Graphics : " + str(data.has_integrated_graphics)
+	power.text = "[indent]Power Draw : " + str(data.power_draw) + "[/indent]"
+	integraphics.text = "[indent]Integrated Graphics : " + str(data.has_integrated_graphics) + "[/indent]"
 	description.text = data.description
+	cores.text = "[indent]Cores : " + str(data.cores) + "[/indent]"
 
 func _on_button_pressed() -> void:
 	Globals.emit_part_panel_clicked_signal(data)

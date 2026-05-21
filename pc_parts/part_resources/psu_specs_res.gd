@@ -1,3 +1,4 @@
+class_name PsuSpecs
 extends PartGeneralData
 
 @export var watt : int

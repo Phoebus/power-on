@@ -1,3 +1,4 @@
+class_name RamSpecs
 extends PartGeneralData
 
 @export var capacity : int

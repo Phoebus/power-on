@@ -24,6 +24,7 @@ anchor_bottom = 1.0
 oversampling_override = 1.0
 initial_position = 2
 size = Vector2i(800, 500)
+visible = true
 theme = ExtResource("3_idjyg")
 
 [node name="MarginContainer" type="MarginContainer" parent="PopupPanel" unique_id=789024872]
@@ -32,10 +33,6 @@ anchor_left = 0.03
 anchor_top = 0.048
 anchor_right = 0.97
 anchor_bottom = 0.952
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
 theme = ExtResource("4_pky0d")
 metadata/_edit_use_anchors_ = true
 
@@ -57,6 +54,7 @@ size_flags_vertical = 3
 theme = ExtResource("4_pky0d")
 theme_type_variation = &"PopupText"
 text = "Specifications"
+vertical_alignment = 1
 
 [node name="PowerDraw" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=699341160]
 layout_mode = 2
@@ -64,6 +62,23 @@ size_flags_vertical = 3
 theme = ExtResource("4_pky0d")
 theme_type_variation = &"PopupText"
 text = "Power Draw : "
+vertical_alignment = 1
+
+[node name="Vram" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1973068391]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_pky0d")
+theme_type_variation = &"PopupText"
+text = "VRAM : "
+vertical_alignment = 1
+
+[node name="PerformanceTier" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=113017044]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_pky0d")
+theme_type_variation = &"PopupText"
+text = "Performance Tier : "
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="PopupPanel/MarginContainer" unique_id=99824853]
 custom_minimum_size = Vector2(40, 40)

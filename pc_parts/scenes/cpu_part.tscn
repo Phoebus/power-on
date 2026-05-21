@@ -36,10 +36,10 @@ anchor_left = 0.03
 anchor_top = 0.048
 anchor_right = 0.97
 anchor_bottom = 0.952
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 784.0
-offset_bottom = 484.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
 theme = ExtResource("3_xk15b")
 metadata/_edit_use_anchors_ = true
 
@@ -61,20 +61,34 @@ size_flags_vertical = 3
 theme = ExtResource("3_xk15b")
 theme_type_variation = &"PopupText"
 text = "Specifications"
+vertical_alignment = 1
 
 [node name="PowerDraw" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1614617045]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_xk15b")
 theme_type_variation = &"PopupText"
-text = "Power Draw : "
+bbcode_enabled = true
+text = "[indent]Power Draw :[/indent] "
+vertical_alignment = 1
 
 [node name="IntegratedGraphics" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=2146826682]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_xk15b")
 theme_type_variation = &"PopupText"
-text = "Integrated Graphics : "
+bbcode_enabled = true
+text = "[indent]Integrated Graphics :[/indent] "
+vertical_alignment = 1
+
+[node name="Cores" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=2029317335]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_xk15b")
+theme_type_variation = &"PopupText"
+bbcode_enabled = true
+text = "[indent]Cores :[/indent] "
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="PopupPanel/MarginContainer" unique_id=975374063]
 custom_minimum_size = Vector2(40, 40)
