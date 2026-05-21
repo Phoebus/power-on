@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bnlpa2uw2ys6f" path="res://assets/placeholder/gpu.png" id="4_camqv"]
 [ext_resource type="PackedScene" uid="uid://digmyfamy70yk" path="res://shop_menu/scenes/cart_panel.tscn" id="4_ihr8w"]
 [ext_resource type="Texture2D" uid="uid://c80x4lwdtqkw1" path="res://assets/placeholder/ram.png" id="5_rdanw"]
+[ext_resource type="Texture2D" uid="uid://jwksas87lrpw" path="res://assets/placeholder/storage.png" id="6_21imm"]
 [ext_resource type="Script" uid="uid://64hyaaahb8au" path="res://shop_menu/scripts/part_display_handler.gd" id="6_camqv"]
+[ext_resource type="Texture2D" uid="uid://dtqigkan5o321" path="res://assets/placeholder/psu.png" id="7_0wujw"]
 [ext_resource type="PackedScene" uid="uid://bnibnak55b0pa" path="res://pc_parts/scenes/cpu_part.tscn" id="8_t1g3y"]
 [ext_resource type="PackedScene" uid="uid://dmw6qwiwcishh" path="res://pc_parts/scenes/gpu_part.tscn" id="10_hk5il"]
 [ext_resource type="Resource" uid="uid://1tw534qqmme" path="res://pc_parts/part_resources/cpu/intel_i3.tres" id="10_rplfg"]
@@ -64,6 +66,14 @@ category_type = 2
 [node name="category_panel4" parent="Panel/VBoxContainer" unique_id=1376773861 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
+category_image = ExtResource("6_21imm")
+category_type = 5
+
+[node name="category_panel5" parent="Panel/VBoxContainer" unique_id=376775438 instance=ExtResource("2_pjsta")]
+layout_mode = 2
+size_flags_vertical = 3
+category_image = ExtResource("7_0wujw")
+category_type = 4
 
 [node name="cart_panel" parent="Panel" unique_id=555252501 instance=ExtResource("4_ihr8w")]
 layout_mode = 1
@@ -218,10 +228,10 @@ anchor_left = 0.03
 anchor_top = 0.12
 anchor_right = 0.97
 anchor_bottom = 0.88
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 184.0
 theme = ExtResource("1_d3ese")
 metadata/_edit_use_anchors_ = true
 

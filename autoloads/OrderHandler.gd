@@ -55,12 +55,12 @@ func check_single_items() -> bool:
 
 func perform_checks() -> void:
 	if player_cpus.get(0).cores < current_order.cpu_cores:
-		cpu_cores_msg = current_order.cpu_cores_fail_message
+		cpu_cores_msg = current_order.cpu_cores_fail_msg
 	else:
 		cpu_cores_msg = "Passed!"
 	
 	if player_gpus.get(0).vram < current_order.gpu_vram:
-		gpu_vram_msg = current_order.gpu_vram_fail_message
+		gpu_vram_msg = current_order.gpu_vram_fail_msg
 	else:
 		gpu_vram_msg = "Passed!"
 	

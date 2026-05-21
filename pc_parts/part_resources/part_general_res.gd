@@ -6,4 +6,4 @@ extends Resource
 @export var id : String
 @export var image : CompressedTexture2D
 @export var description : String
-@export var performance_tier : int
+@export var power_draw : int
