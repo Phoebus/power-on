@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnibnak55b0pa"]
 
 [ext_resource type="Script" uid="uid://d1wli5cuxawq6" path="res://pc_parts/scripts/cpu_part.gd" id="1_xk15b"]
-[ext_resource type="Resource" uid="uid://ddcj6ro6o3830" path="res://pc_parts/part_resources/cpu/intel_celeron.tres" id="2_10end"]
+[ext_resource type="Resource" uid="uid://bvp56mshs2a2f" path="res://pc_parts/part_resources/cpu/intel_3_12.tres" id="2_10end"]
 [ext_resource type="PackedScene" uid="uid://bajd6w3e31emm" path="res://pc_parts/scenes/part_card.tscn" id="2_ou546"]
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="2_qfc2x"]
 [ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="3_xk15b"]
@@ -36,10 +36,10 @@ anchor_left = 0.03
 anchor_top = 0.048
 anchor_right = 0.97
 anchor_bottom = 0.952
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 484.0
 theme = ExtResource("3_xk15b")
 metadata/_edit_use_anchors_ = true
 

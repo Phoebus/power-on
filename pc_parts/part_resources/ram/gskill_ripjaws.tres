@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://c26ep388vqupf"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_g3yiq"]
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_ijnjb"]
+
+[resource]
+script = ExtResource("1_ijnjb")
+capacity = 16
+speed = 3
+name = "G.Skill Ripjaws V DDR4-3600 16GB"
+price = 50
+id = "ram_003"
+image = ExtResource("1_g3yiq")
+description = "Ένα δημοφιλές κιτ υψηλής ταχύτητας DDR4, αγαπημένο από χρήστες AMD Ryzen."
+power_draw = 2
+metadata/_custom_type_script = "uid://j8rns8xdmumq"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://c6fkf8k0f4v26"]
+
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_bcix5"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_fi5gh"]
+
+[resource]
+script = ExtResource("1_bcix5")
+capacity = 64
+generation = 1
+speed = 5
+name = "G.Skill Trident Z5 DDR5-6400 64GB"
+price = 280
+id = "ram_008"
+image = ExtResource("1_fi5gh")
+description = "Ένα τεράστιο κιτ 64GB DDR5 για επαγγελματικές ανάγκες μνήμης επιπέδου workstation."
+power_draw = 4
+metadata/_custom_type_script = "uid://j8rns8xdmumq"

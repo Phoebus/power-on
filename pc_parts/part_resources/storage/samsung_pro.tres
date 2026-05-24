@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StorageSpecs" format=3 uid="uid://b82bhrn5v3wmm"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_kd074"]
+[ext_resource type="Script" uid="uid://uktc6wjgwax5" path="res://pc_parts/part_resources/storage_specs_res.gd" id="1_r2am0"]
+
+[resource]
+script = ExtResource("1_r2am0")
+storage_type = 2
+capacity = 2000
+name = "Samsung 990 Pro 2TB NVMe"
+price = 180
+id = "sto_007"
+image = ExtResource("1_kd074")
+description = "Ένας κορυφαίος NVMe με εξαιρετικές ταχύτητες και μεγάλη χωρητικότητα για σοβαρούς gamers."
+power_draw = 2
+metadata/_custom_type_script = "uid://uktc6wjgwax5"

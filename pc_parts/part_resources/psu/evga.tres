@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://drlrp3ocrrwrl"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_15igb"]
+[ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="1_hamss"]
+
+[resource]
+script = ExtResource("1_hamss")
+power_supply = 7
+certification = 1
+name = "EVGA 600 BR"
+price = 55
+id = "psu_002"
+image = ExtResource("1_15igb")
+description = "Ένα αξιόπιστο τροφοδοτικό εισόδου με λίγο επιπλέον περιθώριο για ελαφριά gaming κατασκευή."
+metadata/_custom_type_script = "uid://do6xns60reviw"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://bp0b58i4bjfp4"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_mcw4h"]
+[ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="1_udvtd"]
+
+[resource]
+script = ExtResource("1_udvtd")
+power_supply = 10
+certification = 3
+name = "be quiet! Pure Power 11 700W"
+price = 95
+id = "psu_005"
+image = ExtResource("1_mcw4h")
+description = "Ένα αθόρυβο και αποδοτικό τροφοδοτικό με άνετο περιθώριο για gaming κατασκευές."
+metadata/_custom_type_script = "uid://do6xns60reviw"

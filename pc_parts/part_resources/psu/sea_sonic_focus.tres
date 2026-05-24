@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://tluk6brdb1yh"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_p0pck"]
+[ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="2_pu8va"]
+
+[resource]
+script = ExtResource("2_pu8va")
+power_supply = 13
+certification = 3
+name = "SeaSonic Focus GX-850"
+price = 145
+id = "psu_007"
+image = ExtResource("1_p0pck")
+description = "Ένα εξαιρετικό τροφοδοτικό με άφθονο περιθώριο για κάρτες γραφικών υψηλής κατηγορίας."
+metadata/_custom_type_script = "uid://do6xns60reviw"

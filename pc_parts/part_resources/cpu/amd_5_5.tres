@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://b78w0yehqxrpc"]
+
+[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_wj6qi"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_wxka6"]
+
+[resource]
+script = ExtResource("1_wj6qi")
+cores = 6
+specialization = 1
+name = "AMD Ryzen 5 5600"
+price = 150
+id = "cpu_005"
+image = ExtResource("1_wxka6")
+description = "Ένας δημοφιλής επεξεργαστής gaming με εξαιρετική απόδοση σε μονό πυρήνα και χαμηλή τιμή."
+power_draw = 2
+metadata/_custom_type_script = "uid://x57gt7nljb7c"

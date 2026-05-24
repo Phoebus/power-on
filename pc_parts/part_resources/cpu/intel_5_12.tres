@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://orbduv6rd5yn"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_jwbow"]
+[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_lgi15"]
+
+[resource]
+script = ExtResource("1_lgi15")
+has_integrated_graphics = true
+cores = 6
+specialization = 2
+name = "Intel Core i5-12400"
+price = 180
+id = "cpu_002"
+image = ExtResource("1_jwbow")
+description = "Ένας αξιόπιστος μεσαίας κατηγορίας επεξεργαστής με ενσωματωμένα γραφικά για γραφειακές εργασίες."
+power_draw = 2
+metadata/_custom_type_script = "uid://x57gt7nljb7c"

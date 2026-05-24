@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="GpuSpecs" format=3 uid="uid://dnn163k6cjb3a"]
+
+[ext_resource type="Script" uid="uid://c0x4k4iylv78" path="res://pc_parts/part_resources/gpu_specs_res.gd" id="1_4e6go"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_bncvs"]
+
+[resource]
+script = ExtResource("1_4e6go")
+vram = 8
+performance_tier = 3
+name = "NVIDIA RTX 3070"
+price = 450
+id = "gpu_005"
+image = ExtResource("1_bncvs")
+description = "Μια ισορροπημένη κάρτα για 1440p με υποστήριξη ray tracing και DLSS."
+power_draw = 3
+metadata/_custom_type_script = "uid://c0x4k4iylv78"

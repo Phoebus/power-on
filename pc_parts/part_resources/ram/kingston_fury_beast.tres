@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://cnj6wwcpc52ur"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_fxhbh"]
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_n4m2n"]
+
+[resource]
+script = ExtResource("1_n4m2n")
+capacity = 16
+generation = 1
+speed = 3
+name = "Kingston Fury Beast DDR5-4800 16GB"
+price = 70
+id = "ram_005"
+image = ExtResource("1_fxhbh")
+description = "Ένα εισαγωγικό κιτ DDR5 για νέες πλατφόρμες με περιορισμένο προϋπολογισμό."
+power_draw = 2
+metadata/_custom_type_script = "uid://j8rns8xdmumq"

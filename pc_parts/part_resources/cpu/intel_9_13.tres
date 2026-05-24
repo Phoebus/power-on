@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://dvm4y7tllfpp7"]
+
+[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_rjhan"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_xa81y"]
+
+[resource]
+script = ExtResource("1_rjhan")
+has_integrated_graphics = true
+cores = 24
+name = "Intel Core i9-13900K"
+price = 550
+id = "cpu_008"
+image = ExtResource("1_xa81y")
+description = "Ένας κορυφαίος 24πύρηνος επεξεργαστής που κυριαρχεί τόσο στο gaming όσο και στη δημιουργία περιεχομένου."
+power_draw = 5
+metadata/_custom_type_script = "uid://x57gt7nljb7c"

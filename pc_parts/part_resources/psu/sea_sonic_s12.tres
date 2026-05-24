@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://5rgj2bbkpqim"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_ivu3g"]
+[ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="1_q6kv6"]
+
+[resource]
+script = ExtResource("1_q6kv6")
+power_supply = 8
+certification = 1
+name = "SeaSonic S12III 650W"
+price = 80
+id = "psu_004"
+image = ExtResource("1_ivu3g")
+description = "Ένα αξιόπιστο τροφοδοτικό από έμπιστη εταιρεία, κατάλληλο για τις περισσότερες μεσαίες κατασκευές."
+metadata/_custom_type_script = "uid://do6xns60reviw"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://bvp56mshs2a2f"]
+
+[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_3o1fq"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_nwlpx"]
+
+[resource]
+script = ExtResource("1_3o1fq")
+has_integrated_graphics = true
+cores = 4
+specialization = 2
+name = "Intel Core i3-12100"
+price = 100
+id = "cpu_001"
+image = ExtResource("1_nwlpx")
+description = "Ένας οικονομικός τετραπύρηνος επεξεργαστής με ενσωματωμένα γραφικά, ιδανικός για καθημερινές εργασίες."
+power_draw = 2
+metadata/_custom_type_script = "uid://x57gt7nljb7c"

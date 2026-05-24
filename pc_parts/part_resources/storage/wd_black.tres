@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StorageSpecs" format=3 uid="uid://t3fs7w45wjck"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_3m5ul"]
+[ext_resource type="Script" uid="uid://uktc6wjgwax5" path="res://pc_parts/part_resources/storage_specs_res.gd" id="1_hasu6"]
+
+[resource]
+script = ExtResource("1_hasu6")
+storage_type = 2
+capacity = 4000
+name = "WD Black SN850X 4TB NVMe"
+price = 350
+id = "sto_008"
+image = ExtResource("1_3m5ul")
+description = "Ένας τεράστιος NVMe για enthusiasts που χρειάζονται ταυτόχρονα ταχύτητα και χώρο."
+power_draw = 3
+metadata/_custom_type_script = "uid://uktc6wjgwax5"

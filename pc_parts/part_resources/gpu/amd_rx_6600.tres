@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="GpuSpecs" format=3 uid="uid://bym24e6di0fqq"]
+
+[ext_resource type="Script" uid="uid://c0x4k4iylv78" path="res://pc_parts/part_resources/gpu_specs_res.gd" id="1_0axgc"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_4etvr"]
+
+[resource]
+script = ExtResource("1_0axgc")
+vram = 8
+performance_tier = 2
+name = "AMD RX 6600"
+price = 220
+id = "gpu_002"
+image = ExtResource("1_4etvr")
+description = "Μια σταθερή επιλογή για 1080p gaming με 8GB μνήμης σε λογική τιμή."
+power_draw = 2
+metadata/_custom_type_script = "uid://c0x4k4iylv78"

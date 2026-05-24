@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://dur37reos1v55"]
+
+[ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="1_3frpe"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_5e5lj"]
+
+[resource]
+script = ExtResource("1_3frpe")
+power_supply = 5
+name = "Thermaltake Smart 500W"
+price = 40
+id = "psu_001"
+image = ExtResource("1_5e5lj")
+description = "Ένα βασικό οικονομικό τροφοδοτικό, αρκετό μόνο για απλές γραφειακές κατασκευές χωρίς κάρτα γραφικών."
+metadata/_custom_type_script = "uid://do6xns60reviw"
