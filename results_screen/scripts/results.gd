@@ -13,18 +13,19 @@ extends Control
 @onready var stor_type : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont/HBox2/StorageTypeExplanation
 
 func _ready() -> void:
-	OrderHandler.perform_checks()
-	assign_msg()
+
+	var results : Dictionary[OrderHandler.RESULT_TYPE, String] = OrderHandler.perform_checks()
+	assign_msg(results)
 	
-func assign_msg() -> void:
-	cpu_cores.text = OrderHandler.cpu_cores_msg
-	cpu_specialization.text = OrderHandler.cpu_specialization_msg
-	gpu_vram.text = OrderHandler.gpu_vram_msg
-	gpu_speed.text = OrderHandler.gpu_speed_msg
-	ram_generation.text = OrderHandler.ram_generation_msg
-	ram_size.text = OrderHandler.ram_capacity_msg
-	ram_speed.text = OrderHandler.ram_speed_msg
-	psu_supply.text = OrderHandler.psu_power_supply_msg
-	psu_certification.text = OrderHandler.psu_certification_msg
-	stor_size.text = OrderHandler.storage_capacity_msg
-	stor_type.text = OrderHandler.storage_type_msg
+func assign_msg(results : Dictionary[OrderHandler.RESULT_TYPE, String]) -> void:
+	cpu_cores.text = results[OrderHandler.RESULT_TYPE.CPU_CORES]
+	cpu_specialization.text = results[OrderHandler.RESULT_TYPE.CPU_SPECIAL]
+	gpu_vram.text = results[OrderHandler.RESULT_TYPE.GPU_VRAM]
+	gpu_speed.text = results[OrderHandler.RESULT_TYPE.GPU_SPEED]
+	ram_generation.text = results[OrderHandler.RESULT_TYPE.RAM_GEN]
+	ram_size.text = results[OrderHandler.RESULT_TYPE.RAM_SIZE]
+	ram_speed.text = results[OrderHandler.RESULT_TYPE.RAM_SPEED]
+	psu_supply.text = results[OrderHandler.RESULT_TYPE.PSU_SUPP]
+	psu_certification.text = results[OrderHandler.RESULT_TYPE.PSU_SUPP]
+	stor_size.text = results[OrderHandler.RESULT_TYPE.STOR_SIZE]
+	stor_type.text = results[OrderHandler.RESULT_TYPE.STOR_TYPE]

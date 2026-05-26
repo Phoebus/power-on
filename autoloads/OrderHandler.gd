@@ -1,5 +1,7 @@
 extends Node
 
+enum RESULT_TYPE {CPU_CORES, CPU_SPECIAL, GPU_VRAM, GPU_SPEED, RAM_SIZE, RAM_GEN, RAM_SPEED, PSU_SUPP, PSU_CERT, STOR_SIZE, STOR_TYPE}
+
 var current_order : OrderBasic
 var player_build : Array[PartGeneralData]
 var player_cpu : Array[CpuSpecs]
@@ -7,22 +9,6 @@ var player_gpu : Array[GpuSpecs]
 var player_ram : Array[RamSpecs]
 var player_psu : Array[PsuSpecs]
 var player_storage : Array[StorageSpecs]
-
-var cpu_cores_msg : String = ""
-var cpu_specialization_msg : String = ""
-var gpu_vram_msg : String = ""
-var gpu_speed_msg : String = ""
-var ram_capacity_msg : String = ""
-var ram_generation_msg : String = ""
-var ram_speed_msg : String = ""
-var psu_power_supply_msg : String = ""
-var psu_certification_msg : String = ""
-var storage_capacity_msg : String = ""
-var storage_type_msg = ""
-
-const BUDGET_ERROR : String = "You have exceeded the given budget!"
-const SINGLE_PART_ERROR : String = "You can only have 1 of each type of item!"
-const NOT_ALL_PARTS_SELECTED : String = "You haven't selected 1 of each type of item!"
 
 func add_part_to_arrays(part_data : PartGeneralData) -> void:
 	player_build.append(part_data)
@@ -54,11 +40,11 @@ func remove_part_from_arrays(part_data : PartGeneralData) -> void:
 
 func strict_checks() -> Dictionary:
 	if not check_single_items():
-		return {"passed" : false, "error" : SINGLE_PART_ERROR}
+		return {"passed" : false, "error" : "You can only have 1 of each type of item!"}
 	elif not check_budget():
-		return {"passed" : false, "error" : BUDGET_ERROR}
+		return {"passed" : false, "error" : "You have exceeded the given budget!"}
 	elif not check_at_least_one():
-		return {"passed" : false, "error" : NOT_ALL_PARTS_SELECTED}
+		return {"passed" : false, "error" : "You haven't selected 1 of each type of item!"}
 	
 	return {"passed" : true, "error" : ""}
 
@@ -95,67 +81,72 @@ func check_enough_power() -> bool:
 
 	return true 
 
-func perform_checks() -> void:
+func perform_checks() -> Dictionary[RESULT_TYPE, String]:
 	
 	# This method can create all the error messages and return them instead of storing them as fields of the class.
 	# I should do this at some point.
-	
+
+	var results : Dictionary[RESULT_TYPE, String]
+
 	# CPU
 	if player_cpu.get(0).cores < current_order.cpu_cores:
-		cpu_cores_msg = current_order.cpu_cores_fail_msg
+		results[RESULT_TYPE.CPU_CORES] = current_order.cpu_cores_fail_msg
 	else:
-		cpu_cores_msg = "Passed!"
+		results[RESULT_TYPE.CPU_CORES] = "Passed!"
 	
+	# TODO Better detection needed.
 	if player_cpu.get(0).specialization != current_order.cpu_specialization:
-		cpu_specialization_msg = current_order.cpu_specialization_fail_msg
+		results[RESULT_TYPE.CPU_SPECIAL] = current_order.cpu_specialization_fail_msg
 	else:
-		cpu_specialization_msg = "Passed!"
+		results[RESULT_TYPE.CPU_SPECIAL] = "Passed!"
 
 	# GPU
 	if player_gpu.get(0).vram < current_order.gpu_vram:
-		gpu_vram_msg = current_order.gpu_vram_fail_msg
+		results[RESULT_TYPE.GPU_VRAM] = current_order.gpu_vram_fail_msg
 	else:
-		gpu_vram_msg = "Passed!"
+		results[RESULT_TYPE.GPU_VRAM] = "Passed!"
 	
-	if player_gpu.get(0).performance_tier < current_order.gpu_performance_tier:
-		gpu_speed_msg = current_order.gpu_performance_tier_fail_msg
+	if player_gpu.get(0).performance_tier < current_order.gpu_speed:
+		results[RESULT_TYPE.GPU_SPEED] = current_order.gpu_speed_fail_msg
 	else:
-		gpu_speed_msg = "Passed!"
+		results[RESULT_TYPE.GPU_SPEED] = "Passed!"
 	
 	# RAM
-	if player_ram.get(0).capacity < current_order.ram_capacity:
-		ram_capacity_msg = current_order.ram_capacity_fail_msg
+	if player_ram.get(0).capacity < current_order.ram_size:
+		results[RESULT_TYPE.RAM_SIZE] = current_order.ram_size_fail_msg
 	else:
-		ram_capacity_msg = "Passed!"
+		results[RESULT_TYPE.RAM_SIZE] = "Passed!"
 	
 	if player_ram.get(0).generation == Globals.RAM_GENERATION.DDR4 and current_order.ram_generation == Globals.RAM_GENERATION.DDR5:
-		ram_generation_msg = current_order.ram_generation_fail_msg
+		results[RESULT_TYPE.RAM_GEN] = current_order.ram_generation_fail_msg
 	else:
-		ram_generation_msg = "Passed!"
+		results[RESULT_TYPE.RAM_GEN] = "Passed!"
 	
 	if player_ram.get(0).speed < current_order.ram_speed:
-		ram_speed_msg = current_order.ram_speed_fail_msg
+		results[RESULT_TYPE.RAM_SPEED] = current_order.ram_speed_fail_msg
 	else:
-		ram_speed_msg = "Passed!"
+		results[RESULT_TYPE.RAM_SPEED] = "Passed!"
 	
 	# PSU
 	if not check_enough_power():
-		psu_power_supply_msg = current_order.psu_power_supply_fail_msg
+		results[RESULT_TYPE.PSU_SUPP] = current_order.psu_power_supply_fail_msg
 	else:
-		psu_power_supply_msg = "Passed!"
+		results[RESULT_TYPE.PSU_SUPP] = "Passed!"
 	
 	if player_psu.get(0).certification < current_order.psu_certification:
-		psu_certification_msg = current_order.psu_certification_fail_msg
+		results[RESULT_TYPE.PSU_CERT] = current_order.psu_certification_fail_msg
 	else:
-		psu_certification_msg = "Passed!"
+		results[RESULT_TYPE.PSU_CERT] = "Passed!"
 	
 	# Storage
-	if player_storage.get(0).capacity < current_order.storage_capacity:
-		storage_capacity_msg = current_order.storage_capacity_fail_msg
+	if player_storage.get(0).capacity < current_order.storage_size:
+		results[RESULT_TYPE.STOR_SIZE] = current_order.storage_size_fail_msg
 	else:
-		storage_capacity_msg = "Passed!"
+		results[RESULT_TYPE.STOR_SIZE] = "Passed!"
 	
 	if player_storage.get(0).type == Globals.STORAGE_TYPE.HDD and (current_order.storage_type == Globals.STORAGE_TYPE.SSD or current_order.storage_type == Globals.STORAGE_TYPE.SSD_NVME):
-		storage_type_msg = current_order.storage_type_fail_msg
+		results[RESULT_TYPE.STOR_TYPE] = current_order.storage_type_fail_msg
 	else:
-		storage_type_msg = "Passed!" 
+		results[RESULT_TYPE.STOR_TYPE] = "Passed!" 
+	
+	return results
