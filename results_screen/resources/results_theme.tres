@@ -12,11 +12,13 @@ border_color = Color(0.54509807, 0.6431373, 0.3647059, 1)
 border_blend = true
 
 [resource]
-MarginContainer/constants/margin_bottom = 50
-MarginContainer/constants/margin_left = 50
-MarginContainer/constants/margin_right = 50
-MarginContainer/constants/margin_top = 50
+BaseHBox/base_type = &"HBoxContainer"
+BaseHBox/constants/separation = 30
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_u68kd")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/font_sizes/normal_font_size = 32
 RichTextLabel/fonts/normal_font = ExtResource("1_2fbsj")
+VBoxDefault/base_type = &"VBoxContainer"
+VBoxDefault/constants/separation = 10
+VBoxDefault2/base_type = &"VBoxContainer"
+VBoxDefault2/constants/separation = 50

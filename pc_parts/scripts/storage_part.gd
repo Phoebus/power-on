@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func popup_init() -> void:
 	description.text = data.description
-	storage_type.text = "[indent]Storage Type : " + str(data.storage_type) + "[/indent]"
+	storage_type.text = "[indent]Storage Type : " + Globals.STORAGE_TYPE.keys()[data.storage_type] + "[/indent]"
 	capacity.text = "[indent]Capacity : " + str(data.capacity) + "[/indent]"
 
 

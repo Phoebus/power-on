@@ -9,8 +9,16 @@ var player_psu : Array[PsuSpecs]
 var player_storage : Array[StorageSpecs]
 
 var cpu_cores_msg : String = ""
+var cpu_specialization_msg : String = ""
 var gpu_vram_msg : String = ""
-var ram_size_msg : String = ""
+var gpu_speed_msg : String = ""
+var ram_capacity_msg : String = ""
+var ram_generation_msg : String = ""
+var ram_speed_msg : String = ""
+var psu_power_supply_msg : String = ""
+var psu_certification_msg : String = ""
+var storage_capacity_msg : String = ""
+var storage_type_msg = ""
 
 const BUDGET_ERROR : String = "You have exceeded the given budget!"
 const SINGLE_PART_ERROR : String = "You can only have 1 of each type of item!"
@@ -76,15 +84,78 @@ func check_single_items() -> bool:
 	else:
 		return true
 
+func check_enough_power() -> bool:
+	var power_sum = 0
+
+	for part in player_build:
+		power_sum += part.power_draw
+
+	if player_psu.get(0).power_supply <= power_sum:
+		return false
+
+	return true 
+
 func perform_checks() -> void:
+	
+	# This method can create all the error messages and return them instead of storing them as fields of the class.
+	# I should do this at some point.
+	
+	# CPU
 	if player_cpu.get(0).cores < current_order.cpu_cores:
 		cpu_cores_msg = current_order.cpu_cores_fail_msg
 	else:
 		cpu_cores_msg = "Passed!"
 	
+	if player_cpu.get(0).specialization != current_order.cpu_specialization:
+		cpu_specialization_msg = current_order.cpu_specialization_fail_msg
+	else:
+		cpu_specialization_msg = "Passed!"
+
+	# GPU
 	if player_gpu.get(0).vram < current_order.gpu_vram:
 		gpu_vram_msg = current_order.gpu_vram_fail_msg
 	else:
 		gpu_vram_msg = "Passed!"
 	
-	# TODO Add more checks for all the parts.
+	if player_gpu.get(0).performance_tier < current_order.gpu_performance_tier:
+		gpu_speed_msg = current_order.gpu_performance_tier_fail_msg
+	else:
+		gpu_speed_msg = "Passed!"
+	
+	# RAM
+	if player_ram.get(0).capacity < current_order.ram_capacity:
+		ram_capacity_msg = current_order.ram_capacity_fail_msg
+	else:
+		ram_capacity_msg = "Passed!"
+	
+	if player_ram.get(0).generation == Globals.RAM_GENERATION.DDR4 and current_order.ram_generation == Globals.RAM_GENERATION.DDR5:
+		ram_generation_msg = current_order.ram_generation_fail_msg
+	else:
+		ram_generation_msg = "Passed!"
+	
+	if player_ram.get(0).speed < current_order.ram_speed:
+		ram_speed_msg = current_order.ram_speed_fail_msg
+	else:
+		ram_speed_msg = "Passed!"
+	
+	# PSU
+	if not check_enough_power():
+		psu_power_supply_msg = current_order.psu_power_supply_fail_msg
+	else:
+		psu_power_supply_msg = "Passed!"
+	
+	if player_psu.get(0).certification < current_order.psu_certification:
+		psu_certification_msg = current_order.psu_certification_fail_msg
+	else:
+		psu_certification_msg = "Passed!"
+	
+	# Storage
+	if player_storage.get(0).capacity < current_order.storage_capacity:
+		storage_capacity_msg = current_order.storage_capacity_fail_msg
+	else:
+		storage_capacity_msg = "Passed!"
+	
+	if player_storage.get(0).type == Globals.STORAGE_TYPE.HDD and (current_order.storage_type == Globals.STORAGE_TYPE.SSD or current_order.storage_type == Globals.STORAGE_TYPE.SSD_NVME):
+		storage_type_msg = current_order.storage_type_fail_msg
+	else:
+		storage_type_msg = "Passed!" 

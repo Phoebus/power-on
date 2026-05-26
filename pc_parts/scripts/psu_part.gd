@@ -14,7 +14,7 @@ func _ready() -> void:
 func popup_init() -> void:
 	description.text = data.description
 	watt.text = "[indent]Watt : " + str(data.power_supply) + "[/indent]"
-	certification.text = "[indent]Certification : " + str(data.certification) + "[/indent]"
+	certification.text = "[indent]Certification : " + Globals.PSU_CERTIFICATION.keys()[data.certification] + "[/indent]"
 
 func _on_button_pressed() -> void:
 	Globals.emit_part_panel_clicked_signal(data)

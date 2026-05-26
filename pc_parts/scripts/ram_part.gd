@@ -17,7 +17,7 @@ func popup_init() -> void:
 	power.text = "[indent]Power Draw : " + str(data.power_draw) + "[/indent]"
 	capacity.text = "[indent]Capacity : " + str(data.capacity) + "[/indent]"
 	speed_tier.text = "[indent]Speed Tier : " + str(data.speed) + "[/indent]"
-	generation.text = "[indent]Power Draw : " + str(data.generation) + "[/indent]"
+	generation.text = "[indent]Power Draw : " + Globals.RAM_GENERATION.keys()[data.generation] + "[/indent]"
 	description.text = data.description
 
 func _on_button_pressed() -> void:

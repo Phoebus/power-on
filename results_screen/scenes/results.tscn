@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://u0piy7gdqms"]
 
 [ext_resource type="Theme" uid="uid://cqpw8xohhwxfo" path="res://results_screen/resources/results_theme.tres" id="1_jab16"]
-[ext_resource type="Script" uid="uid://fni524y80cqe" path="res://results_screen/scenes/results.gd" id="1_vk7dq"]
+[ext_resource type="Script" uid="uid://fni524y80cqe" path="res://results_screen/scripts/results.gd" id="1_vk7dq"]
 
 [node name="Results" type="Control" unique_id=1624282444]
 layout_mode = 3
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vk7dq")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1212757464]
+[node name="PanCont" type="PanelContainer" parent="." unique_id=1212757464]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,14 +21,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_jab16")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=933550918]
-layout_mode = 2
-theme = ExtResource("1_jab16")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1460041865]
+[node name="BaseVBox" type="VBoxContainer" parent="PanCont" unique_id=1460041865]
 layout_mode = 2
 
-[node name="Results" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1016126961]
+[node name="Results" type="RichTextLabel" parent="PanCont/BaseVBox" unique_id=1016126961]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_jab16")
@@ -37,23 +33,37 @@ text = "Results"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CpuContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=977483204]
+[node name="BaseHBox" type="HBoxContainer" parent="PanCont/BaseVBox" unique_id=1639462494]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"BaseHBox"
 
-[node name="CpuTitle" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/CpuContainer" unique_id=571998755]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanCont/BaseVBox/BaseHBox" unique_id=472430854]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CpuCont" type="VBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer" unique_id=977483204]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="CpuTitle" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont" unique_id=571998755]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_jab16")
 bbcode_enabled = true
 text = "Cpu"
+fit_content = true
+scroll_active = false
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/CpuContainer" unique_id=571637988]
+[node name="HBox1" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont" unique_id=571637988]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="CpuCores" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/CpuContainer/HBoxContainer" unique_id=1816772379]
+[node name="CpuCores" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont/HBox1" unique_id=1816772379]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -61,85 +71,319 @@ size_flags_stretch_ratio = 0.22
 theme = ExtResource("1_jab16")
 bbcode_enabled = true
 text = "[indent]Cores:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="CpuCoresExplanation" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/CpuContainer/HBoxContainer" unique_id=314227985]
+[node name="CpuCoresExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont/HBox1" unique_id=314227985]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "You ddint pass because blah blah blah blah blah"
 vertical_alignment = 1
 
-[node name="GpuContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1039135373]
+[node name="HBox2" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont" unique_id=1594546000]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GpuTitle" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/GpuContainer" unique_id=1089561793]
+[node name="CpuSpecialization" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont/HBox2" unique_id=1963370921]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+theme = ExtResource("1_jab16")
+bbcode_enabled = true
+text = "[indent]Specialization:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="CpuSpecializationExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont/HBox2" unique_id=1244689792]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1
+
+[node name="GpuCont" type="VBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer" unique_id=1039135373]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="GpuTitle" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont" unique_id=1089561793]
 layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 text = "Gpu"
+fit_content = true
+scroll_active = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/GpuContainer" unique_id=904212199]
+[node name="HBox1" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont" unique_id=904212199]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GpuVram" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/GpuContainer/HBoxContainer" unique_id=623085765]
+[node name="GpuVram" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont/HBox1" unique_id=623085765]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.22
 bbcode_enabled = true
 text = "[indent]Vram:[indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="GpuVramExplanation" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/GpuContainer/HBoxContainer" unique_id=1694822298]
+[node name="GpuVramExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont/HBox1" unique_id=1694822298]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "You ddint pass because blah blah blah blah blah"
 vertical_alignment = 1
 
-[node name="RamContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=180794474]
+[node name="HBox2" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont" unique_id=910015660]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RamTitle" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/RamContainer" unique_id=525456692]
+[node name="GpuSpeed" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont/HBox2" unique_id=462166521]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Speed:[indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="GpuSpeedExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont/HBox2" unique_id=1401368353]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1
+
+[node name="RamCont" type="VBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer" unique_id=180794474]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="RamTitle" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont" unique_id=525456692]
 layout_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 text = "Ram"
+fit_content = true
+scroll_active = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/RamContainer" unique_id=772697367]
+[node name="HBox1" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont" unique_id=772697367]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RamSize" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/RamContainer/HBoxContainer" unique_id=113343247]
+[node name="RamSize" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox1" unique_id=113343247]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.22
 bbcode_enabled = true
 text = "[indent]Size:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="RamSizeExplanation" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/RamContainer/HBoxContainer" unique_id=1073233082]
+[node name="RamSizeExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox1" unique_id=1073233082]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "You ddint pass because blah blah blah blah blah"
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1423432620]
+[node name="HBox2" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont" unique_id=341511542]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.13
 
-[node name="Retry" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1489774165]
-custom_minimum_size = Vector2(50, 50)
+[node name="RamGeneration" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox2" unique_id=959273830]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Generation:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
 
-[node name="Continue" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1412501093]
-custom_minimum_size = Vector2(50, 50)
+[node name="RamGenerationExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox2" unique_id=1448266132]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1
+
+[node name="HBox3" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont" unique_id=544452264]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RamSpeed" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox3" unique_id=90242658]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Speed:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="RamSpeedExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox3" unique_id=1643353580]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanCont/BaseVBox/BaseHBox" unique_id=2141061906]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PsuCont" type="VBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2" unique_id=1569373721]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault2"
+
+[node name="PsuTitle" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont" unique_id=1692974345]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "PSU
+"
+fit_content = true
+scroll_active = false
+
+[node name="HBox1" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont" unique_id=1140934671]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PsuPowerSupply" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont/HBox1" unique_id=659420370]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Power Supply:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="PsuPowerSupplyExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont/HBox1" unique_id=2064492997]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont" unique_id=2097967411]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PsuCertification" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont/HBox2" unique_id=1016334928]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Certification:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="PsuCertificationExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont/HBox2" unique_id=1784721010]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1
+
+[node name="StorCont" type="VBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2" unique_id=56271929]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault2"
+
+[node name="StorageTitle" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont" unique_id=105918252]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Storage"
+fit_content = true
+scroll_active = false
+
+[node name="HBox1" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont" unique_id=264559318]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StorageSize" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont/HBox1" unique_id=1698857841]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Size:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="StorageSizeExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont/HBox1" unique_id=71570007]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont" unique_id=823080815]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StorageType" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont/HBox2" unique_id=293716510]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Type:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="StorageTypeExplanation" type="RichTextLabel" parent="PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont/HBox2" unique_id=2139886896]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+vertical_alignment = 1

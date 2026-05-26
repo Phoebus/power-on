@@ -41,5 +41,5 @@ extends Resource
 @export var storage_type_fail_msg : String
 @export var storage_capacity_fail_msg : String
 @export_subgroup("PSU ERRORS")
-@export var psu_watt_fail_msg : String
+@export var psu_power_supply_fail_msg : String
 @export var psu_certification_fail_msg : String
