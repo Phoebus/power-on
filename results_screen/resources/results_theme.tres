@@ -14,6 +14,10 @@ border_blend = true
 [resource]
 BaseHBox/base_type = &"HBoxContainer"
 BaseHBox/constants/separation = 30
+MarginContainer/constants/margin_bottom = 40
+MarginContainer/constants/margin_left = 40
+MarginContainer/constants/margin_right = 40
+MarginContainer/constants/margin_top = 40
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_u68kd")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/font_sizes/normal_font_size = 32

@@ -1,16 +1,16 @@
 extends Control
 
-@onready var cpu_cores : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont/HBox1/CpuCoresExplanation
-@onready var cpu_specialization : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer/CpuCont/HBox2/CpuSpecializationExplanation
-@onready var gpu_vram : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont/HBox1/GpuVramExplanation
-@onready var gpu_speed : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer/GpuCont/HBox2/GpuSpeedExplanation
-@onready var ram_size : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox1/RamSizeExplanation
-@onready var ram_generation : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox2/RamGenerationExplanation
-@onready var ram_speed : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer/RamCont/HBox3/RamSpeedExplanation
-@onready var psu_supply : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont/HBox1/PsuPowerSupplyExplanation
-@onready var psu_certification : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer2/PsuCont/HBox2/PsuCertificationExplanation
-@onready var stor_size : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont/HBox1/StorageSizeExplanation
-@onready var stor_type : RichTextLabel = $PanCont/BaseVBox/BaseHBox/VBoxContainer2/StorCont/HBox2/StorageTypeExplanation
+@onready var cpu_cores : RichTextLabel = %CpuCoresExplanation
+@onready var cpu_specialization : RichTextLabel = %CpuSpecializationExplanation
+@onready var gpu_vram : RichTextLabel = %GpuVramExplanation
+@onready var gpu_speed : RichTextLabel = %GpuSpeedExplanation
+@onready var ram_size : RichTextLabel = %RamSizeExplanation
+@onready var ram_generation : RichTextLabel = %RamGenerationExplanation
+@onready var ram_speed : RichTextLabel = %RamSpeedExplanation
+@onready var psu_supply : RichTextLabel = %PsuPowerSupplyExplanation
+@onready var psu_certification : RichTextLabel = %PsuCertificationExplanation
+@onready var stor_size : RichTextLabel = %StorageSizeExplanation
+@onready var stor_type : RichTextLabel = %StorageTypeExplanation
 
 func _ready() -> void:
 
