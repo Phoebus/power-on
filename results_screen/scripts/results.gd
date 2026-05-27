@@ -14,18 +14,18 @@ extends Control
 
 func _ready() -> void:
 
-	var results : Dictionary[OrderHandler.RESULT_TYPE, String] = OrderHandler.perform_checks()
+	var results : OrderResults = OrderHandler.perform_checks()
 	assign_msg(results)
 	
-func assign_msg(results : Dictionary[OrderHandler.RESULT_TYPE, String]) -> void:
-	cpu_cores.text = results[OrderHandler.RESULT_TYPE.CPU_CORES]
-	cpu_specialization.text = results[OrderHandler.RESULT_TYPE.CPU_SPECIAL]
-	gpu_vram.text = results[OrderHandler.RESULT_TYPE.GPU_VRAM]
-	gpu_speed.text = results[OrderHandler.RESULT_TYPE.GPU_SPEED]
-	ram_generation.text = results[OrderHandler.RESULT_TYPE.RAM_GEN]
-	ram_size.text = results[OrderHandler.RESULT_TYPE.RAM_SIZE]
-	ram_speed.text = results[OrderHandler.RESULT_TYPE.RAM_SPEED]
-	psu_supply.text = results[OrderHandler.RESULT_TYPE.PSU_SUPP]
-	psu_certification.text = results[OrderHandler.RESULT_TYPE.PSU_SUPP]
-	stor_size.text = results[OrderHandler.RESULT_TYPE.STOR_SIZE]
-	stor_type.text = results[OrderHandler.RESULT_TYPE.STOR_TYPE]
+func assign_msg(results : OrderResults) -> void:
+	cpu_cores.text = results.cpu_cores_msg
+	cpu_specialization.text = results.cpu_specialization_msg
+	gpu_vram.text = results.gpu_vram_msg
+	gpu_speed.text = results.gpu_speed_msg
+	ram_generation.text = results.ram_generation_msg
+	ram_size.text = results.ram_size_msg
+	ram_speed.text = results.ram_speed_msg
+	psu_supply.text = results.psu_power_supply_msg
+	psu_certification.text = results.psu_certification_msg
+	stor_size.text = results.storage_size_msg
+	stor_type.text = results.storage_type_msg

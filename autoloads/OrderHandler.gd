@@ -1,6 +1,6 @@
 extends Node
 
-enum RESULT_TYPE {CPU_CORES, CPU_SPECIAL, GPU_VRAM, GPU_SPEED, RAM_SIZE, RAM_GEN, RAM_SPEED, PSU_SUPP, PSU_CERT, STOR_SIZE, STOR_TYPE}
+enum RESULT_TYPE {SCORE, CPU_CORES, CPU_SPECIAL, GPU_VRAM, GPU_SPEED, RAM_SIZE, RAM_GEN, RAM_SPEED, PSU_SUPP, PSU_CERT, STOR_SIZE, STOR_TYPE}
 
 var current_order : OrderBasic
 var player_build : Array[PartGeneralData]
@@ -81,72 +81,92 @@ func check_enough_power() -> bool:
 
 	return true 
 
-func perform_checks() -> Dictionary[RESULT_TYPE, String]:
+func perform_checks() -> OrderResults:
 	
 	# This method can create all the error messages and return them instead of storing them as fields of the class.
 	# I should do this at some point.
-
-	var results : Dictionary[RESULT_TYPE, String]
+	var	results : OrderResults = OrderResults.new()
 
 	# CPU
 	if player_cpu.get(0).cores < current_order.cpu_cores:
-		results[RESULT_TYPE.CPU_CORES] = current_order.cpu_cores_fail_msg
+		results.cpu_cores_msg = current_order.cpu_cores_fail_msg
 	else:
-		results[RESULT_TYPE.CPU_CORES] = "Passed!"
+		results.cpu_cores_msg = "Passed!"
+		results.score += 1
 	
 	# TODO Better detection needed.
-	if player_cpu.get(0).specialization != current_order.cpu_specialization:
-		results[RESULT_TYPE.CPU_SPECIAL] = current_order.cpu_specialization_fail_msg
+	if (player_cpu.get(0).specialization != current_order.cpu_specialization) or (player_cpu.get(0).specialization == Globals.CPU_SPECIALIZATION.ALL):
+		results.cpu_specialization_msg = current_order.cpu_specialization_fail_msg
 	else:
-		results[RESULT_TYPE.CPU_SPECIAL] = "Passed!"
+		results.cpu_specialization_msg = "Passed!"
+		results.score += 1
 
 	# GPU
 	if player_gpu.get(0).vram < current_order.gpu_vram:
-		results[RESULT_TYPE.GPU_VRAM] = current_order.gpu_vram_fail_msg
+		results.gpu_vram_msg = current_order.gpu_vram_fail_msg
 	else:
-		results[RESULT_TYPE.GPU_VRAM] = "Passed!"
+		results.gpu_vram_msg = "Passed!"
+		results.score += 1
 	
 	if player_gpu.get(0).performance_tier < current_order.gpu_speed:
-		results[RESULT_TYPE.GPU_SPEED] = current_order.gpu_speed_fail_msg
+		results.gpu_speed_msg = current_order.gpu_speed_fail_msg
 	else:
-		results[RESULT_TYPE.GPU_SPEED] = "Passed!"
+		results.gpu_speed_msg = "Passed!"
+		results.score += 1
 	
 	# RAM
 	if player_ram.get(0).capacity < current_order.ram_size:
-		results[RESULT_TYPE.RAM_SIZE] = current_order.ram_size_fail_msg
+		results.ram_size_msg = current_order.ram_size_fail_msg
 	else:
-		results[RESULT_TYPE.RAM_SIZE] = "Passed!"
+		results.ram_size_msg = "Passed!"
+		results.score += 1
 	
 	if player_ram.get(0).generation == Globals.RAM_GENERATION.DDR4 and current_order.ram_generation == Globals.RAM_GENERATION.DDR5:
-		results[RESULT_TYPE.RAM_GEN] = current_order.ram_generation_fail_msg
+		results.ram_generation_msg = current_order.ram_generation_fail_msg
 	else:
-		results[RESULT_TYPE.RAM_GEN] = "Passed!"
+		results.ram_generation_msg = "Passed!"
+		results.score += 1
 	
 	if player_ram.get(0).speed < current_order.ram_speed:
-		results[RESULT_TYPE.RAM_SPEED] = current_order.ram_speed_fail_msg
+		results.ram_speed_msg = current_order.ram_speed_fail_msg
 	else:
-		results[RESULT_TYPE.RAM_SPEED] = "Passed!"
+		results.ram_speed_msg = "Passed!"
+		results.score += 1
 	
 	# PSU
 	if not check_enough_power():
-		results[RESULT_TYPE.PSU_SUPP] = current_order.psu_power_supply_fail_msg
+		results.psu_power_supply_msg = current_order.psu_power_supply_fail_msg
 	else:
-		results[RESULT_TYPE.PSU_SUPP] = "Passed!"
+		results.psu_power_supply_msg = "Passed!"
+		results.score += 1
 	
 	if player_psu.get(0).certification < current_order.psu_certification:
-		results[RESULT_TYPE.PSU_CERT] = current_order.psu_certification_fail_msg
+		results.psu_certification_msg = current_order.psu_certification_fail_msg
 	else:
-		results[RESULT_TYPE.PSU_CERT] = "Passed!"
+		results.psu_certification_msg = "Passed!"
+		results.score += 1
 	
 	# Storage
 	if player_storage.get(0).capacity < current_order.storage_size:
-		results[RESULT_TYPE.STOR_SIZE] = current_order.storage_size_fail_msg
+		results.storage_size_msg = current_order.storage_size_fail_msg
 	else:
-		results[RESULT_TYPE.STOR_SIZE] = "Passed!"
+		results.storage_size_msg = "Passed!"
+		results.score += 1	
 	
 	if player_storage.get(0).type == Globals.STORAGE_TYPE.HDD and (current_order.storage_type == Globals.STORAGE_TYPE.SSD or current_order.storage_type == Globals.STORAGE_TYPE.SSD_NVME):
-		results[RESULT_TYPE.STOR_TYPE] = current_order.storage_type_fail_msg
+		results.storage_type_msg = current_order.storage_type_fail_msg
 	else:
-		results[RESULT_TYPE.STOR_TYPE] = "Passed!" 
-	
+		results.storage_type_msg = "Passed!"
+		results.score += 1 
+
 	return results
+
+func clear_mission_data(starting_state : OrderBasic) -> void:
+
+	current_order = starting_state
+	player_build = []
+	player_cpu = []
+	player_gpu = []
+	player_psu = []
+	player_ram = []
+	player_storage = []
