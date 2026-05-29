@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c5nfybq4wdpx"]
+
+[ext_resource type="Script" uid="uid://cvmmpfeh6byvd" path="res://mission_select/scripts/mission_select.gd" id="1_ov730"]
+[ext_resource type="Theme" uid="uid://lymelg5qw5dd" path="res://main_menu/resources/main_menu_theme.tres" id="1_yskfk"]
+[ext_resource type="Script" uid="uid://gvmybxksqh1g" path="res://mission_select/scripts/mission_button.gd" id="3_0b6am"]
+[ext_resource type="Resource" uid="uid://dyoe1lweijmed" path="res://data/mission_resources/specific/games_high_budget.tres" id="4_0b6am"]
+
+[node name="MissionSelect" type="Control" unique_id=1363248469]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ov730")
+
+[node name="Panel" type="Panel" parent="." unique_id=915063297]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yskfk")
+
+[node name="MissionButton" type="Button" parent="." unique_id=988581489]
+layout_mode = 0
+anchor_left = 0.26302084
+anchor_top = 0.23981482
+anchor_right = 0.41927084
+anchor_bottom = 0.33240741
+offset_left = -3.0517578e-05
+text = "Mission 1"
+script = ExtResource("3_0b6am")
+mission_order = ExtResource("4_0b6am")
+metadata/_custom_type_script = "uid://gvmybxksqh1g"
+
+[connection signal="pressed" from="MissionButton" to="." method="_on_mission_button_pressed" flags=18]

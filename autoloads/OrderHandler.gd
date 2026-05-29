@@ -1,7 +1,5 @@
 extends Node
 
-enum RESULT_TYPE {SCORE, CPU_CORES, CPU_SPECIAL, GPU_VRAM, GPU_SPEED, RAM_SIZE, RAM_GEN, RAM_SPEED, PSU_SUPP, PSU_CERT, STOR_SIZE, STOR_TYPE}
-
 var current_order : OrderBasic
 var player_build : Array[PartGeneralData]
 var player_cpu : Array[CpuSpecs]
@@ -162,7 +160,7 @@ func perform_checks() -> OrderResults:
 	return results
 
 func clear_mission_data(starting_state : OrderBasic) -> void:
-
+	
 	current_order = starting_state
 	player_build = []
 	player_cpu = []
@@ -170,3 +168,6 @@ func clear_mission_data(starting_state : OrderBasic) -> void:
 	player_psu = []
 	player_ram = []
 	player_storage = []
+
+func set_mission_data(order : OrderBasic) -> void:
+	current_order = order

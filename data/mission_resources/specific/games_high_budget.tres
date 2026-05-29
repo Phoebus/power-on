@@ -4,28 +4,23 @@
 
 [resource]
 script = ExtResource("1_pn3ex")
+pass_score = 8
 description = "Hey I want a PC to play all the newest games!"
 budget = 3000
 cpu_cores = 6
 cpu_specialization = 1
 gpu_vram = 16
-gpu_performance_tier = 4
-ram_capacity = 16
 ram_generation = 1
 ram_speed = 4
-storage_capacity = 1000
 storage_type = 2
 psu_watt = 1000
 psu_certification = 4
 cpu_cores_fail_msg = "Modern gaming requires a lot of processing power. A lot of cores is a must."
 cpu_specialization_fail_msg = "A CPU specialized in gaming would be a better fit."
 gpu_vram_fail_msg = "Modern games can take up a lot of space. Textures can get quite big so ensuring your PC has a lot of VRAM to load these textures properly is mandatory."
-gpu_performance_tier_fail_msg = "Faster processing speeds are always better when it comes to computationally expensive tasks like playing video games."
-ram_capacity_fail_msg = "Modern OSs and games require a lot of memory to load all of the necessary infromation. Having at least 16 GBs of ram is a must."
 ram_generation_fail_msg = "DDR5 is the new standard when it comes to speed, which is crucial when playing the newest games."
 ram_speed_fail_msg = "New games require faster speeds."
 storage_type_fail_msg = "HDDs are really slow compared to SSDs and that can cause big and long loading times."
-storage_capacity_fail_msg = "New games take up a lot of space. Having less than 1 TB of memory means that you'll start struggling to have all of your favorite programs downloaded."
 psu_power_supply_fail_msg = "sddgrgrgerger"
 psu_certification_fail_msg = "sdgdsgdfbdbf"
 metadata/_custom_type_script = "uid://dg8o68jfl5nq"

@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://lymelg5qw5dd"]
+
+[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_gru1k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcfyi"]
+bg_color = Color(0.54509807, 0.6431373, 0.3647059, 1)
+
+[resource]
+Button/font_sizes/font_size = 42
+Button/fonts/font = ExtResource("1_gru1k")
+Panel/styles/panel = SubResource("StyleBoxFlat_rcfyi")
+RichTextLabel/font_sizes/normal_font_size = 82
+RichTextLabel/fonts/normal_font = ExtResource("1_gru1k")
