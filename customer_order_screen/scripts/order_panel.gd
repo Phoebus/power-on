@@ -7,8 +7,6 @@ extends PanelContainer
 @onready var order_budget = $MarginContainer/VBoxContainer/OrderBudget
 @onready var start_order_button = $MarginContainer/VBoxContainer/StartOrder
 
-var shop_scene : PackedScene = preload("res://shop_menu/scenes/shop_menu.tscn")
-
 var order_data : OrderBasic
 
 func _ready() -> void:
@@ -18,7 +16,7 @@ func _ready() -> void:
 	customer.take_order.connect(appear)
 	order_data = customer.order
 	order_description.text = order_data.description
-	order_budget.text = "Budget : " + str(order_data.budget)
+	order_budget.text = "Διαθεσιμο Ποσο : " + str(order_data.budget)
 
 func appear() -> void:
 	visible = true
@@ -26,8 +24,4 @@ func appear() -> void:
 	tween.tween_property(self, "scale", Vector2(1.0, 1.0), scale_duration).set_trans(Tween.TRANS_SINE)
 
 func _on_start_order_pressed() -> void:
-	OrderHandler.current_order = order_data
-	call_deferred("switch_scene_deferred", shop_scene)
-
-func switch_scene_deferred(new_scene : PackedScene) -> void:
-	get_tree().change_scene_to_packed(new_scene)
+	SceneSwitcher.to_shop(order_data)

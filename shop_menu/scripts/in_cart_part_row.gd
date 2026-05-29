@@ -3,7 +3,7 @@ extends HBoxContainer
 
 signal item_removal(data : PartGeneralData)
 
-@onready var data_label : Label = $Label
+@onready var data_label : RichTextLabel = $ItemName
 
 var part_data : PartGeneralData
 

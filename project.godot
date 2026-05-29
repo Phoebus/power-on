@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="*uid://ha2shki7lxlo"
 OrderHandler="*uid://cms0foc8l7dkx"
+SceneSwitcher="*uid://bw55u0ldwiyh0"
 
 [display]
 

@@ -423,7 +423,7 @@ anchor_right = 1.0
 anchor_bottom = 0.30555555
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 32
+theme = ExtResource("1_d3ese")
 text = "Placeholder :
 100"
 fit_content = true
@@ -456,10 +456,11 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8901042
 anchor_top = 0.87314814
-anchor_right = 0.9706771
+anchor_right = 0.97760415
 anchor_bottom = 0.93333334
+offset_right = -13.300049
 theme = ExtResource("1_d3ese")
-text = "Build!"
+text = "Συναρμολογηση!"
 script = ExtResource("16_dwk53")
 metadata/_edit_use_anchors_ = true
 
@@ -474,10 +475,10 @@ anchor_left = 0.03
 anchor_top = 0.12
 anchor_right = 0.97
 anchor_bottom = 0.88
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 784.0
-offset_bottom = 184.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
 theme = ExtResource("1_d3ese")
 metadata/_edit_use_anchors_ = true
 

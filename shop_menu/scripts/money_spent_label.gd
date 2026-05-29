@@ -8,12 +8,12 @@ func _ready() -> void:
    cart_icon.on_item_added.connect(on_item_added) 
    cart_icon.on_item_removed.connect(on_item_removed)
 
-   text = "Sum : \n0.0"
+   text = "Συνολο : \n0.0"
 
 func on_item_added(price : int) -> void:
     money += price
-    text = "Sum : \n" + str(money)
+    text = "Συνολο : \n" + str(money)
 
 func on_item_removed(price : int) -> void:
     money -= price
-    text = "Sum : \n" + str(money)
+    text = "Συνολο : \n" + str(money)

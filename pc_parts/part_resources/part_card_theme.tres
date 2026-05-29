@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://c30jlkqnsilg5"]
 
-[ext_resource type="FontFile" uid="uid://bbnjjo0tsxht0" path="res://assets/joystix_monospace.ttf" id="1_2d3fp"]
+[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_83jrn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1omkr"]
 bg_color = Color(0.6863316, 0.5843762, 0.42629787, 1)
@@ -50,6 +50,6 @@ PopupPanel/styles/panel = SubResource("StyleBoxFlat_83jrn")
 PriceTag/base_type = &"PanelContainer"
 PriceTag/styles/panel = SubResource("StyleBoxFlat_fc0o5")
 PriceTagText/base_type = &"RichTextLabel"
-PriceTagText/font_sizes/normal_font_size = 30
-RichTextLabel/font_sizes/normal_font_size = 16
-RichTextLabel/fonts/normal_font = ExtResource("1_2d3fp")
+PriceTagText/font_sizes/normal_font_size = 36
+RichTextLabel/font_sizes/normal_font_size = 20
+RichTextLabel/fonts/normal_font = ExtResource("1_83jrn")

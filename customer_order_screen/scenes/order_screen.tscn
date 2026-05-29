@@ -63,7 +63,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 theme = ExtResource("3_m3m5a")
 theme_type_variation = &"OrderPanelText"
-text = "Budget : "
+text = "Διαθεσιμο Ποσο : "
 fit_content = true
 autowrap_mode = 0
 vertical_alignment = 1
@@ -75,7 +75,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
 theme = ExtResource("3_m3m5a")
-text = "START!"
+text = "ΕΝΑΡΞΗ!"
 
 [node name="Customer" parent="." unique_id=1267655347 instance=ExtResource("1_70lk0")]
 layout_mode = 1

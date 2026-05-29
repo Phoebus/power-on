@@ -1,8 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://c4kmtylhg822m"]
 
-[ext_resource type="FontFile" uid="uid://bbnjjo0tsxht0" path="res://assets/joystix_monospace.ttf" id="1_gbyoe"]
 [ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="2_gc1ps"]
 [ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_obp5a"]
+[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="4_e0qr6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04mib"]
 bg_color = Color(0.92611, 0.88577497, 0.83163553, 1)
@@ -45,7 +45,7 @@ shadow_size = 8
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 24
-Button/fonts/font = ExtResource("1_gbyoe")
+Button/fonts/font = ExtResource("4_e0qr6")
 Button/styles/hover = ExtResource("2_obp5a")
 Button/styles/normal = ExtResource("2_gc1ps")
 Button/styles/pressed = ExtResource("2_gc1ps")
@@ -60,11 +60,12 @@ MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 30
 Panel/styles/panel = SubResource("StyleBoxFlat_hayk2")
+PartRowText/base_type = &"RichTextLabel"
+PartRowText/font_sizes/normal_font_size = 42
 PopupPanel/styles/panel = SubResource("StyleBoxFlat_ym2fe")
 PopupText/base_type = &"RichTextLabel"
 PopupText/colors/default_color = Color(0, 0, 0, 1)
-PopupText/font_sizes/normal_font_size = 28
-PopupText/fonts/normal_font = ExtResource("1_gbyoe")
-PopupText_Label/base_type = &"Label"
-PopupText_Label/colors/font_color = Color(0, 0, 0, 1)
+PopupText/font_sizes/normal_font_size = 40
+RichTextLabel/font_sizes/normal_font_size = 34
+RichTextLabel/fonts/normal_font = ExtResource("4_e0qr6")
 VBoxContainer/constants/separation = 8

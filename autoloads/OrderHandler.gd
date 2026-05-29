@@ -40,11 +40,11 @@ func remove_part_from_arrays(part_data : PartGeneralData) -> void:
 
 func strict_checks() -> Dictionary:
 	if not check_single_items():
-		return {"passed" : false, "error" : "You can only have 1 of each type of item!"}
+		return {"passed" : false, "error" : "Μπορεις να επιλεξεις μονο 1 απο καθε ειδος αντικειμενου!"}
 	elif not check_budget():
-		return {"passed" : false, "error" : "You have exceeded the given budget!"}
+		return {"passed" : false, "error" : "Εχεις ξεπερασει το διαθεσιμο ποσο!"}
 	elif not check_at_least_one():
-		return {"passed" : false, "error" : "You haven't selected 1 of each type of item!"}
+		return {"passed" : false, "error" : "Δεν εχεις επιλεξει 1 απο καθε ειδος αντικειμενου!"}
 	
 	return {"passed" : true, "error" : ""}
 
