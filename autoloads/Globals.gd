@@ -60,5 +60,5 @@ func emit_part_panel_clicked_signal(data : PartGeneralData) -> void:
 func emit_mission_button_clicked_signal(order : OrderBasic) -> void:
 	mission_button_clicked.emit(order)
 
-func check_mission_available(id : int) -> bool:
-	return save_data["Level" + str(id)]
+func check_mission_available(id : String) -> bool:
+	return save_data[id]

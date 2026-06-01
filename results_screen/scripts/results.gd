@@ -20,10 +20,12 @@ func _ready() -> void:
 	var results : OrderResults = OrderHandler.perform_checks()
 	assign_msg(results)
 
+	# The retry button is enabled only if the player didn't pass.
 	retry_btn.disabled = results.score_passed
 	
+	# If passed unlock the next mission and save the game.
 	if results.score_passed:
-		Globals.save_data["Level" + str(OrderHandler.current_order.unlocks.id)] = true
+		Globals.save_data[OrderHandler.current_order.unlocks.id] = true
 		Globals.save_game()
 	
 func assign_msg(results : OrderResults) -> void:
@@ -43,5 +45,5 @@ func _on_retry_button_pressed() -> void:
 	SceneSwitcher.retry_mission()
 
 func _on_continue_button_pressed() -> void:
-	#SceneSwitcher.to_mission_select()
-	get_tree().quit()
+	SceneSwitcher.to_mission_select()
+	#get_tree().quit()

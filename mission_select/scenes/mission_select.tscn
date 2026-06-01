@@ -76,7 +76,7 @@ size_flags_vertical = 2
 theme = ExtResource("5_dwqvo")
 text = "Επιπεδο 2"
 script = ExtResource("3_0b6am")
-mission_order = ExtResource("6_20pvo")
+mission_order = ExtResource("7_w6qrh")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"
 
 [node name="MissionButton3" type="Button" parent="GridContainer" unique_id=1783565537]
@@ -87,7 +87,7 @@ size_flags_vertical = 2
 theme = ExtResource("5_dwqvo")
 text = "Επιπεδο 3"
 script = ExtResource("3_0b6am")
-mission_order = ExtResource("7_w6qrh")
+mission_order = ExtResource("8_v78ma")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"
 
 [node name="MissionButton4" type="Button" parent="GridContainer" unique_id=1649768409]
@@ -98,7 +98,7 @@ size_flags_vertical = 2
 theme = ExtResource("5_dwqvo")
 text = "Επιπεδο 4"
 script = ExtResource("3_0b6am")
-mission_order = ExtResource("8_v78ma")
+mission_order = ExtResource("9_n50af")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"
 
 [node name="MissionButton5" type="Button" parent="GridContainer" unique_id=459277817]
@@ -109,7 +109,7 @@ size_flags_vertical = 2
 theme = ExtResource("5_dwqvo")
 text = "Επιπεδο 5"
 script = ExtResource("3_0b6am")
-mission_order = ExtResource("9_n50af")
+mission_order = ExtResource("6_20pvo")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"
 
 [node name="MissionButton6" type="Button" parent="GridContainer" unique_id=1239385430]

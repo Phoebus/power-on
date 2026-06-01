@@ -56,6 +56,7 @@
 [ext_resource type="Resource" uid="uid://b82bhrn5v3wmm" path="res://pc_parts/part_resources/storage/samsung_pro.tres" id="51_wvrg0"]
 [ext_resource type="Resource" uid="uid://dsebkakie3vo3" path="res://pc_parts/part_resources/storage/seagate_baracuda.tres" id="52_22njf"]
 [ext_resource type="Resource" uid="uid://di2d05g31hs8f" path="res://pc_parts/part_resources/storage/seagate_firecuda.tres" id="53_maji0"]
+[ext_resource type="Script" uid="uid://d1u88d3rs12vl" path="res://shop_menu/reminder_button.gd" id="57_lrgqe"]
 
 [node name="ShopMenu" type="Control" unique_id=360702051]
 layout_mode = 3
@@ -474,10 +475,10 @@ anchor_left = 0.03
 anchor_top = 0.12
 anchor_right = 0.97
 anchor_bottom = 0.88
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 184.0
 theme = ExtResource("1_d3ese")
 metadata/_edit_use_anchors_ = true
 
@@ -489,4 +490,43 @@ text = "Error!!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ReminderButton" type="Button" parent="Panel" unique_id=1661261702]
+layout_mode = 0
+anchor_left = 0.8802083
+anchor_top = 0.7962963
+anchor_right = 0.984375
+anchor_bottom = 0.8564815
+text = "Υπενθυμιση 
+Παραγγελιας"
+autowrap_mode = 3
+script = ExtResource("57_lrgqe")
+metadata/_edit_use_anchors_ = true
+
+[node name="PopupPanel" type="PopupPanel" parent="Panel/ReminderButton" unique_id=1069244834]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(800, 400)
+theme = ExtResource("1_d3ese")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/ReminderButton/PopupPanel" unique_id=1992808138]
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.06
+anchor_right = 0.97
+anchor_bottom = 0.94
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("1_d3ese")
+metadata/_edit_use_anchors_ = true
+
+[node name="OrderReminder" type="RichTextLabel" parent="Panel/ReminderButton/PopupPanel/MarginContainer" unique_id=1115656009]
+layout_mode = 2
+theme = ExtResource("1_d3ese")
+theme_type_variation = &"PopupText"
+text = "PlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholder"
+vertical_alignment = 1
+
 [connection signal="pressed" from="Panel/BuildButton" to="Panel/BuildButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/ReminderButton" to="Panel/ReminderButton" method="_on_pressed"]

@@ -1,11 +1,12 @@
 class_name OrderBasic
 extends Resource
 
-@export var id : int
+@export var id : String
 @export var unlocks : OrderBasic
 
 @export_range(1,11) var pass_score : int
 @export var description : String
+@export var reminder_description : String
 @export var budget : int
 
 @export_subgroup("CPU")

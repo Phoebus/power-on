@@ -173,6 +173,3 @@ func clear_mission_data(starting_state : OrderBasic) -> void:
 	player_psu = []
 	player_ram = []
 	player_storage = []
-
-func set_mission_data(order : OrderBasic) -> void:
-	current_order = order

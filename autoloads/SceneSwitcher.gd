@@ -15,8 +15,7 @@ func retry_mission() -> void:
 	call_deferred("switch_scene_deferred", shop_screen)
 
 func to_order(order: OrderBasic) -> void:
-	OrderHandler.clear_mission_data(null)
-	OrderHandler.set_mission_data(order)
+	OrderHandler.clear_mission_data(order)
 	call_deferred("switch_scene_deferred", order_screen)
 
 func to_results() -> void:
