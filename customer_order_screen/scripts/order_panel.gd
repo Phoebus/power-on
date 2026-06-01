@@ -12,8 +12,8 @@ func _ready() -> void:
 	scale = Vector2(0.0, 0.0)
 
 	customer.take_order.connect(appear)
-	order_description.text = customer.order.description
-	order_budget.text = "Διαθεσιμο Ποσο : " + str(customer.order.budget)
+	order_description.text = OrderHandler.current_order.description
+	order_budget.text = "Διαθεσιμο Ποσο : " + str(OrderHandler.current_order.budget)
 
 func appear() -> void:
 	visible = true
@@ -21,4 +21,4 @@ func appear() -> void:
 	tween.tween_property(self, "scale", Vector2(1.0, 1.0), scale_duration).set_trans(Tween.TRANS_SINE)
 
 func _on_start_order_pressed() -> void:
-	SceneSwitcher.to_shop(customer.order)
+	SceneSwitcher.to_shop(OrderHandler.current_order)

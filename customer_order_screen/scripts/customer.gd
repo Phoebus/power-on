@@ -3,8 +3,6 @@ extends TextureRect
 
 signal take_order()
 
-@export var order : OrderBasic
-
 @onready var scale_on_hover : Node = $ScaleOnHoverAnimator
 @onready var take_order_label : RichTextLabel = $TakeOrderLabel
 

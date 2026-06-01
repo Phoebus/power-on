@@ -10,6 +10,10 @@ func to_shop(order_details : OrderBasic) -> void:
 	OrderHandler.current_order = order_details
 	call_deferred("switch_scene_deferred", shop_screen)
 
+func retry_mission() -> void:
+	OrderHandler.clear_mission_data(OrderHandler.current_order)
+	call_deferred("switch_scene_deferred", shop_screen)
+
 func to_order(order: OrderBasic) -> void:
 	OrderHandler.clear_mission_data(null)
 	OrderHandler.set_mission_data(order)
@@ -19,6 +23,7 @@ func to_results() -> void:
 	call_deferred("switch_scene_deferred", results_screen)
 
 func to_mission_select() -> void:
+	OrderHandler.clear_mission_data(null)
 	call_deferred("switch_scene_deferred", mission_select_screen)
 
 func switch_scene_deferred(new_scene : PackedScene) -> void:

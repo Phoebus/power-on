@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://c60txmxs6cojx"]
+
+[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_v0d2q"]
+[ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_rjt04"]
+[ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="3_hpqy6"]
+
+[resource]
+Button/font_sizes/font_size = 42
+Button/fonts/font = ExtResource("1_v0d2q")
+Button/styles/hover = ExtResource("2_rjt04")
+Button/styles/normal = ExtResource("3_hpqy6")
+Button/styles/pressed = ExtResource("3_hpqy6")
+RichTextLabel/font_sizes/normal_font_size = 82
+RichTextLabel/fonts/normal_font = ExtResource("1_v0d2q")

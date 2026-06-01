@@ -12,10 +12,19 @@ extends Control
 @onready var stor_size : RichTextLabel = %StorageSizeExplanation
 @onready var stor_type : RichTextLabel = %StorageTypeExplanation
 
+@onready var retry_btn : Button = $RetryButton
+@onready var continue_btn : Button = $ContinueButton
+
 func _ready() -> void:
 
 	var results : OrderResults = OrderHandler.perform_checks()
 	assign_msg(results)
+
+	retry_btn.disabled = results.score_passed
+	
+	if results.score_passed:
+		Globals.save_data["Level" + str(OrderHandler.current_order.unlocks.id)] = true
+		Globals.save_game()
 	
 func assign_msg(results : OrderResults) -> void:
 	cpu_cores.text = results.cpu_cores_msg
@@ -29,3 +38,10 @@ func assign_msg(results : OrderResults) -> void:
 	psu_certification.text = results.psu_certification_msg
 	stor_size.text = results.storage_size_msg
 	stor_type.text = results.storage_type_msg
+
+func _on_retry_button_pressed() -> void:
+	SceneSwitcher.retry_mission()
+
+func _on_continue_button_pressed() -> void:
+	#SceneSwitcher.to_mission_select()
+	get_tree().quit()

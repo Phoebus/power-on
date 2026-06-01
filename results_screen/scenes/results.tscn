@@ -420,3 +420,27 @@ text = "You ddint pass because blah blah blah blah blah"
 fit_content = true
 scroll_active = false
 vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="." unique_id=654596275]
+layout_mode = 0
+anchor_left = 0.796875
+anchor_top = 0.09259259
+anchor_right = 0.953125
+anchor_bottom = 0.18518518
+theme = ExtResource("1_jab16")
+text = "Συνεχεια"
+metadata/_edit_use_anchors_ = true
+
+[node name="RetryButton" type="Button" parent="." unique_id=781886301]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6145833
+anchor_top = 0.09259259
+anchor_right = 0.7708333
+anchor_bottom = 0.18518518
+theme = ExtResource("1_jab16")
+text = "Ξανα Προσπαθησε"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

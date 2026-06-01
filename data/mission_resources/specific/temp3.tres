@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://boqc3ysgxt1pj"]
+
+[ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order.gd" id="1_1ggiv"]
+
+[resource]
+script = ExtResource("1_1ggiv")
+id = 4
+metadata/_custom_type_script = "uid://dg8o68jfl5nq"

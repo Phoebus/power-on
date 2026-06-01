@@ -69,7 +69,7 @@ autowrap_mode = 0
 vertical_alignment = 1
 
 [node name="StartOrder" type="Button" parent="OrderPanel/MarginContainer/VBoxContainer" unique_id=907433022]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3

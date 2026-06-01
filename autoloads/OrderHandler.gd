@@ -157,6 +157,11 @@ func perform_checks() -> OrderResults:
 		results.storage_type_msg = "Passed!"
 		results.score += 1 
 
+	if results.score < current_order.pass_score:
+		results.score_passed = false
+	else:
+		results.score_passed = true
+
 	return results
 
 func clear_mission_data(starting_state : OrderBasic) -> void:

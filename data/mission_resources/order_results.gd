@@ -14,6 +14,7 @@ var psu_power_supply_msg : String
 var psu_certification_msg : String
 
 var score : int
+var score_passed : bool
 
 # func _init(res_msg : Dictionary[OrderHandler.RESULT_TYPE, String], score_sum : int) -> void:
 # 	score = score_sum

@@ -19,6 +19,7 @@ size_flags_vertical = 5
 size_flags_stretch_ratio = 3.0
 theme = ExtResource("2_0m8ru")
 theme_type_variation = &"PartRowText"
+fit_content = true
 vertical_alignment = 1
 
 [node name="Blank" type="Label" parent="." unique_id=805119663]

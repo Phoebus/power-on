@@ -454,11 +454,10 @@ metadata/_edit_use_anchors_ = true
 [node name="BuildButton" type="Button" parent="Panel" unique_id=64472265]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8901042
-anchor_top = 0.87314814
-anchor_right = 0.97760415
-anchor_bottom = 0.93333334
-offset_right = -13.300049
+anchor_left = 0.8802083
+anchor_top = 0.875
+anchor_right = 0.984375
+anchor_bottom = 0.9351852
 theme = ExtResource("1_d3ese")
 text = "Συναρμολογηση!"
 script = ExtResource("16_dwk53")
