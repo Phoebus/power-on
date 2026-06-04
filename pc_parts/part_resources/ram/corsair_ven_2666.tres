@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://b17nbb41k2s1i"]
+
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_lfjx7"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_omyxj"]
+
+[resource]
+script = ExtResource("1_lfjx7")
+capacity = 8
+name = "Corsair Vengeance DDR4-2666 8GB"
+price = 25
+id = "ram_001"
+image = ExtResource("1_omyxj")
+description = "Ένα απλό stick 8GB αρκετό για βασικές γραφειακές εργασίες και περιήγηση στο διαδίκτυο."
+metadata/_custom_type_script = "uid://j8rns8xdmumq"

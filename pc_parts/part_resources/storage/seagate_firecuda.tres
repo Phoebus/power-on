@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StorageSpecs" format=3 uid="uid://di2d05g31hs8f"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_7vjyq"]
+[ext_resource type="Script" uid="uid://uktc6wjgwax5" path="res://pc_parts/part_resources/storage_specs_res.gd" id="1_qumba"]
+
+[resource]
+script = ExtResource("1_qumba")
+storage_type = 2
+capacity = 1000
+name = "Seagate FireCuda 530 1TB NVMe"
+price = 110
+id = "sto_006"
+image = ExtResource("1_7vjyq")
+description = "Ένας δίσκος NVMe υψηλών επιδόσεων χτισμένος για γρήγορους χρόνους φόρτωσης στο gaming."
+power_draw = 2
+metadata/_custom_type_script = "uid://uktc6wjgwax5"

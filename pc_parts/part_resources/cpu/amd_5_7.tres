@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://ci0p81gg0k2cy"]
+
+[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_p5d8t"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_q4h6s"]
+
+[resource]
+script = ExtResource("1_p5d8t")
+has_integrated_graphics = true
+cores = 6
+specialization = 1
+name = "AMD Ryzen 5 7600X"
+price = 250
+id = "cpu_006"
+image = ExtResource("1_q4h6s")
+description = "Ένας γρήγορος επεξεργαστής για gaming με υποστήριξη DDR5 και υψηλές ταχύτητες ρολογιού."
+power_draw = 3
+metadata/_custom_type_script = "uid://x57gt7nljb7c"

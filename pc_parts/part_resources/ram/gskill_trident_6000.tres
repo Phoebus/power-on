@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://cpkj6btvqhdce"]
+
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_01rol"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_6huke"]
+
+[resource]
+script = ExtResource("1_01rol")
+capacity = 32
+generation = 1
+speed = 5
+name = "G.Skill Trident Z5 DDR5-6000 32GB"
+price = 160
+id = "ram_007"
+image = ExtResource("1_6huke")
+description = "Ένα κορυφαίο κιτ DDR5 βελτιστοποιημένο για Intel 13ης γενιάς και μέγιστο εύρος ζώνης."
+power_draw = 3
+metadata/_custom_type_script = "uid://j8rns8xdmumq"

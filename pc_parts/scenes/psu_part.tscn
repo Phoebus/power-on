@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://btwckepgpa470"]
+
+[ext_resource type="Script" uid="uid://bpitajs4wg5nk" path="res://pc_parts/scripts/psu_part.gd" id="1_e0w5n"]
+[ext_resource type="PackedScene" uid="uid://bajd6w3e31emm" path="res://pc_parts/scenes/part_card.tscn" id="2_3coud"]
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="3_8gbka"]
+[ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="4_uuvfc"]
+[ext_resource type="Texture2D" uid="uid://if2byjdjwg20" path="res://assets/blue_plus.png" id="5_lb6tu"]
+
+[node name="PsuPart" type="Control" unique_id=1383118440]
+layout_mode = 3
+anchor_right = 0.104166664
+anchor_bottom = 0.18518518
+script = ExtResource("1_e0w5n")
+metadata/_custom_type_script = "uid://bpitajs4wg5nk"
+metadata/_edit_use_anchors_ = true
+
+[node name="PartCard" parent="." unique_id=1488749326 instance=ExtResource("2_3coud")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PopupPanel" type="PopupPanel" parent="." unique_id=997326593]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(800, 500)
+theme = ExtResource("3_8gbka")
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupPanel" unique_id=478471797]
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.048
+anchor_right = 0.97
+anchor_bottom = 0.952
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 484.0
+theme = ExtResource("4_uuvfc")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/MarginContainer" unique_id=150144082]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=590065215]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.4
+theme = ExtResource("4_uuvfc")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
+
+[node name="SpecificationsTitle" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=227212984]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_uuvfc")
+theme_type_variation = &"PopupText"
+bbcode_enabled = true
+text = "Specifications"
+vertical_alignment = 1
+
+[node name="Watt" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1718764775]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_uuvfc")
+theme_type_variation = &"PopupText"
+bbcode_enabled = true
+text = "Watt : "
+vertical_alignment = 1
+
+[node name="Certification" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1722501344]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_uuvfc")
+theme_type_variation = &"PopupText"
+bbcode_enabled = true
+text = "Certification : "
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="PopupPanel/MarginContainer" unique_id=941832234]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+icon = ExtResource("5_lb6tu")
+flat = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="PopupPanel/MarginContainer/Button" to="." method="_on_button_pressed"]

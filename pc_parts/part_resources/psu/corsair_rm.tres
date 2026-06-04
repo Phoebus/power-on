@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://3tqncohdic7i"]
+
+[ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="1_1fnqb"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_5ypl4"]
+
+[resource]
+script = ExtResource("1_1fnqb")
+power_supply = 11
+certification = 3
+name = "Corsair RM750x"
+price = 120
+id = "psu_006"
+image = ExtResource("1_5ypl4")
+description = "Ένα πλήρως αρθρωτό gold τροφοδοτικό με σχεδόν αθόρυβη λειτουργία και εξαιρετική αξιοπιστία."
+metadata/_custom_type_script = "uid://do6xns60reviw"

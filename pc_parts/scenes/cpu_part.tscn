@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://bnibnak55b0pa"]
+
+[ext_resource type="Script" uid="uid://d1wli5cuxawq6" path="res://pc_parts/scripts/cpu_part.gd" id="1_xk15b"]
+[ext_resource type="Resource" uid="uid://bvp56mshs2a2f" path="res://pc_parts/part_resources/cpu/intel_3_12.tres" id="2_10end"]
+[ext_resource type="PackedScene" uid="uid://bajd6w3e31emm" path="res://pc_parts/scenes/part_card.tscn" id="2_ou546"]
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="2_qfc2x"]
+[ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="3_xk15b"]
+[ext_resource type="Texture2D" uid="uid://if2byjdjwg20" path="res://assets/blue_plus.png" id="6_yh8xq"]
+
+[node name="CpuPart" type="Control" unique_id=707776067]
+layout_mode = 3
+anchor_right = 0.104166664
+anchor_bottom = 0.18518518
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xk15b")
+data = ExtResource("2_10end")
+metadata/_custom_type_script = "uid://d1wli5cuxawq6"
+metadata/_edit_use_anchors_ = true
+
+[node name="PartCard" parent="." unique_id=1039407945 instance=ExtResource("2_ou546")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PopupPanel" type="PopupPanel" parent="." unique_id=603784532]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(800, 500)
+theme = ExtResource("2_qfc2x")
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupPanel" unique_id=706372793]
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.048
+anchor_right = 0.97
+anchor_bottom = 0.952
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("3_xk15b")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/MarginContainer" unique_id=1171913522]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1550681598]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.4
+theme = ExtResource("3_xk15b")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
+
+[node name="SpecificationsTitle" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=397476539]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_xk15b")
+theme_type_variation = &"PopupText"
+text = "Specifications"
+vertical_alignment = 1
+
+[node name="PowerDraw" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=1614617045]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_xk15b")
+theme_type_variation = &"PopupText"
+bbcode_enabled = true
+text = "[indent]Power Draw :[/indent] "
+vertical_alignment = 1
+
+[node name="IntegratedGraphics" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=2146826682]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_xk15b")
+theme_type_variation = &"PopupText"
+bbcode_enabled = true
+text = "[indent]Integrated Graphics :[/indent] "
+vertical_alignment = 1
+
+[node name="Cores" type="RichTextLabel" parent="PopupPanel/MarginContainer/VBoxContainer" unique_id=2029317335]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_xk15b")
+theme_type_variation = &"PopupText"
+bbcode_enabled = true
+text = "[indent]Cores :[/indent] "
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="PopupPanel/MarginContainer" unique_id=975374063]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+icon = ExtResource("6_yh8xq")
+flat = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="PopupPanel/MarginContainer/Button" to="." method="_on_button_pressed"]

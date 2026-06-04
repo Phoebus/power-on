@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://wkww0n1bimqa"]
+
+[ext_resource type="PackedScene" uid="uid://dthngd20ayvus" path="res://customer_order_screen/scenes/customer.tscn" id="1_70lk0"]
+[ext_resource type="Theme" uid="uid://c22x4tej8h8ow" path="res://customer_order_screen/resources/order_screen.tres" id="3_m3m5a"]
+[ext_resource type="Texture2D" uid="uid://tptmobk1be54" path="res://assets/placeholder/customers/leonk.png" id="6_knsar"]
+[ext_resource type="Script" uid="uid://bi1ufm6oofd7j" path="res://customer_order_screen/scripts/order_panel.gd" id="7_mbqak"]
+
+[node name="OrderScreen" type="Control" unique_id=631616782]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player" type="TextureRect" parent="." unique_id=1770892494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 598.0
+offset_right = -1512.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_knsar")
+expand_mode = 1
+flip_h = true
+
+[node name="OrderPanel" type="PanelContainer" parent="." unique_id=2050786596]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.04
+anchor_right = 0.96
+anchor_bottom = 0.96
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("3_m3m5a")
+script = ExtResource("7_mbqak")
+scale_duration = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="OrderPanel" unique_id=1225730514]
+layout_mode = 2
+theme = ExtResource("3_m3m5a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OrderPanel/MarginContainer" unique_id=275426930]
+layout_mode = 2
+
+[node name="OrderDescription" type="RichTextLabel" parent="OrderPanel/MarginContainer/VBoxContainer" unique_id=903171855]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_m3m5a")
+theme_type_variation = &"OrderPanelText"
+
+[node name="OrderBudget" type="RichTextLabel" parent="OrderPanel/MarginContainer/VBoxContainer" unique_id=1779995830]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme = ExtResource("3_m3m5a")
+theme_type_variation = &"OrderPanelText"
+text = "Διαθεσιμο Ποσο : "
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="StartOrder" type="Button" parent="OrderPanel/MarginContainer/VBoxContainer" unique_id=907433022]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme = ExtResource("3_m3m5a")
+text = "ΕΝΑΡΞΗ!"
+
+[node name="Customer" parent="." unique_id=1267655347 instance=ExtResource("1_70lk0")]
+layout_mode = 1
+
+[connection signal="pressed" from="OrderPanel/MarginContainer/VBoxContainer/StartOrder" to="OrderPanel" method="_on_start_order_pressed"]

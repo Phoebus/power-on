@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://digmyfamy70yk"]
+
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="1_2c3qn"]
+[ext_resource type="Texture2D" uid="uid://bqhd5yumf3ka1" path="res://assets/shopping_cart.svg" id="1_yvwst"]
+[ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="2_70nju"]
+[ext_resource type="Script" uid="uid://defw0icsnqgb0" path="res://shop_menu/scripts/cart.gd" id="2_htk5j"]
+
+[node name="CartPanel" type="Panel" unique_id=357710217]
+anchors_preset = -1
+anchor_right = 0.034722224
+anchor_bottom = 0.061728396
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_2c3qn")
+theme_type_variation = &"CartPanel"
+script = ExtResource("2_htk5j")
+metadata/_custom_type_script = "uid://defw0icsnqgb0"
+
+[node name="ScaleOnHoverAnimator" parent="." unique_id=106302802 node_paths=PackedStringArray("target") instance=ExtResource("2_70nju")]
+target = NodePath("..")
+to = Vector2(1.1, 1.1)
+duration = 0.15
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1491446917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yvwst")
+metadata/_edit_use_anchors_ = true
+
+[node name="PopupPanel" type="PopupPanel" parent="." unique_id=936534281]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(800, 500)
+theme = ExtResource("1_2c3qn")
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupPanel" unique_id=1628073004]
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.048
+anchor_right = 0.97
+anchor_bottom = 0.952
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 484.0
+theme = ExtResource("1_2c3qn")
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PopupPanel/MarginContainer" unique_id=2130642040]
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="PartListContainer" type="VBoxContainer" parent="PopupPanel/MarginContainer/ScrollContainer" unique_id=832783847]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

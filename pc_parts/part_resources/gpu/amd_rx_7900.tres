@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="GpuSpecs" format=3 uid="uid://brx6vuqvuft7e"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_88ncm"]
+[ext_resource type="Script" uid="uid://c0x4k4iylv78" path="res://pc_parts/part_resources/gpu_specs_res.gd" id="1_kg85f"]
+
+[resource]
+script = ExtResource("1_kg85f")
+vram = 16
+performance_tier = 4
+name = "AMD RX 7900 GRE"
+price = 550
+id = "gpu_006"
+image = ExtResource("1_88ncm")
+description = "Μια κάρτα υψηλών επιδόσεων με τεράστια μνήμη, κατάλληλη για 4K και δημιουργική εργασία."
+power_draw = 4
+metadata/_custom_type_script = "uid://c0x4k4iylv78"

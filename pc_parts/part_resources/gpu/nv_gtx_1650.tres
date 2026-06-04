@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GpuSpecs" format=3 uid="uid://c7lp645lcnbe"]
+
+[ext_resource type="Script" uid="uid://c0x4k4iylv78" path="res://pc_parts/part_resources/gpu_specs_res.gd" id="1_f1ei4"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_v57qv"]
+
+[resource]
+script = ExtResource("1_f1ei4")
+vram = 4
+name = "NVIDIA GTX 1650"
+price = 150
+id = "gpu_001"
+image = ExtResource("1_v57qv")
+description = "Μια οικονομική κάρτα εισόδου που αντέχει ελαφριά παιχνίδια σε 1080p χωρίς να χρειάζεται επιπλέον τροφοδοσία."
+power_draw = 1
+metadata/_custom_type_script = "uid://c0x4k4iylv78"

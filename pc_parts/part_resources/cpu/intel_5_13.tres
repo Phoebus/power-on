@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://b5q4dd1cngjg0"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_alrmm"]
+[ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_jbf6a"]
+
+[resource]
+script = ExtResource("1_jbf6a")
+has_integrated_graphics = true
+cores = 14
+name = "Intel Core i5-13600K"
+price = 280
+id = "cpu_003"
+image = ExtResource("1_alrmm")
+description = "Ένας ευέλικτος επεξεργαστής με υβριδική αρχιτεκτονική που αντέχει τόσο σε εργασία όσο και σε παιχνίδια."
+power_draw = 3
+metadata/_custom_type_script = "uid://x57gt7nljb7c"

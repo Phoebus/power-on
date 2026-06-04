@@ -1,0 +1,43 @@
+[gd_resource type="Theme" format=3 uid="uid://cqpw8xohhwxfo"]
+
+[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_2fbsj"]
+[ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_jhqhw"]
+[ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="3_nv6rn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhqhw"]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u68kd"]
+bg_color = Color(0.9254902, 0.8862745, 0.83137256, 1)
+border_width_left = 32
+border_width_top = 32
+border_width_right = 32
+border_width_bottom = 32
+border_color = Color(0.54509807, 0.6431373, 0.3647059, 1)
+border_blend = true
+
+[resource]
+BaseHBox/base_type = &"HBoxContainer"
+BaseHBox/constants/separation = 30
+Button/font_sizes/font_size = 36
+Button/fonts/font = ExtResource("1_2fbsj")
+Button/styles/disabled = SubResource("StyleBoxFlat_jhqhw")
+Button/styles/hover = ExtResource("2_jhqhw")
+Button/styles/normal = ExtResource("3_nv6rn")
+Button/styles/pressed = ExtResource("3_nv6rn")
+MarginContainer/constants/margin_bottom = 40
+MarginContainer/constants/margin_left = 40
+MarginContainer/constants/margin_right = 40
+MarginContainer/constants/margin_top = 40
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_u68kd")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/normal_font_size = 42
+RichTextLabel/fonts/normal_font = ExtResource("1_2fbsj")
+VBoxDefault/base_type = &"VBoxContainer"
+VBoxDefault/constants/separation = 10
+VBoxDefault2/base_type = &"VBoxContainer"
+VBoxDefault2/constants/separation = 50

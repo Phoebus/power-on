@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://dyoe1lweijmed"]
+
+[ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order.gd" id="1_pn3ex"]
+[ext_resource type="Resource" uid="uid://b7wqusavbiko3" path="res://data/mission_resources/specific/temp_order.tres" id="2_8q1yw"]
+
+[resource]
+script = ExtResource("1_pn3ex")
+id = "Level1"
+unlocks = ExtResource("2_8q1yw")
+pass_score = 8
+description = "Hey I want a PC to play all the newest games!"
+reminder_description = "The customer wants a strong computer to play modern games."
+budget = 3000
+cpu_cores = 6
+cpu_specialization = 1
+gpu_vram = 16
+ram_generation = 1
+ram_speed = 4
+storage_type = 2
+psu_watt = 1000
+psu_certification = 4
+cpu_cores_fail_msg = "Modern gaming requires a lot of processing power. A lot of cores is a must."
+cpu_specialization_fail_msg = "A CPU specialized in gaming would be a better fit."
+gpu_vram_fail_msg = "Modern games can take up a lot of space. Textures can get quite big so ensuring your PC has a lot of VRAM to load these textures properly is mandatory."
+ram_generation_fail_msg = "DDR5 is the new standard when it comes to speed, which is crucial when playing the newest games."
+ram_speed_fail_msg = "New games require faster speeds."
+storage_type_fail_msg = "HDDs are really slow compared to SSDs and that can cause big and long loading times."
+psu_power_supply_fail_msg = "sddgrgrgerger"
+psu_certification_fail_msg = "sdgdsgdfbdbf"
+metadata/_custom_type_script = "uid://dg8o68jfl5nq"

@@ -1,0 +1,27 @@
+[gd_resource type="Theme" format=3 uid="uid://c60txmxs6cojx"]
+
+[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_v0d2q"]
+[ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_rjt04"]
+[ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="3_hpqy6"]
+[ext_resource type="Texture2D" uid="uid://dqly6sab81tow" path="res://assets/mission_select_bg_temp.png" id="4_hpqy6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjt04"]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d6yux"]
+texture = ExtResource("4_hpqy6")
+
+[resource]
+Button/font_sizes/font_size = 42
+Button/fonts/font = ExtResource("1_v0d2q")
+Button/styles/disabled = SubResource("StyleBoxFlat_rjt04")
+Button/styles/hover = ExtResource("2_rjt04")
+Button/styles/normal = ExtResource("3_hpqy6")
+Button/styles/pressed = ExtResource("3_hpqy6")
+Panel/styles/panel = SubResource("StyleBoxTexture_d6yux")
+RichTextLabel/font_sizes/normal_font_size = 82
+RichTextLabel/fonts/normal_font = ExtResource("1_v0d2q")

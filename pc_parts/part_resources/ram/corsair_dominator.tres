@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://c4s4cl4yts41f"]
+
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_57c6e"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_be163"]
+
+[resource]
+script = ExtResource("1_57c6e")
+capacity = 32
+generation = 1
+speed = 4
+name = "Corsair Dominator DDR5-5600 32GB"
+price = 130
+id = "ram_006"
+image = ExtResource("1_be163")
+description = "Ένα κιτ DDR5 υψηλής χωρητικότητας με επιθετικές ρυθμίσεις για enthusiast κατασκευές."
+power_draw = 3
+metadata/_custom_type_script = "uid://j8rns8xdmumq"

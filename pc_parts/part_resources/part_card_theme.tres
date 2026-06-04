@@ -1,0 +1,57 @@
+[gd_resource type="Theme" format=3 uid="uid://c30jlkqnsilg5"]
+
+[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_83jrn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1omkr"]
+bg_color = Color(0.6863316, 0.5843762, 0.42629787, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylmcr"]
+bg_color = Color(0.76999855, 0.53799796, 0.22866376, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.91062385, 0.78525454, 0.50741076, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83jrn"]
+bg_color = Color(0.89145625, 0.89145625, 0.8914562, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fc0o5"]
+bg_color = Color(0.23981324, 0.6607296, 0.7629949, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 16
+shadow_size = 6
+
+[resource]
+MarginContainer/constants/margin_bottom = 30
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 30
+Panel/styles/panel = SubResource("StyleBoxFlat_1omkr")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_ylmcr")
+PartCardText/base_type = &"RichTextLabel"
+PartCardText/font_sizes/normal_font_size = 20
+PopupPanel/styles/panel = SubResource("StyleBoxFlat_83jrn")
+PriceTag/base_type = &"PanelContainer"
+PriceTag/styles/panel = SubResource("StyleBoxFlat_fc0o5")
+PriceTagText/base_type = &"RichTextLabel"
+PriceTagText/font_sizes/normal_font_size = 36
+RichTextLabel/font_sizes/normal_font_size = 26
+RichTextLabel/fonts/normal_font = ExtResource("1_83jrn")

@@ -1,0 +1,446 @@
+[gd_scene format=3 uid="uid://u0piy7gdqms"]
+
+[ext_resource type="Theme" uid="uid://cqpw8xohhwxfo" path="res://results_screen/resources/results_theme.tres" id="1_jab16"]
+[ext_resource type="Script" uid="uid://fni524y80cqe" path="res://results_screen/scripts/results.gd" id="1_vk7dq"]
+
+[node name="Results" type="Control" unique_id=1624282444]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vk7dq")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1212757464]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jab16")
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=116238280]
+layout_mode = 2
+theme = ExtResource("1_jab16")
+
+[node name="BaseVBox" type="VBoxContainer" parent="Panel/Margin" unique_id=149465240]
+layout_mode = 2
+
+[node name="ResultsTitle" type="RichTextLabel" parent="Panel/Margin/BaseVBox" unique_id=1016126961]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme = ExtResource("1_jab16")
+bbcode_enabled = true
+text = "Αποτελεσματα"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Margin/BaseVBox" unique_id=1473114917]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+
+[node name="ScrollVBox" type="VBoxContainer" parent="Panel/Margin/BaseVBox/Scroll" unique_id=1460041865]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Cpu" type="VBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox" unique_id=977483204]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="CpuTitle" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu" unique_id=571998755]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+bbcode_enabled = true
+text = "Επεξεργαστης"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBox1" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu" unique_id=571637988]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CpuCores" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox1" unique_id=1816772379]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+theme = ExtResource("1_jab16")
+bbcode_enabled = true
+text = "[indent]Πυρηνες:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="CpuCoresExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox1" unique_id=314227985]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "sdfsdfsdfsdf"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu" unique_id=1594546000]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CpuSpecialization" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox2" unique_id=1963370921]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+theme = ExtResource("1_jab16")
+bbcode_enabled = true
+text = "[indent]Εξειδικευση:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="CpuSpecializationExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox2" unique_id=1244689792]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Gpu" type="VBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox" unique_id=1039135373]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="GpuTitle" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Gpu" unique_id=1089561793]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Καρτα Γραφικων"
+fit_content = true
+scroll_active = false
+
+[node name="HBox1" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Gpu" unique_id=904212199]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GpuVram" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Gpu/HBox1" unique_id=623085765]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Μνημη VRAM:[indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="GpuVramExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Gpu/HBox1" unique_id=1694822298]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Gpu" unique_id=910015660]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GpuSpeed" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Gpu/HBox2" unique_id=462166521]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Ταχυτητα:[indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="GpuSpeedExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Gpu/HBox2" unique_id=1401368353]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Ram" type="VBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox" unique_id=180794474]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="RamTitle" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram" unique_id=525456692]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Μνημη RAM"
+fit_content = true
+scroll_active = false
+
+[node name="HBox1" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram" unique_id=772697367]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RamSize" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram/HBox1" unique_id=113343247]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Χωριτικοτητα:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="RamSizeExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram/HBox1" unique_id=1073233082]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram" unique_id=341511542]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RamGeneration" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram/HBox2" unique_id=959273830]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Γενια DDR:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="RamGenerationExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram/HBox2" unique_id=1448266132]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBox3" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram" unique_id=544452264]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RamSpeed" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram/HBox3" unique_id=90242658]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Ταχυτητα:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="RamSpeedExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Ram/HBox3" unique_id=1643353580]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Psu" type="VBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox" unique_id=1569373721]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="PsuTitle" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Psu" unique_id=1692974345]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Τροφοδοτικο"
+fit_content = true
+scroll_active = false
+
+[node name="HBox1" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Psu" unique_id=1140934671]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PsuPowerSupply" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Psu/HBox1" unique_id=659420370]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Παροχη Ενεργειας:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="PsuPowerSupplyExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Psu/HBox1" unique_id=2064492997]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Psu" unique_id=2097967411]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PsuCertification" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Psu/HBox2" unique_id=1016334928]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Πιστοποιηση:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="PsuCertificationExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Psu/HBox2" unique_id=1784721010]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Stor" type="VBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox" unique_id=56271929]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jab16")
+theme_type_variation = &"VBoxDefault"
+
+[node name="StorageTitle" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Stor" unique_id=105918252]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Αποθηκευτικος Χωρος"
+fit_content = true
+scroll_active = false
+
+[node name="HBox1" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Stor" unique_id=264559318]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StorageSize" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Stor/HBox1" unique_id=1698857841]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Χωριτικοτητα:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="StorageSizeExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Stor/HBox1" unique_id=71570007]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Stor" unique_id=823080815]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StorageType" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Stor/HBox2" unique_id=293716510]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
+bbcode_enabled = true
+text = "[indent]Τυπος:[/indent]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="StorageTypeExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Stor/HBox2" unique_id=2139886896]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You ddint pass because blah blah blah blah blah"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="." unique_id=654596275]
+layout_mode = 0
+anchor_left = 0.796875
+anchor_top = 0.09259259
+anchor_right = 0.953125
+anchor_bottom = 0.18518518
+theme = ExtResource("1_jab16")
+text = "Συνεχεια"
+metadata/_edit_use_anchors_ = true
+
+[node name="RetryButton" type="Button" parent="." unique_id=781886301]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6145833
+anchor_top = 0.09259259
+anchor_right = 0.7708333
+anchor_bottom = 0.18518518
+theme = ExtResource("1_jab16")
+text = "Ξανα Προσπαθησε"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

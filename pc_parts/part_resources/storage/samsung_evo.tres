@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StorageSpecs" format=3 uid="uid://btf7hxcfkmvbq"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_j7nn2"]
+[ext_resource type="Script" uid="uid://uktc6wjgwax5" path="res://pc_parts/part_resources/storage_specs_res.gd" id="1_wtm5t"]
+
+[resource]
+script = ExtResource("1_wtm5t")
+storage_type = 1
+capacity = 1000
+name = "Samsung 870 EVO 1TB SSD"
+price = 90
+id = "sto_004"
+image = ExtResource("1_j7nn2")
+description = "Ένας κορυφαίος SSD με εξαιρετική αντοχή και σταθερές ταχύτητες για καθημερινή χρήση."
+metadata/_custom_type_script = "uid://uktc6wjgwax5"

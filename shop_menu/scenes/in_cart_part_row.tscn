@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dvsj0k8o32rt"]
+
+[ext_resource type="Script" uid="uid://dr7nklc5f03w0" path="res://shop_menu/scripts/in_cart_part_row.gd" id="1_0tnxo"]
+[ext_resource type="Texture2D" uid="uid://bgmxiikqqbukc" path="res://assets/blue_minus.png" id="1_ji7n8"]
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="2_0m8ru"]
+
+[node name="InCartPartRow" type="HBoxContainer" unique_id=807783004]
+anchors_preset = -1
+anchor_right = 0.7074653
+anchor_bottom = 0.10339506
+script = ExtResource("1_0tnxo")
+metadata/_custom_type_script = "uid://dr7nklc5f03w0"
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemName" type="RichTextLabel" parent="." unique_id=439138419]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_0m8ru")
+theme_type_variation = &"PartRowText"
+fit_content = true
+vertical_alignment = 1
+
+[node name="Blank" type="Label" parent="." unique_id=805119663]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+
+[node name="Button" type="Button" parent="." unique_id=1816361957]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 0.25
+icon = ExtResource("1_ji7n8")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

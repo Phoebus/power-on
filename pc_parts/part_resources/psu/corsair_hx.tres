@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://c2rsyi5ulvluo"]
+
+[ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="1_1prgt"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_u3w7c"]
+
+[resource]
+script = ExtResource("1_1prgt")
+power_supply = 15
+certification = 4
+name = "Corsair HX1000"
+price = 200
+id = "psu_008"
+image = ExtResource("1_u3w7c")
+description = "Ένα κορυφαίο platinum τροφοδοτικό για τις πιο απαιτητικές κατασκευές υψηλής απόδοσης."
+metadata/_custom_type_script = "uid://do6xns60reviw"

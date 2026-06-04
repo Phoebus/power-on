@@ -11,8 +11,21 @@ config_version=5
 [application]
 
 config/name="PowerOn"
+run/main_scene="uid://do1auh1swcpb7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*uid://ha2shki7lxlo"
+OrderHandler="*uid://cms0foc8l7dkx"
+SceneSwitcher="*uid://bw55u0ldwiyh0"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 
 [physics]
 
@@ -21,4 +34,3 @@ config/icon="res://icon.svg"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="forward_plus"

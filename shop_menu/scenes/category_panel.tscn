@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cpln3k7i4f1nl"]
+
+[ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="1_h81g3"]
+[ext_resource type="Script" uid="uid://cboyyn2eesxk2" path="res://shop_menu/scripts/category_panel.gd" id="2_bxgwd"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="2_hldlv"]
+[ext_resource type="PackedScene" uid="uid://ccvmeqc2dyldq" path="res://ui_animators/ScaleOnHoverAnimator.tscn" id="4_bxgwd"]
+
+[node name="CategoryPanel" type="Panel" unique_id=1333305782]
+anchors_preset = -1
+anchor_right = 0.065104164
+anchor_bottom = 0.057098765
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_h81g3")
+theme_type_variation = &"CategoryPanel"
+script = ExtResource("2_bxgwd")
+metadata/_edit_use_anchors_ = true
+
+[node name="CategoryImage" type="TextureRect" parent="." unique_id=1616749384]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.62666667
+anchor_top = 0.21621622
+anchor_right = 0.8933333
+anchor_bottom = 0.7567568
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_hldlv")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ScaleOnHoverAnimator" parent="." unique_id=106302802 node_paths=PackedStringArray("target") instance=ExtResource("4_bxgwd")]
+target = NodePath("..")
+to = Vector2(1.1, 1.1)
+duration = 0.25
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://dse7h8lbdjrro"]
+
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_ahsrs"]
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_x8mo1"]
+
+[resource]
+script = ExtResource("1_x8mo1")
+capacity = 32
+speed = 3
+name = "Corsair Vengeance DDR4-3600 32GB"
+price = 80
+id = "ram_004"
+image = ExtResource("1_ahsrs")
+description = "Ένα ευρύχωρο κιτ 32GB DDR4 για χρήστες που κάνουν πολλές εργασίες ταυτόχρονα."
+power_draw = 2
+metadata/_custom_type_script = "uid://j8rns8xdmumq"

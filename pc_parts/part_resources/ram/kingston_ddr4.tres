@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://cwr2cdcithbf3"]
+
+[ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_m602j"]
+[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_usq1o"]
+
+[resource]
+script = ExtResource("1_m602j")
+capacity = 16
+speed = 2
+name = "Kingston Fury Beast DDR4-3200 16GB"
+price = 40
+id = "ram_002"
+image = ExtResource("1_usq1o")
+description = "Ένα αξιόπιστο κιτ 16GB DDR4 που καλύπτει τις ανάγκες των περισσότερων gamers και χρηστών."
+metadata/_custom_type_script = "uid://j8rns8xdmumq"
