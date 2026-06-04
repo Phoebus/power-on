@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dthngd20ayvus" path="res://customer_order_screen/scenes/customer.tscn" id="1_70lk0"]
 [ext_resource type="Theme" uid="uid://c22x4tej8h8ow" path="res://customer_order_screen/resources/order_screen.tres" id="3_m3m5a"]
-[ext_resource type="Resource" uid="uid://dyoe1lweijmed" path="res://data/mission_resources/specific/games_high_budget.tres" id="5_oo6dj"]
 [ext_resource type="Texture2D" uid="uid://tptmobk1be54" path="res://assets/placeholder/customers/leonk.png" id="6_knsar"]
 [ext_resource type="Script" uid="uid://bi1ufm6oofd7j" path="res://customer_order_screen/scripts/order_panel.gd" id="7_mbqak"]
 
@@ -79,6 +78,5 @@ text = "ΕΝΑΡΞΗ!"
 
 [node name="Customer" parent="." unique_id=1267655347 instance=ExtResource("1_70lk0")]
 layout_mode = 1
-order = ExtResource("5_oo6dj")
 
 [connection signal="pressed" from="OrderPanel/MarginContainer/VBoxContainer/StartOrder" to="OrderPanel" method="_on_start_order_pressed"]

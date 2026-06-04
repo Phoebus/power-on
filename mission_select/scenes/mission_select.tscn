@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c5nfybq4wdpx"]
 
 [ext_resource type="Script" uid="uid://cvmmpfeh6byvd" path="res://mission_select/scripts/mission_select.gd" id="1_ov730"]
-[ext_resource type="Theme" uid="uid://lymelg5qw5dd" path="res://main_menu/resources/main_menu_theme.tres" id="1_yskfk"]
 [ext_resource type="Script" uid="uid://gvmybxksqh1g" path="res://mission_select/scripts/mission_button.gd" id="3_0b6am"]
 [ext_resource type="Resource" uid="uid://dyoe1lweijmed" path="res://data/mission_resources/specific/games_high_budget.tres" id="4_0b6am"]
 [ext_resource type="Theme" uid="uid://c60txmxs6cojx" path="res://mission_select/resources/mission_select_theme.tres" id="5_dwqvo"]
@@ -26,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_yskfk")
+theme = ExtResource("5_dwqvo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1257566150]
 layout_mode = 1
