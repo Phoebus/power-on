@@ -1,8 +1,10 @@
 [gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://cd2knnhx30byd"]
 
+[ext_resource type="Texture2D" uid="uid://tptmobk1be54" path="res://assets/placeholder/customers/leonk.png" id="1_m4qyc"]
 [ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order.gd" id="1_xt11e"]
 
 [resource]
 script = ExtResource("1_xt11e")
 id = "Level2"
+customer_rect = ExtResource("1_m4qyc")
 metadata/_custom_type_script = "uid://dg8o68jfl5nq"

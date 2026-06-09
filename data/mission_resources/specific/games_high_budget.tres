@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://dyoe1lweijmed"]
 
+[ext_resource type="Texture2D" uid="uid://dhg0515gdhtp1" path="res://assets/customers/leon_papa.png" id="1_pdw2b"]
 [ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order.gd" id="1_pn3ex"]
 [ext_resource type="Resource" uid="uid://b7wqusavbiko3" path="res://data/mission_resources/specific/temp_order.tres" id="2_8q1yw"]
 
@@ -7,6 +8,7 @@
 script = ExtResource("1_pn3ex")
 id = "Level1"
 unlocks = ExtResource("2_8q1yw")
+customer_rect = ExtResource("1_pdw2b")
 pass_score = 8
 description = "Hey I want a PC to play all the newest games!"
 reminder_description = "The customer wants a strong computer to play modern games."

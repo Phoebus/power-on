@@ -6,7 +6,6 @@
 [resource]
 script = ExtResource("1_4e6go")
 vram = 8
-performance_tier = 3
 name = "NVIDIA RTX 3070"
 price = 450
 id = "gpu_005"

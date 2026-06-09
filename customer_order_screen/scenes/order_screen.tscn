@@ -3,8 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dthngd20ayvus" path="res://customer_order_screen/scenes/customer.tscn" id="1_70lk0"]
 [ext_resource type="Theme" uid="uid://c22x4tej8h8ow" path="res://customer_order_screen/resources/order_screen.tres" id="3_m3m5a"]
 [ext_resource type="Script" uid="uid://bi1ufm6oofd7j" path="res://customer_order_screen/scripts/order_panel.gd" id="7_mbqak"]
-[ext_resource type="PackedScene" uid="uid://bwhuselcsmhog" path="res://customer_order_screen/scenes/phone_prompt.tscn" id="8_phone"]
-[ext_resource type="Texture2D" uid="uid://c7whvjta5wp7v" path="res://assets/placeholder/customers/elvis.png" id="9_elvis"]
+[ext_resource type="PackedScene" uid="uid://3bxr2o2d66b5" path="res://customer_order_screen/scenes/phone_prompt.tscn" id="8_phone"]
 
 [node name="OrderScreen" type="Control" unique_id=631616782]
 layout_mode = 3
@@ -77,7 +76,6 @@ layout_mode = 1
 offset_top = 60.0
 offset_right = -1100.0
 offset_bottom = -60.0
-portrait = ExtResource("9_elvis")
 flip_portrait = true
 
 [node name="PhonePrompt" parent="." unique_id=1542538133 instance=ExtResource("8_phone")]
@@ -89,5 +87,5 @@ offset_right = 995.0
 offset_bottom = 802.0
 
 [connection signal="pressed" from="OrderPanel/MarginContainer/VBoxContainer/StartOrder" to="OrderPanel" method="_on_start_order_pressed"]
-[connection signal="phone_picked_up" from="PhonePrompt" to="Customer" method="appear"]
 [connection signal="take_order" from="Customer" to="OrderPanel" method="appear"]
+[connection signal="phone_picked_up" from="PhonePrompt" to="Customer" method="appear"]

@@ -3,6 +3,7 @@ extends Resource
 
 @export var id : String
 @export var unlocks : OrderBasic
+@export var customer_rect : Texture2D
 
 @export_range(1,11) var pass_score : int
 @export var description : String

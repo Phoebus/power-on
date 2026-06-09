@@ -3,8 +3,9 @@ extends Control
 
 signal take_order()
 
-@export var portrait : Texture2D
 @export var flip_portrait : bool = false
+
+var portrait : Texture2D = OrderHandler.current_order.customer_rect
 
 const SLIDE_DURATION : float = 0.35
 const SKEW : float = 80.0
