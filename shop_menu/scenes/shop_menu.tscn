@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://ci0p81gg0k2cy" path="res://pc_parts/part_resources/cpu/amd_5_7.tres" id="12_lrgqe"]
 [ext_resource type="Resource" uid="uid://c5wf6a76vrj62" path="res://pc_parts/part_resources/cpu/amd_9_7.tres" id="13_4vsqy"]
 [ext_resource type="PackedScene" uid="uid://btwckepgpa470" path="res://pc_parts/scenes/psu_part.tscn" id="13_21imm"]
+[ext_resource type="Script" uid="uid://c3wkfpb7u70hx" path="res://shop_menu/scripts/return_button.gd" id="13_wcmyo"]
 [ext_resource type="PackedScene" uid="uid://b6mboww2sfcqa" path="res://pc_parts/scenes/storage_part.tscn" id="14_0wujw"]
 [ext_resource type="Script" uid="uid://uwej0ruufnrx" path="res://shop_menu/scripts/money_spent_label.gd" id="14_m2ei0"]
 [ext_resource type="Resource" uid="uid://orbduv6rd5yn" path="res://pc_parts/part_resources/cpu/intel_5_12.tres" id="14_wcmyo"]
@@ -168,7 +169,7 @@ anchor_top = 0.875
 anchor_right = 0.984375
 anchor_bottom = 0.9351852
 theme = ExtResource("1_d3ese")
-text = "Συναρμολογηση!"
+text = "ΣΥΝΑΡΜΟΛΟΓΗΣΗ"
 script = ExtResource("16_dwk53")
 metadata/_edit_use_anchors_ = true
 
@@ -204,8 +205,7 @@ anchor_left = 0.8802083
 anchor_top = 0.7962963
 anchor_right = 0.984375
 anchor_bottom = 0.8564815
-text = "Υπενθυμιση 
-Παραγγελιας"
+text = "ΥΠΕΝΘΥΜΙΣΗ ΠΑΡΑΓΓΕΛΙΑΣ"
 autowrap_mode = 3
 script = ExtResource("57_lrgqe")
 metadata/_edit_use_anchors_ = true
@@ -235,6 +235,18 @@ theme = ExtResource("1_d3ese")
 theme_type_variation = &"PopupText"
 text = "PlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholder"
 vertical_alignment = 1
+
+[node name="ReturnButton" type="Button" parent="Panel" unique_id=1640470939]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017708333
+anchor_top = 0.018518519
+anchor_right = 0.121875
+anchor_bottom = 0.0787037
+theme = ExtResource("1_d3ese")
+text = "ΕΠΙΣΤΡΟΦΗ"
+script = ExtResource("13_wcmyo")
+metadata/_edit_use_anchors_ = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=767358338]
 clip_contents = false
@@ -535,3 +547,4 @@ data = ExtResource("48_1p5od")
 
 [connection signal="pressed" from="Panel/BuildButton" to="Panel/BuildButton" method="_on_pressed"]
 [connection signal="pressed" from="Panel/ReminderButton" to="Panel/ReminderButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/ReturnButton" to="Panel/ReturnButton" method="_on_pressed"]

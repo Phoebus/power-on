@@ -25,10 +25,10 @@ metadata/_custom_type_script = "uid://cjd673bq4yiob"
 [node name="TakeOrderLabel" type="RichTextLabel" parent="." unique_id=487968741]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.192
-anchor_top = -0.21954887
-anchor_right = 1.008
-anchor_bottom = -0.016541352
+anchor_left = -0.056
+anchor_top = -0.23308271
+anchor_right = 1.144
+anchor_bottom = -0.030075189
 theme = ExtResource("3_pdaxs")
 theme_type_variation = &"TakeOrderLabel"
 text = "Παρε Παραγγελια!"

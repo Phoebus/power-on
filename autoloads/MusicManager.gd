@@ -6,7 +6,7 @@ const TRACK_PATH : String = "res://assets/audio/size12.ogg"
 const DEFAULT_VOLUME_DB : float = -10.0
 const FILTER_CUTOFF_MUFFLED : float = 600.0
 const FILTER_CUTOFF_CLEAR : float = 20000.0
-const FILTER_TWEEN_DURATION : float = 3.0
+const FILTER_TWEEN_DURATION : float = 2.0
 
 var player : AudioStreamPlayer
 var _filter_tween : Tween
