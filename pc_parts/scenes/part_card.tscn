@@ -8,8 +8,8 @@
 [node name="PartCard" type="Control" unique_id=1488749326]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 3
-anchor_right = 0.104166664
-anchor_bottom = 0.18518518
+anchor_right = 0.15625
+anchor_bottom = 0.2777778
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -34,7 +34,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 
 [node name="Image" type="TextureRect" parent="CardContainer/VBoxContainer" unique_id=322842902]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -58,12 +58,12 @@ vertical_alignment = 1
 [node name="PriceTagContainer" type="PanelContainer" parent="." unique_id=1890857790]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.745
-anchor_top = -0.305
-anchor_right = 1.064359
-anchor_bottom = 0.35079086
-offset_right = 65.39975
-offset_bottom = -63.54946
+anchor_left = 0.8466667
+anchor_top = -0.24333331
+anchor_right = 1.0906433
+anchor_bottom = 0.268122
+offset_right = 76.80701
+offset_bottom = -73.43659
 rotation = 0.6357404
 mouse_filter = 1
 theme = ExtResource("1_u3g6n")

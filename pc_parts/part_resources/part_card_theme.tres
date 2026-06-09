@@ -1,17 +1,17 @@
 [gd_resource type="Theme" format=3 uid="uid://c30jlkqnsilg5"]
 
-[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_83jrn"]
+[ext_resource type="FontFile" uid="uid://d3bqlg5qr0tyx" path="res://assets/fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf" id="1_83jrn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1omkr"]
 bg_color = Color(0.6863316, 0.5843762, 0.42629787, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylmcr"]
-bg_color = Color(0.76999855, 0.53799796, 0.22866376, 1)
+bg_color = Color(0.99607843, 0.99607843, 0.99607843, 0.37254903)
 border_width_left = 16
 border_width_top = 16
 border_width_right = 16
 border_width_bottom = 16
-border_color = Color(0.91062385, 0.78525454, 0.50741076, 1)
+border_color = Color(0.5686275, 0.57254905, 0.5176471, 0.76862746)
 border_blend = true
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -47,11 +47,11 @@ MarginContainer/constants/margin_top = 30
 Panel/styles/panel = SubResource("StyleBoxFlat_1omkr")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_ylmcr")
 PartCardText/base_type = &"RichTextLabel"
-PartCardText/font_sizes/normal_font_size = 20
+PartCardText/font_sizes/normal_font_size = 32
 PopupPanel/styles/panel = SubResource("StyleBoxFlat_83jrn")
 PriceTag/base_type = &"PanelContainer"
 PriceTag/styles/panel = SubResource("StyleBoxFlat_fc0o5")
 PriceTagText/base_type = &"RichTextLabel"
-PriceTagText/font_sizes/normal_font_size = 36
-RichTextLabel/font_sizes/normal_font_size = 26
+PriceTagText/font_sizes/normal_font_size = 40
+RichTextLabel/font_sizes/normal_font_size = 32
 RichTextLabel/fonts/normal_font = ExtResource("1_83jrn")

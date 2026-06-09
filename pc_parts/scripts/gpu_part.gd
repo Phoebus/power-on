@@ -15,7 +15,7 @@ func _ready() -> void:
 func popup_init() -> void:
 	power.text = "[indent]Power Draw : " + str(data.power_draw) + "[/indent]"
 	vram.text = "[indent]Vram : " + str(data.vram) + "[/indent]"
-	perf_tier.text = "[indent]Performance Tier : " + str(data.performance_tier) + "[/indent]"
+	perf_tier.text = "[indent]Performance Tier : " + str(data.gpu_speed) + "[/indent]"
 	description.text = data.description
 
 func _on_button_pressed() -> void:

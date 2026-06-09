@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="StorageSpecs" format=3 uid="uid://ciyiuqu2kg6k8"]
 
 [ext_resource type="Script" uid="uid://uktc6wjgwax5" path="res://pc_parts/part_resources/storage_specs_res.gd" id="1_1d6fb"]
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_wlhv3"]
+[ext_resource type="Texture2D" uid="uid://dsqcwobo2pecy" path="res://assets/part_images/storage/storage_epic.png" id="1_wlhv3"]
 
 [resource]
 script = ExtResource("1_1d6fb")

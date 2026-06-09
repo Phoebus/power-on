@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://c2rsyi5ulvluo"]
 
 [ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="1_1prgt"]
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_u3w7c"]
+[ext_resource type="Texture2D" uid="uid://cytc8lgdl5hck" path="res://assets/part_images/psu/psu_epic.png" id="1_u3w7c"]
 
 [resource]
 script = ExtResource("1_1prgt")

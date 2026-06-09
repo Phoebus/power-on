@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://rvnwp875bt8l"]
 
 [ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_7fark"]
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_s07vk"]
+[ext_resource type="Texture2D" uid="uid://duywt182y147o" path="res://assets/part_images/cpu/cpu_rare.png" id="1_s07vk"]
 
 [resource]
 script = ExtResource("1_7fark")

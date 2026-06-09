@@ -10,10 +10,10 @@ func _ready() -> void:
 
    text = "Συνολο : \n0.0"
 
-func on_item_added(price : int) -> void:
-    money += price
+func on_item_added(part_data : PartGeneralData) -> void:
+    money += part_data.price
     text = "Συνολο : \n" + str(money)
 
-func on_item_removed(price : int) -> void:
-    money -= price
+func on_item_removed(part_data : PartGeneralData) -> void:
+    money -= part_data.price
     text = "Συνολο : \n" + str(money)

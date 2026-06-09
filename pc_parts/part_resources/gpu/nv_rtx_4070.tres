@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="GpuSpecs" format=3 uid="uid://dw4tuhh4cl0uj"]
 
 [ext_resource type="Script" uid="uid://c0x4k4iylv78" path="res://pc_parts/part_resources/gpu_specs_res.gd" id="1_0huc1"]
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_pldj2"]
+[ext_resource type="Texture2D" uid="uid://1tey5jukdihj" path="res://assets/part_images/gpu/gpu_rare.png" id="1_pldj2"]
 
 [resource]
 script = ExtResource("1_0huc1")

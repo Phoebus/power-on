@@ -122,306 +122,15 @@ anchor_right = 0.9380208
 anchor_bottom = 0.17604166
 metadata/_edit_use_anchors_ = true
 
-[node name="PartDisplayHandler" type="GridContainer" parent="Panel" unique_id=610050586]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.1
-anchor_right = 0.8666667
-anchor_bottom = 0.9179012
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("1_d3ese")
-columns = 5
-script = ExtResource("6_camqv")
-metadata/_edit_use_anchors_ = true
-
-[node name="CpuPart" parent="Panel/PartDisplayHandler" unique_id=707776067 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("11_2yjpj")
-
-[node name="CpuPart2" parent="Panel/PartDisplayHandler" unique_id=666493432 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("12_lrgqe")
-
-[node name="CpuPart3" parent="Panel/PartDisplayHandler" unique_id=1427259488 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("13_4vsqy")
-
-[node name="CpuPart4" parent="Panel/PartDisplayHandler" unique_id=847822350 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-
-[node name="CpuPart5" parent="Panel/PartDisplayHandler" unique_id=1928241225 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("14_wcmyo")
-
-[node name="CpuPart6" parent="Panel/PartDisplayHandler" unique_id=207222496 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("15_7y01w")
-
-[node name="CpuPart7" parent="Panel/PartDisplayHandler" unique_id=39376041 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("16_xcg64")
-
-[node name="CpuPart8" parent="Panel/PartDisplayHandler" unique_id=2143273173 instance=ExtResource("8_t1g3y")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("17_vxm8c")
-
-[node name="GpuPart" parent="Panel/PartDisplayHandler" unique_id=753525489 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("19_obxv0")
-
-[node name="GpuPart2" parent="Panel/PartDisplayHandler" unique_id=126295101 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("20_vr47q")
-
-[node name="GpuPart3" parent="Panel/PartDisplayHandler" unique_id=351766862 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("21_siurt")
-
-[node name="GpuPart4" parent="Panel/PartDisplayHandler" unique_id=817167245 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("22_j8oqu")
-
-[node name="GpuPart5" parent="Panel/PartDisplayHandler" unique_id=1951865429 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("23_5lqvt")
-
-[node name="GpuPart6" parent="Panel/PartDisplayHandler" unique_id=1682677205 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("24_eh367")
-
-[node name="GpuPart7" parent="Panel/PartDisplayHandler" unique_id=2042963421 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("25_f2kr2")
-
-[node name="GpuPart8" parent="Panel/PartDisplayHandler" unique_id=1826028125 instance=ExtResource("10_hk5il")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("26_p5enr")
-
-[node name="RamPart" parent="Panel/PartDisplayHandler" unique_id=1724671838 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("28_m6epm")
-
-[node name="RamPart2" parent="Panel/PartDisplayHandler" unique_id=93275748 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("29_0owxo")
-
-[node name="RamPart3" parent="Panel/PartDisplayHandler" unique_id=45074578 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("30_w2xgv")
-
-[node name="RamPart4" parent="Panel/PartDisplayHandler" unique_id=1029918760 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("31_al6st")
-
-[node name="RamPart5" parent="Panel/PartDisplayHandler" unique_id=1442645798 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("32_vh121")
-
-[node name="RamPart6" parent="Panel/PartDisplayHandler" unique_id=1052656046 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("33_3e4xk")
-
-[node name="RamPart7" parent="Panel/PartDisplayHandler" unique_id=1190122458 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("34_yodbm")
-
-[node name="RamPart8" parent="Panel/PartDisplayHandler" unique_id=16468797 instance=ExtResource("12_7vxou")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("35_73f2m")
-
-[node name="PsuPart" parent="Panel/PartDisplayHandler" unique_id=1383118440 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("37_jtmg0")
-
-[node name="PsuPart2" parent="Panel/PartDisplayHandler" unique_id=1442167553 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("38_7iirv")
-
-[node name="PsuPart3" parent="Panel/PartDisplayHandler" unique_id=459602725 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("39_nlnpw")
-
-[node name="PsuPart4" parent="Panel/PartDisplayHandler" unique_id=707242570 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("40_rug10")
-
-[node name="PsuPart5" parent="Panel/PartDisplayHandler" unique_id=1307863266 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("41_0litp")
-
-[node name="PsuPart6" parent="Panel/PartDisplayHandler" unique_id=1717813740 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("42_f6yjd")
-
-[node name="PsuPart7" parent="Panel/PartDisplayHandler" unique_id=1025828428 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("43_hfsgv")
-
-[node name="PsuPart8" parent="Panel/PartDisplayHandler" unique_id=1793574400 instance=ExtResource("13_21imm")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("44_4nirr")
-
-[node name="StoragePart" parent="Panel/PartDisplayHandler" unique_id=1123600629 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("46_2pv3a")
-
-[node name="StoragePart2" parent="Panel/PartDisplayHandler" unique_id=656734688 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("47_pi4bv")
-
-[node name="StoragePart3" parent="Panel/PartDisplayHandler" unique_id=760296018 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("48_1p5od")
-
-[node name="StoragePart4" parent="Panel/PartDisplayHandler" unique_id=1034767632 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("49_c767p")
-
-[node name="StoragePart5" parent="Panel/PartDisplayHandler" unique_id=1904631369 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("50_2oh3d")
-
-[node name="StoragePart6" parent="Panel/PartDisplayHandler" unique_id=1121805804 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("51_wvrg0")
-
-[node name="StoragePart7" parent="Panel/PartDisplayHandler" unique_id=431143539 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("52_22njf")
-
-[node name="StoragePart8" parent="Panel/PartDisplayHandler" unique_id=238932387 instance=ExtResource("14_0wujw")]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-data = ExtResource("53_maji0")
-
 [node name="MoneySpent" type="RichTextLabel" parent="Panel" unique_id=1700341537]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8802083
-anchor_top = 0.22222222
+anchor_top = 0.21296297
 anchor_right = 1.0
-anchor_bottom = 0.30555555
+anchor_bottom = 0.3148148
+offset_top = 9.999985
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_d3ese")
@@ -437,13 +146,12 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8802083
-anchor_top = 0.32407406
+anchor_top = 0.3611111
 anchor_right = 1.0
-anchor_bottom = 0.4074074
-offset_top = 3.0517578e-05
+anchor_bottom = 0.46296296
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 32
+theme = ExtResource("1_d3ese")
 text = "Placeholder :
 100"
 fit_content = true
@@ -475,10 +183,10 @@ anchor_left = 0.03
 anchor_top = 0.12
 anchor_right = 0.97
 anchor_bottom = 0.88
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 784.0
-offset_bottom = 184.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
 theme = ExtResource("1_d3ese")
 metadata/_edit_use_anchors_ = true
 
@@ -527,6 +235,303 @@ theme = ExtResource("1_d3ese")
 theme_type_variation = &"PopupText"
 text = "PlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholder"
 vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=767358338]
+clip_contents = false
+layout_mode = 0
+anchor_left = 0.17604166
+anchor_top = 0.106481485
+anchor_right = 0.8598958
+anchor_bottom = 0.9259259
+metadata/_edit_use_anchors_ = true
+
+[node name="PartDisplayHandler" type="GridContainer" parent="ScrollContainer" unique_id=610050586]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme = ExtResource("1_d3ese")
+columns = 3
+script = ExtResource("6_camqv")
+metadata/_edit_use_anchors_ = true
+
+[node name="CpuPart4" parent="ScrollContainer/PartDisplayHandler" unique_id=847822350 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="CpuPart" parent="ScrollContainer/PartDisplayHandler" unique_id=707776067 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("11_2yjpj")
+
+[node name="CpuPart5" parent="ScrollContainer/PartDisplayHandler" unique_id=1928241225 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("14_wcmyo")
+
+[node name="CpuPart2" parent="ScrollContainer/PartDisplayHandler" unique_id=666493432 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("12_lrgqe")
+
+[node name="CpuPart6" parent="ScrollContainer/PartDisplayHandler" unique_id=207222496 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("15_7y01w")
+
+[node name="CpuPart7" parent="ScrollContainer/PartDisplayHandler" unique_id=39376041 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("16_xcg64")
+
+[node name="CpuPart3" parent="ScrollContainer/PartDisplayHandler" unique_id=1427259488 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("13_4vsqy")
+
+[node name="CpuPart8" parent="ScrollContainer/PartDisplayHandler" unique_id=2143273173 instance=ExtResource("8_t1g3y")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("17_vxm8c")
+
+[node name="GpuPart4" parent="ScrollContainer/PartDisplayHandler" unique_id=817167245 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("22_j8oqu")
+
+[node name="GpuPart" parent="ScrollContainer/PartDisplayHandler" unique_id=753525489 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("19_obxv0")
+
+[node name="GpuPart5" parent="ScrollContainer/PartDisplayHandler" unique_id=1951865429 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("23_5lqvt")
+
+[node name="GpuPart2" parent="ScrollContainer/PartDisplayHandler" unique_id=126295101 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("20_vr47q")
+
+[node name="GpuPart6" parent="ScrollContainer/PartDisplayHandler" unique_id=1682677205 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("24_eh367")
+
+[node name="GpuPart3" parent="ScrollContainer/PartDisplayHandler" unique_id=351766862 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("21_siurt")
+
+[node name="GpuPart7" parent="ScrollContainer/PartDisplayHandler" unique_id=2042963421 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("25_f2kr2")
+
+[node name="GpuPart8" parent="ScrollContainer/PartDisplayHandler" unique_id=1826028125 instance=ExtResource("10_hk5il")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("26_p5enr")
+
+[node name="RamPart3" parent="ScrollContainer/PartDisplayHandler" unique_id=45074578 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("30_w2xgv")
+
+[node name="RamPart" parent="ScrollContainer/PartDisplayHandler" unique_id=1724671838 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("28_m6epm")
+
+[node name="RamPart2" parent="ScrollContainer/PartDisplayHandler" unique_id=93275748 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("29_0owxo")
+
+[node name="RamPart8" parent="ScrollContainer/PartDisplayHandler" unique_id=16468797 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("35_73f2m")
+
+[node name="RamPart4" parent="ScrollContainer/PartDisplayHandler" unique_id=1029918760 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("31_al6st")
+
+[node name="RamPart5" parent="ScrollContainer/PartDisplayHandler" unique_id=1442645798 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("32_vh121")
+
+[node name="RamPart6" parent="ScrollContainer/PartDisplayHandler" unique_id=1052656046 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("33_3e4xk")
+
+[node name="RamPart7" parent="ScrollContainer/PartDisplayHandler" unique_id=1190122458 instance=ExtResource("12_7vxou")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("34_yodbm")
+
+[node name="PsuPart6" parent="ScrollContainer/PartDisplayHandler" unique_id=1717813740 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("42_f6yjd")
+
+[node name="PsuPart" parent="ScrollContainer/PartDisplayHandler" unique_id=1383118440 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("37_jtmg0")
+
+[node name="PsuPart3" parent="ScrollContainer/PartDisplayHandler" unique_id=459602725 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("39_nlnpw")
+
+[node name="PsuPart7" parent="ScrollContainer/PartDisplayHandler" unique_id=1025828428 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("43_hfsgv")
+
+[node name="PsuPart2" parent="ScrollContainer/PartDisplayHandler" unique_id=1442167553 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("38_7iirv")
+
+[node name="PsuPart5" parent="ScrollContainer/PartDisplayHandler" unique_id=1307863266 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("41_0litp")
+
+[node name="PsuPart8" parent="ScrollContainer/PartDisplayHandler" unique_id=1793574400 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("44_4nirr")
+
+[node name="PsuPart4" parent="ScrollContainer/PartDisplayHandler" unique_id=707242570 instance=ExtResource("13_21imm")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("40_rug10")
+
+[node name="StoragePart2" parent="ScrollContainer/PartDisplayHandler" unique_id=656734688 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("47_pi4bv")
+
+[node name="StoragePart7" parent="ScrollContainer/PartDisplayHandler" unique_id=431143539 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("52_22njf")
+
+[node name="StoragePart4" parent="ScrollContainer/PartDisplayHandler" unique_id=1034767632 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("49_c767p")
+
+[node name="StoragePart" parent="ScrollContainer/PartDisplayHandler" unique_id=1123600629 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("46_2pv3a")
+
+[node name="StoragePart5" parent="ScrollContainer/PartDisplayHandler" unique_id=1904631369 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("50_2oh3d")
+
+[node name="StoragePart8" parent="ScrollContainer/PartDisplayHandler" unique_id=238932387 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("53_maji0")
+
+[node name="StoragePart6" parent="ScrollContainer/PartDisplayHandler" unique_id=1121805804 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("51_wvrg0")
+
+[node name="StoragePart3" parent="ScrollContainer/PartDisplayHandler" unique_id=760296018 instance=ExtResource("14_0wujw")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+data = ExtResource("48_1p5od")
 
 [connection signal="pressed" from="Panel/BuildButton" to="Panel/BuildButton" method="_on_pressed"]
 [connection signal="pressed" from="Panel/ReminderButton" to="Panel/ReminderButton" method="_on_pressed"]

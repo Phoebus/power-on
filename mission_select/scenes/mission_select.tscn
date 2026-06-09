@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c5nfybq4wdpx"]
 
 [ext_resource type="Script" uid="uid://cvmmpfeh6byvd" path="res://mission_select/scripts/mission_select.gd" id="1_ov730"]
+[ext_resource type="Theme" uid="uid://lymelg5qw5dd" path="res://main_menu/resources/main_menu_theme.tres" id="2_20pvo"]
 [ext_resource type="Script" uid="uid://gvmybxksqh1g" path="res://mission_select/scripts/mission_button.gd" id="3_0b6am"]
 [ext_resource type="Resource" uid="uid://dyoe1lweijmed" path="res://data/mission_resources/specific/games_high_budget.tres" id="4_0b6am"]
 [ext_resource type="Theme" uid="uid://c60txmxs6cojx" path="res://mission_select/resources/mission_select_theme.tres" id="5_dwqvo"]
@@ -25,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("5_dwqvo")
+theme = ExtResource("2_20pvo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1257566150]
 layout_mode = 1
@@ -47,14 +48,13 @@ metadata/_edit_use_anchors_ = true
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1082850643]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.23999998
-anchor_right = 0.95
-anchor_bottom = 0.95
+anchor_left = 0.08
+anchor_top = 0.23
+anchor_right = 0.92
+anchor_bottom = 0.82
 grow_horizontal = 2
 grow_vertical = 2
 columns = 5
-metadata/_edit_use_anchors_ = true
 
 [node name="MissionButton" type="Button" parent="GridContainer" unique_id=1073811208]
 custom_minimum_size = Vector2(300, 100)

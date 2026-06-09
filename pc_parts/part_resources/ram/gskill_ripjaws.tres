@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://c26ep388vqupf"]
 
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_g3yiq"]
+[ext_resource type="Texture2D" uid="uid://cofww7f24ct4n" path="res://assets/part_images/ram/ram_rare.png" id="1_g3yiq"]
 [ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_ijnjb"]
 
 [resource]

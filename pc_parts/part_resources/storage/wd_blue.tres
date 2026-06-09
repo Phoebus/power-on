@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="StorageSpecs" format=3 uid="uid://u1n0jc3umq2q"]
 
 [ext_resource type="Script" uid="uid://uktc6wjgwax5" path="res://pc_parts/part_resources/storage_specs_res.gd" id="1_7jfjk"]
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_poihk"]
+[ext_resource type="Texture2D" uid="uid://da5qtt3cvk1jm" path="res://assets/part_images/storage/storage_common.png" id="1_poihk"]
 
 [resource]
 script = ExtResource("1_7jfjk")

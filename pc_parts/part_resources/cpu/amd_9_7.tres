@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CpuSpecs" format=3 uid="uid://c5wf6a76vrj62"]
 
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_2cbgh"]
+[ext_resource type="Texture2D" uid="uid://bkylnn0kdh3hs" path="res://assets/part_images/cpu/cpu_epic.png" id="1_2cbgh"]
 [ext_resource type="Script" uid="uid://x57gt7nljb7c" path="res://pc_parts/part_resources/cpu_specs_res.gd" id="1_d4e7o"]
 
 [resource]
