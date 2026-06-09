@@ -428,7 +428,7 @@ anchor_top = 0.09259259
 anchor_right = 0.953125
 anchor_bottom = 0.18518518
 theme = ExtResource("1_jab16")
-text = "Συνεχεια"
+text = "ΣΥΝΕΧΕΙΑ"
 metadata/_edit_use_anchors_ = true
 
 [node name="RetryButton" type="Button" parent="." unique_id=781886301]
@@ -439,7 +439,7 @@ anchor_top = 0.09259259
 anchor_right = 0.7708333
 anchor_bottom = 0.18518518
 theme = ExtResource("1_jab16")
-text = "Ξανα Προσπαθησε"
+text = "ΞΑΝΑ ΠΡΟΣΠΑΘΗΣΕ"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
