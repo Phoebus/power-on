@@ -8,6 +8,7 @@ extends PanelContainer
 @onready var start_order_button = $MarginContainer/VBoxContainer/StartOrder
 
 func _ready() -> void:
+	MusicManager.set_filter(true)
 	visible = false
 	scale = Vector2(0.0, 0.0)
 

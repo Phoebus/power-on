@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	pass
+	MusicManager.set_filter(true)
 
 func _on_play_pressed() -> void:
 	SceneSwitcher.to_mission_select()
