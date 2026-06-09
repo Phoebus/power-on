@@ -16,7 +16,7 @@ extends Control
 @onready var continue_btn : Button = $ContinueButton
 
 func _ready() -> void:
-
+	MusicManager.set_filter(true)
 	var results : OrderResults = OrderHandler.perform_checks()
 	assign_msg(results)
 

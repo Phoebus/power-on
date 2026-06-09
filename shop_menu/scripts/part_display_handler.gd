@@ -6,6 +6,7 @@ var display_mode : Globals.PART_TYPE = Globals.PART_TYPE.NONE
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicManager.set_filter(false)
 	switch_display_mode(Globals.PART_TYPE.CPU)
 
 	# Connect signals.
