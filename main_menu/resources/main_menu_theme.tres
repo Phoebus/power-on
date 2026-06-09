@@ -1,18 +1,20 @@
 [gd_resource type="Theme" format=3 uid="uid://lymelg5qw5dd"]
 
-[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_gru1k"]
 [ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_twvdq"]
 [ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="3_njxn0"]
+[ext_resource type="FontFile" uid="uid://d3bqlg5qr0tyx" path="res://assets/fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf" id="4_njxn0"]
+[ext_resource type="Texture2D" uid="uid://hnutetnculyk" path="res://assets/backgrounds/main_background.png" id="4_ye1cp"]
+[ext_resource type="FontFile" uid="uid://bdug2tfh2jmo7" path="res://assets/fonts/UbuntuMono-Regular.ttf" id="5_ye1cp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcfyi"]
-bg_color = Color(0.54509807, 0.6431373, 0.3647059, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgvxc"]
+texture = ExtResource("4_ye1cp")
 
 [resource]
-Button/font_sizes/font_size = 42
-Button/fonts/font = ExtResource("1_gru1k")
+Button/font_sizes/font_size = 52
+Button/fonts/font = ExtResource("4_njxn0")
 Button/styles/hover = ExtResource("2_twvdq")
 Button/styles/normal = ExtResource("3_njxn0")
 Button/styles/pressed = ExtResource("3_njxn0")
-Panel/styles/panel = SubResource("StyleBoxFlat_rcfyi")
-RichTextLabel/font_sizes/normal_font_size = 82
-RichTextLabel/fonts/normal_font = ExtResource("1_gru1k")
+Panel/styles/panel = SubResource("StyleBoxTexture_dgvxc")
+RichTextLabel/font_sizes/normal_font_size = 22
+RichTextLabel/fonts/normal_font = ExtResource("5_ye1cp")

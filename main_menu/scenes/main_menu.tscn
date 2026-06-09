@@ -24,26 +24,33 @@ theme = ExtResource("1_u584x")
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1779420504]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.39800003
-anchor_right = 0.60200006
-anchor_bottom = 1.0
-offset_left = 152.83997
-offset_top = 216.0
-offset_right = -152.84009
-offset_bottom = -841.0
+anchor_left = 0.17630209
+anchor_top = 0.13
+anchor_right = 0.8236979
+anchor_bottom = 0.2851852
+offset_left = 33.0
+offset_right = -33.0
 grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_u584x")
-text = "POWER ON"
+text = "░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓███████▓▒░        ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░ 
+░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░ ░▒▓███████▓▒░       ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░ 
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░ 
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░       
+░▒▓█▓▒░       ░▒▓██████▓▒░ ░▒▓█████████████▓▒░░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░       ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░"
 fit_content = true
 autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="ButtonsVBox" type="VBoxContainer" parent="." unique_id=1841606018]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.7
-anchor_right = 0.3
-anchor_bottom = 0.95
+anchor_left = 0.4
+anchor_top = 0.65
+anchor_right = 0.6
+anchor_bottom = 0.9
 metadata/_edit_use_anchors_ = true
 
 [node name="Play" type="Button" parent="ButtonsVBox" unique_id=165652588]
@@ -52,7 +59,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme = ExtResource("1_u584x")
-text = "Εκκινηση"
+text = "ΕΚΚΙΝΗΣΗ"
 
 [node name="Quit" type="Button" parent="ButtonsVBox" unique_id=708061536]
 custom_minimum_size = Vector2(300, 80)
@@ -60,7 +67,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme = ExtResource("1_u584x")
-text = "Κλεισιμο
+text = "ΚΛΕΙΣΙΜΟ
 "
 
 [connection signal="pressed" from="ButtonsVBox/Play" to="." method="_on_play_pressed"]
