@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="RamSpecs" format=3 uid="uid://c6fkf8k0f4v26"]
 
 [ext_resource type="Script" uid="uid://j8rns8xdmumq" path="res://pc_parts/part_resources/ram_specs_res.gd" id="1_bcix5"]
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_fi5gh"]
+[ext_resource type="Texture2D" uid="uid://bmtxi56v6fvg5" path="res://assets/part_images/ram/ram_epic.png" id="1_fi5gh"]
 
 [resource]
 script = ExtResource("1_bcix5")

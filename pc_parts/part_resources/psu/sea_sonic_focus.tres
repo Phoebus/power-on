@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PsuSpecs" format=3 uid="uid://tluk6brdb1yh"]
 
-[ext_resource type="Texture2D" uid="uid://dwtol072du0ds" path="res://icon.svg" id="1_p0pck"]
+[ext_resource type="Texture2D" uid="uid://d1ogrv7vhyqao" path="res://assets/part_images/gpu/gpu_epic.png" id="1_p0pck"]
 [ext_resource type="Script" uid="uid://do6xns60reviw" path="res://pc_parts/part_resources/psu_specs_res.gd" id="2_pu8va"]
 
 [resource]

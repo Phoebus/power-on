@@ -20,7 +20,7 @@ func add_part(part_data : PartGeneralData) -> void:
 		var new_item : CartPartRow = in_cart_part_row.instantiate().with_data(part_data)
 		part_list.add_child(new_item)
 		new_item.item_removal.connect(on_item_removal)	
-		on_item_added.emit(part_data.price)
+		on_item_added.emit(part_data)
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -29,4 +29,4 @@ func _on_gui_input(event: InputEvent) -> void:
 
 func on_item_removal(part_data : PartGeneralData) -> void:
 	OrderHandler.remove_part_from_arrays(part_data)
-	on_item_removed.emit(part_data.price)
+	on_item_removed.emit(part_data)

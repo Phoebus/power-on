@@ -1,4 +1,16 @@
 extends RichTextLabel
 
+@onready var cart_icon : Cart = $"../cart_panel"
+@onready var money_spent : RichTextLabel = $"../MoneySpent"
+var budget : float
+
 func _ready() -> void:
-	text = "Διαθεσιμο Ποσο : \n" + str(OrderHandler.current_order.budget)
+	budget = OrderHandler.current_order.budget
+	text = "Διαθεσιμο Ποσο : \n" + str(budget)
+
+	cart_icon.on_item_added.connect(update_budget)
+	cart_icon.on_item_removed.connect(update_budget)
+
+func update_budget(_data: PartGeneralData) -> void:
+	text = "Διαθεσιμο Ποσο : \n" + str(budget - money_spent.money)
+

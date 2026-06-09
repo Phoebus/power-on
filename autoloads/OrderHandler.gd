@@ -37,10 +37,10 @@ func remove_part_from_arrays(part_data : PartGeneralData) -> void:
 		player_storage.erase(part_data)
 
 func strict_checks() -> Dictionary:
-	if not check_single_items():
-		return {"passed" : false, "error" : "Μπορεις να επιλεξεις μονο 1 απο καθε ειδος αντικειμενου!"}
-	elif not check_budget():
+	if not check_budget():
 		return {"passed" : false, "error" : "Εχεις ξεπερασει το διαθεσιμο ποσο!"}
+	elif not check_single_items():
+		return {"passed" : false, "error" : "Μπορεις να επιλεξεις μονο 1 απο καθε ειδος αντικειμενου!"}
 	elif not check_at_least_one():
 		return {"passed" : false, "error" : "Δεν εχεις επιλεξει 1 απο καθε ειδος αντικειμενου!"}
 	
@@ -106,7 +106,7 @@ func perform_checks() -> OrderResults:
 		results.gpu_vram_msg = "Passed!"
 		results.score += 1
 	
-	if player_gpu.get(0).performance_tier < current_order.gpu_speed:
+	if player_gpu.get(0).gpu_speed < current_order.gpu_speed:
 		results.gpu_speed_msg = current_order.gpu_speed_fail_msg
 	else:
 		results.gpu_speed_msg = "Passed!"
