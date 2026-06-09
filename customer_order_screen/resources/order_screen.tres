@@ -2,7 +2,11 @@
 
 [ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="2_bq0ht"]
 [ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_r4yc4"]
-[ext_resource type="FontFile" uid="uid://dj8hlgjx5dk8k" path="res://assets/fonts/Tiny5-Regular.ttf" id="4_u4s17"]
+[ext_resource type="Texture2D" uid="uid://bq5gsimtcpe70" path="res://assets/backgrounds/order_screen.png" id="4_6gw6x"]
+[ext_resource type="FontFile" uid="uid://d3bqlg5qr0tyx" path="res://assets/fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf" id="5_tatl5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tatl5"]
+texture = ExtResource("4_6gw6x")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcwyi"]
 bg_color = Color(0.9254902, 0.8862745, 0.83137256, 1)
@@ -21,8 +25,8 @@ shadow_size = 6
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 24
-Button/fonts/font = ExtResource("4_u4s17")
+Button/font_sizes/font_size = 38
+Button/fonts/font = ExtResource("5_tatl5")
 Button/styles/hover = ExtResource("2_r4yc4")
 Button/styles/normal = ExtResource("2_bq0ht")
 Button/styles/pressed = ExtResource("2_bq0ht")
@@ -32,9 +36,10 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 30
 OrderPanelText/base_type = &"RichTextLabel"
 OrderPanelText/colors/default_color = Color(0.07123137, 0.07123139, 0.07123137, 1)
-OrderPanelText/font_sizes/normal_font_size = 40
+OrderPanelText/font_sizes/normal_font_size = 52
+Panel/styles/panel = SubResource("StyleBoxTexture_tatl5")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_fcwyi")
-RichTextLabel/font_sizes/normal_font_size = 32
-RichTextLabel/fonts/normal_font = ExtResource("4_u4s17")
+RichTextLabel/font_sizes/normal_font_size = 34
+RichTextLabel/fonts/normal_font = ExtResource("5_tatl5")
 TakeOrderLabel/base_type = &"RichTextLabel"
-TakeOrderLabel/font_sizes/normal_font_size = 52
+TakeOrderLabel/font_sizes/normal_font_size = 62
