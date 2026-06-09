@@ -13,22 +13,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Panel" type="Panel" parent="." unique_id=259584431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_m3m5a")
+
 [node name="Player" type="TextureRect" parent="." unique_id=1770892494]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 33.0
-offset_top = 598.0
-offset_right = -1512.0
-offset_bottom = 183.0
+offset_left = 541.0
+offset_top = 604.0
+offset_right = -1004.0
+offset_bottom = 189.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_knsar")
 expand_mode = 1
-flip_h = true
 
 [node name="OrderPanel" type="PanelContainer" parent="." unique_id=2050786596]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -74,9 +83,14 @@ size_flags_horizontal = 8
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
 theme = ExtResource("3_m3m5a")
-text = "ΕΝΑΡΞΗ!"
+text = "ΕΝΑΡΞΗ"
 
 [node name="Customer" parent="." unique_id=1267655347 instance=ExtResource("1_70lk0")]
 layout_mode = 1
+offset_left = 85.0
+offset_top = 608.0
+offset_right = -1460.0
+offset_bottom = 193.0
+flip_h = true
 
 [connection signal="pressed" from="OrderPanel/MarginContainer/VBoxContainer/StartOrder" to="OrderPanel" method="_on_start_order_pressed"]

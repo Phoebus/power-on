@@ -5,6 +5,11 @@ extends Button
 
 func _ready() -> void:
 	pressed.connect(on_pressed)
+	
+	if mission_order == null:
+		disabled = true
+		return
+	
 	disabled = not Globals.check_mission_available(mission_order.id)
 	#print("Button " + name + ", availability " + str(Globals.save_data.availability_list[mission_order.id]))
 
