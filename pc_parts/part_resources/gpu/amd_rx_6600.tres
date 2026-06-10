@@ -6,7 +6,6 @@
 [resource]
 script = ExtResource("1_0axgc")
 vram = 8
-gpu_speed = 2
 name = "AMD RX 6600"
 price = 220
 id = "gpu_002"

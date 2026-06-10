@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://3bxr2o2d66b5"]
+[gd_scene format=3 uid="uid://bwhuselcsmhog"]
 
-[ext_resource type="Script" path="res://customer_order_screen/scripts/phone_prompt.gd" id="1"]
+[ext_resource type="Script" uid="uid://dbl452qecf277" path="res://customer_order_screen/scripts/phone_prompt.gd" id="1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
 content_margin_left = 14.0

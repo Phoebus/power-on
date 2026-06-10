@@ -6,7 +6,6 @@
 [resource]
 script = ExtResource("1_xmraf")
 vram = 12
-gpu_speed = 3
 name = "AMD RX 6700 XT"
 price = 350
 id = "gpu_004"

@@ -6,7 +6,6 @@
 [resource]
 script = ExtResource("1_8puyo")
 vram = 24
-gpu_speed = 5
 name = "NVIDIA RTX 4090"
 price = 1600
 id = "gpu_008"
