@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dthngd20ayvus" path="res://customer_order_screen/scenes/customer.tscn" id="1_70lk0"]
 [ext_resource type="Theme" uid="uid://c22x4tej8h8ow" path="res://customer_order_screen/resources/order_screen.tres" id="3_m3m5a"]
-[ext_resource type="Texture2D" uid="uid://tptmobk1be54" path="res://assets/placeholder/customers/leonk.png" id="6_knsar"]
 [ext_resource type="Script" uid="uid://bi1ufm6oofd7j" path="res://customer_order_screen/scripts/order_panel.gd" id="7_mbqak"]
+[ext_resource type="PackedScene" uid="uid://3bxr2o2d66b5" path="res://customer_order_screen/scenes/phone_prompt.tscn" id="8_phone"]
 
 [node name="OrderScreen" type="Control" unique_id=631616782]
 layout_mode = 3
@@ -21,20 +21,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_m3m5a")
-
-[node name="Player" type="TextureRect" parent="." unique_id=1770892494]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 541.0
-offset_top = 604.0
-offset_right = -1004.0
-offset_bottom = 189.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_knsar")
-expand_mode = 1
 
 [node name="OrderPanel" type="PanelContainer" parent="." unique_id=2050786596]
 visible = false
@@ -71,7 +57,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 theme = ExtResource("3_m3m5a")
 theme_type_variation = &"OrderPanelText"
-text = "Διαθεσιμο Ποσο : "
+text = "Διαθέσιμο Ποσό : "
 fit_content = true
 autowrap_mode = 0
 vertical_alignment = 1
@@ -87,10 +73,19 @@ text = "ΕΝΑΡΞΗ"
 
 [node name="Customer" parent="." unique_id=1267655347 instance=ExtResource("1_70lk0")]
 layout_mode = 1
-offset_left = 85.0
-offset_top = 608.0
-offset_right = -1460.0
-offset_bottom = 193.0
-flip_h = true
+offset_top = 60.0
+offset_right = -1100.0
+offset_bottom = -60.0
+flip_portrait = true
+
+[node name="PhonePrompt" parent="." unique_id=1542538133 instance=ExtResource("8_phone")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+offset_left = 826.0
+offset_top = 653.0
+offset_right = 995.0
+offset_bottom = 802.0
 
 [connection signal="pressed" from="OrderPanel/MarginContainer/VBoxContainer/StartOrder" to="OrderPanel" method="_on_start_order_pressed"]
+[connection signal="take_order" from="Customer" to="OrderPanel" method="appear"]
+[connection signal="phone_picked_up" from="PhonePrompt" to="Customer" method="appear"]

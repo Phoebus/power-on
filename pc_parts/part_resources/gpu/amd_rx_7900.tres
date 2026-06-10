@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_kg85f")
 vram = 16
+gpu_speed = 4
 name = "AMD RX 7900 GRE"
 price = 550
 id = "gpu_006"

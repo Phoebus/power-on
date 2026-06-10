@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bajd6w3e31emm" path="res://pc_parts/scenes/part_card.tscn" id="2_c5end"]
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="3_n2q7d"]
 [ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="4_vu6ni"]
-[ext_resource type="Texture2D" uid="uid://if2byjdjwg20" path="res://assets/blue_plus.png" id="5_7f61d"]
 
 [node name="StoragePart" type="Control" unique_id=1123600629]
 layout_mode = 3
@@ -84,8 +83,8 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-icon = ExtResource("5_7f61d")
-flat = true
+theme = ExtResource("3_n2q7d")
+theme_type_variation = &"PartPanelBtn"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="pressed" from="PopupPanel/MarginContainer/Button" to="." method="_on_button_pressed"]

@@ -7,6 +7,7 @@ func _ready() -> void:
 	popup.hide()
 
 func _on_pressed() -> void:
+	MusicManager.play_sfx(MusicManager.CLICK_SFX_PATH)
 	var check_result : Dictionary = OrderHandler.strict_checks()
 
 	if check_result["passed"]:

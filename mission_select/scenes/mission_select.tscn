@@ -3,12 +3,10 @@
 [ext_resource type="Script" uid="uid://cvmmpfeh6byvd" path="res://mission_select/scripts/mission_select.gd" id="1_ov730"]
 [ext_resource type="Theme" uid="uid://lymelg5qw5dd" path="res://main_menu/resources/main_menu_theme.tres" id="2_20pvo"]
 [ext_resource type="Script" uid="uid://gvmybxksqh1g" path="res://mission_select/scripts/mission_button.gd" id="3_0b6am"]
-[ext_resource type="Resource" uid="uid://dyoe1lweijmed" path="res://data/mission_resources/specific/games_high_budget.tres" id="4_0b6am"]
 [ext_resource type="Theme" uid="uid://c60txmxs6cojx" path="res://mission_select/resources/mission_select_theme.tres" id="5_dwqvo"]
-[ext_resource type="Resource" uid="uid://b7wqusavbiko3" path="res://data/mission_resources/specific/temp_order.tres" id="6_20pvo"]
-[ext_resource type="Resource" uid="uid://cd2knnhx30byd" path="res://data/mission_resources/specific/temp2.tres" id="7_w6qrh"]
-[ext_resource type="Resource" uid="uid://boqc3ysgxt1pj" path="res://data/mission_resources/specific/temp3.tres" id="8_v78ma"]
-[ext_resource type="Resource" uid="uid://c7b4yijg3dm67" path="res://data/mission_resources/specific/temp4.tres" id="9_n50af"]
+[ext_resource type="Resource" uid="uid://bdvyjbt5dvr42" path="res://data/mission_resources/specific/mission1.tres" id="5_kpsgp"]
+[ext_resource type="Resource" uid="uid://vnb75jxh2sk6" path="res://data/mission_resources/specific/mission2.tres" id="6_01rjg"]
+[ext_resource type="Resource" uid="uid://dyfd6lkkiunyq" path="res://data/mission_resources/specific/mission3.tres" id="7_20pvo"]
 
 [node name="MissionSelect" type="Control" unique_id=1363248469]
 layout_mode = 3
@@ -54,7 +52,7 @@ anchor_right = 0.92
 anchor_bottom = 0.82
 grow_horizontal = 2
 grow_vertical = 2
-columns = 5
+columns = 3
 
 [node name="MissionButton" type="Button" parent="GridContainer" unique_id=1073811208]
 custom_minimum_size = Vector2(300, 100)
@@ -62,9 +60,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 1"
+text = "Επίπεδο 1"
 script = ExtResource("3_0b6am")
-mission_order = ExtResource("4_0b6am")
+mission_order = ExtResource("5_kpsgp")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"
 
 [node name="MissionButton2" type="Button" parent="GridContainer" unique_id=2136808941]
@@ -73,9 +71,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 2"
+text = "Επίπεδο 2"
 script = ExtResource("3_0b6am")
-mission_order = ExtResource("6_20pvo")
+mission_order = ExtResource("6_01rjg")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"
 
 [node name="MissionButton3" type="Button" parent="GridContainer" unique_id=1783565537]
@@ -84,49 +82,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 3"
+text = "Επίπεδο 3"
 script = ExtResource("3_0b6am")
-mission_order = ExtResource("8_v78ma")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton4" type="Button" parent="GridContainer" unique_id=1649768409]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 4"
-script = ExtResource("3_0b6am")
-mission_order = ExtResource("9_n50af")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton5" type="Button" parent="GridContainer" unique_id=459277817]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 5"
-script = ExtResource("3_0b6am")
-mission_order = ExtResource("7_w6qrh")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton6" type="Button" parent="GridContainer" unique_id=1239385430]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 6"
-script = ExtResource("3_0b6am")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton7" type="Button" parent="GridContainer" unique_id=879562453]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 7"
-script = ExtResource("3_0b6am")
+mission_order = ExtResource("7_20pvo")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"

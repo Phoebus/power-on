@@ -14,19 +14,24 @@ extends Control
 
 @onready var retry_btn : Button = $RetryButton
 @onready var continue_btn : Button = $ContinueButton
+@onready var score_lbl : RichTextLabel = $Score
 
 func _ready() -> void:
 	MusicManager.set_filter(true)
+	MusicManager.play_sfx(MusicManager.COMPLETED_ORDER_SFX_PATH)
 	var results : OrderResults = OrderHandler.perform_checks()
 	assign_msg(results)
 
 	# The retry button is enabled only if the player didn't pass.
 	retry_btn.disabled = results.score_passed
-	
+
 	# If passed unlock the next mission and save the game.
 	if results.score_passed:
-		Globals.save_data[OrderHandler.current_order.unlocks.id] = true
-		Globals.save_game()
+		if OrderHandler.current_order.unlocks != null:
+			Globals.save_data[OrderHandler.current_order.unlocks.id] = true
+			Globals.save_game()
+	
+	score_lbl.text = "ΣΚΟΡ: " + str(results.score)
 	
 func assign_msg(results : OrderResults) -> void:
 	cpu_cores.text = results.cpu_cores_msg
@@ -42,8 +47,10 @@ func assign_msg(results : OrderResults) -> void:
 	stor_type.text = results.storage_type_msg
 
 func _on_retry_button_pressed() -> void:
+	MusicManager.play_sfx(MusicManager.CLICK_SFX_PATH)
 	SceneSwitcher.retry_mission()
 
 func _on_continue_button_pressed() -> void:
+	MusicManager.play_sfx(MusicManager.CLICK_SFX_PATH)
 	SceneSwitcher.to_mission_select()
 	#get_tree().quit()

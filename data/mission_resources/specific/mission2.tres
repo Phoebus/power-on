@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://vnb75jxh2sk6"]
+
+[ext_resource type="Texture2D" uid="uid://dhg0515gdhtp1" path="res://assets/customers/leon_papa.png" id="1_g6hc2"]
+[ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order.gd" id="1_ogcmm"]
+[ext_resource type="Resource" uid="uid://dyfd6lkkiunyq" path="res://data/mission_resources/specific/mission3.tres" id="3_umh6p"]
+
+[resource]
+script = ExtResource("1_ogcmm")
+id = "Mission2"
+unlocks = ExtResource("3_umh6p")
+customer_rect = ExtResource("1_g6hc2")
+pass_score = 8
+description = "Χρειάζομαι έναν φοβερά δυνατό υπολογιστή γραφείου για εργασίες δημιουργίας γραφικών και επεξεργασίας βίντεο"
+reminder_description = "Υπολογιστής για απαιτητικές δουλειές γραφείου"
+budget = 1800
+cpu_cores = 12
+cpu_specialization = 2
+gpu_vram = 8
+gpu_speed = 4
+ram_size = 32
+ram_speed = 4
+storage_size = 2000
+storage_type = 1
+psu_certification = 3
+cpu_cores_fail_msg = "Ανεπαρκείς πυρήνες περιορίζουν τις εργασίες που μπορούν να πραγματοποιηθούν ταυτόχρονα στον υπολογιστή, έτσι δημιουργείται καθυστέρηση"
+cpu_specialization_fail_msg = "Ένας επεξεργαστής που ειδικεύεται σε δουλειά γραφείου θα μπορούσε να παρέχει καλύτερη απόδοση με λιγότερα χρήματα και με μικρότερη χρήση ενέργειας"
+gpu_vram_fail_msg = "Ανεπαρκής μνήμη VRAM στην κάρτα γραφικών θα κάνει μερικά προγράμματα να μην μπορούν να τρέξουν"
+gpu_speed_fail_msg = "Μία αργή κάρτα γραφικών θα οδηγήσει σε καθυστέρηση στα πιο βαριά γραφιστικά προγράμματα"
+ram_size_fail_msg = "Ανεπαρκής μνήμη RAM θα κάνει μερικά προγράμματα να μην μπορούν να τρέξουν"
+ram_speed_fail_msg = "Αργή RAM δημιουργεί καθυστέρηση ακόμη και σε απλές λειτουργίες του υπολογιστή με αποτέλεσμα τη μείωση της παραγωγικότητας κατά τη διάρκεια εργασίας"
+storage_type_fail_msg = "Ο τύπος του αποθηκευτικού χώρου επηρεάζει την ταχύτητα του υπολογιστή κάθε φορά που εκτελείται η διαδικασία αποθήκευσης αρχείων. Ένας αργός τύπος δημιουργεί καθυστέρηση ακόμη και σε απλές λειτουργίες του υπολογιστή με αποτέλεσμα τη μείωση της παραγωγικότητας κατά τη διάρκεια εργασίας"
+storage_size_fail_msg = "Ανεπαρκής αποθηκευτικός χώρος περιορίζει τα προγράμματα και τα project που μπορούμε να έχουμε εγκατεστημένα στον υπολογιστή"
+psu_power_supply_fail_msg = "Ανεπαρκής ηλεκτρική ενέργεια προς τα μέλη του υπολογιστή μειώνει την απόδοσή τους και μπορεί να οδηγήσει σε crashes κατά τη λειτουργία πιο απαιτητικών προγραμμάτων"
+psu_certification_fail_msg = "Η πιστοποίηση του τροφοδοτικού δείχνει την αξιοπιστία του, δηλαδή τη δυνατότητά του να αποδίδει κανονικά κατά τη διάρκεια μεγάλου φόρτου εργασίας και για πολλές ώρες"
+metadata/_custom_type_script = "uid://dg8o68jfl5nq"

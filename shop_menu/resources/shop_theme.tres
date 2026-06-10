@@ -2,7 +2,10 @@
 
 [ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="2_gc1ps"]
 [ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_obp5a"]
+[ext_resource type="Texture2D" uid="uid://bgmxiikqqbukc" path="res://assets/blue_minus.png" id="4_5eji6"]
 [ext_resource type="Texture2D" uid="uid://b83kv7lg1eimr" path="res://assets/backgrounds/shop_background.png" id="4_7a7k8"]
+[ext_resource type="StyleBox" uid="uid://b32bjchjsjuc2" path="res://pc_parts/part_resources/themes/btn_hover.tres" id="5_5eji6"]
+[ext_resource type="Texture2D" uid="uid://if2byjdjwg20" path="res://assets/blue_plus.png" id="5_aitdq"]
 [ext_resource type="FontFile" uid="uid://d3bqlg5qr0tyx" path="res://assets/fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf" id="5_e0qr6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04mib"]
@@ -12,6 +15,16 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 corner_detail = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ht4jb"]
+texture = ExtResource("4_5eji6")
+modulate_color = Color(0.70796657, 0.7079665, 0.7079665, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1g5o"]
+texture = ExtResource("4_5eji6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5juy"]
+texture = ExtResource("4_5eji6")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ciopv"]
 content_margin_left = 4.0
@@ -27,13 +40,19 @@ shadow_size = 4
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0qr6"]
 texture = ExtResource("4_7a7k8")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5eji6"]
+texture = ExtResource("5_aitdq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aitdq"]
+texture = ExtResource("5_aitdq")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym2fe"]
 bg_color = Color(0.89787424, 0.90034187, 0.886061, 1)
 border_width_left = 16
 border_width_top = 16
 border_width_right = 16
 border_width_bottom = 16
-border_color = Color(0.54509807, 0.6431373, 0.3647059, 1)
+border_color = Color(0.55005217, 0.5426702, 0.5118605, 1)
 border_blend = true
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -52,8 +71,14 @@ Button/styles/normal = ExtResource("2_gc1ps")
 Button/styles/pressed = ExtResource("2_gc1ps")
 CartPanel/base_type = &"Panel"
 CartPanel/styles/panel = SubResource("StyleBoxFlat_04mib")
+CartPanelBtn/base_type = &"Button"
+CartPanelBtn/styles/hover = SubResource("StyleBoxTexture_ht4jb")
+CartPanelBtn/styles/normal = SubResource("StyleBoxTexture_o1g5o")
+CartPanelBtn/styles/pressed = SubResource("StyleBoxTexture_q5juy")
 CategoryPanel/base_type = &"Panel"
 CategoryPanel/styles/panel = SubResource("StyleBoxFlat_ciopv")
+CategoryText/base_type = &"RichTextLabel"
+CategoryText/font_sizes/normal_font_size = 46
 GridContainer/constants/h_separation = 100
 GridContainer/constants/v_separation = 100
 MarginContainer/constants/margin_bottom = 30
@@ -61,6 +86,10 @@ MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 30
 Panel/styles/panel = SubResource("StyleBoxTexture_e0qr6")
+PartPanelBtn/base_type = &"Button"
+PartPanelBtn/styles/hover = ExtResource("5_5eji6")
+PartPanelBtn/styles/normal = SubResource("StyleBoxTexture_5eji6")
+PartPanelBtn/styles/pressed = SubResource("StyleBoxTexture_aitdq")
 PartRowText/base_type = &"RichTextLabel"
 PartRowText/colors/default_color = Color(0, 0, 0, 1)
 PartRowText/font_sizes/normal_font_size = 42

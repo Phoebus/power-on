@@ -14,4 +14,5 @@ func _ready() -> void:
 	#print("Button " + name + ", availability " + str(Globals.save_data.availability_list[mission_order.id]))
 
 func on_pressed() -> void:
+	MusicManager.play_sfx(MusicManager.CLICK_SFX_PATH)
 	Globals.emit_mission_button_clicked_signal(mission_order)

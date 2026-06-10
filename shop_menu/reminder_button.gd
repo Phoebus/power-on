@@ -8,4 +8,5 @@ func _ready() -> void:
     reminder_label.text = OrderHandler.current_order.reminder_description
 
 func _on_pressed() -> void:
+    MusicManager.play_sfx(MusicManager.CLICK_SFX_PATH)
     popup.show()

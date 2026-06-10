@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_dgcc5")
 vram = 12
+gpu_speed = 2
 name = "NVIDIA RTX 3060"
 price = 300
 id = "gpu_003"
