@@ -10,6 +10,9 @@ var player_ram : Array[RamSpecs]
 var player_psu : Array[PsuSpecs]
 var player_storage : Array[StorageSpecs]
 
+var only_integr : bool = false
+var order_sum : int = 0
+
 func add_part_to_arrays(part_data : PartGeneralData) -> void:
 	player_build.append(part_data)
 
@@ -49,17 +52,23 @@ func strict_checks() -> Dictionary:
 	return {"passed" : true, "error" : ""}
 
 func check_at_least_one() -> bool:
-	if player_cpu.is_empty() or player_gpu.is_empty() or player_ram.is_empty() or player_psu.is_empty() or player_storage.is_empty():
+	if player_cpu.is_empty() or player_ram.is_empty() or player_psu.is_empty() or player_storage.is_empty():
 		return false
-	return true
+	else:
+		if !player_gpu.is_empty():
+			only_integr = false
+			return true
+		if !player_cpu.get(0).has_integrated_graphics:
+			return false	
 
-func check_budget() -> bool:
-	var sum : int = 0
-
-	for item in player_build:
-		sum += item.price 
+		only_integr = true
+		return true
 	
-	if sum > current_order.budget:
+func check_budget() -> bool:
+	for item in player_build:
+		order_sum += item.price 
+	
+	if order_sum > current_order.budget:
 		return false
 	else:
 		return true
@@ -101,17 +110,22 @@ func perform_checks() -> OrderResults:
 		results.cpu_specialization_msg = current_order.cpu_specialization_fail_msg
 
 	# GPU
-	if player_gpu.get(0).vram < current_order.gpu_vram:
-		results.gpu_vram_msg = current_order.gpu_vram_fail_msg
-	else:
-		results.gpu_vram_msg = pass_text
-		results.score += 1
+	if !only_integr:
+		if player_gpu.get(0).vram < current_order.gpu_vram:
+			results.gpu_vram_msg = current_order.gpu_vram_fail_msg
+		else:
+			results.gpu_vram_msg = pass_text
+			results.score += 1
 	
-	if player_gpu.get(0).gpu_speed < current_order.gpu_speed:
-		results.gpu_speed_msg = current_order.gpu_speed_fail_msg
-	else:
-		results.gpu_speed_msg = pass_text
-		results.score += 1
+		if player_gpu.get(0).gpu_speed < current_order.gpu_speed:
+			results.gpu_speed_msg = current_order.gpu_speed_fail_msg
+		else:
+			results.gpu_speed_msg = pass_text
+			results.score += 1
+	elif current_order.cpu_integrated_graphs:
+		results.gpu_vram_msg = "-"
+		results.gpu_speed_msg = "-"
+		results.score += 2
 	
 	# RAM
 	if player_ram.get(0).capacity < current_order.ram_size:
@@ -163,6 +177,14 @@ func perform_checks() -> OrderResults:
 	else:
 		results.score_passed = true
 
+	# Bonus based on the price
+	var spare_money : int = current_order.budget - order_sum
+
+	if spare_money > 200:
+		results.score += 1
+	elif spare_money > 600:
+		results.score += 2
+
 	return results
 
 func clear_mission_data(starting_state : OrderBasic) -> void:
@@ -174,3 +196,6 @@ func clear_mission_data(starting_state : OrderBasic) -> void:
 	player_psu = []
 	player_ram = []
 	player_storage = []
+
+	only_integr = false
+	order_sum = 0

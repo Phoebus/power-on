@@ -14,6 +14,7 @@ extends Control
 
 @onready var retry_btn : Button = $RetryButton
 @onready var continue_btn : Button = $ContinueButton
+@onready var score_lbl : RichTextLabel = $Score
 
 func _ready() -> void:
 	MusicManager.set_filter(true)
@@ -25,8 +26,11 @@ func _ready() -> void:
 	
 	# If passed unlock the next mission and save the game.
 	if results.score_passed:
-		Globals.save_data[OrderHandler.current_order.unlocks.id] = true
-		Globals.save_game()
+		if OrderHandler.current_order.unlocks != null:
+			Globals.save_data[OrderHandler.current_order.unlocks.id] = true
+			Globals.save_game()
+	
+	score_lbl.text = "ΣΚΟΡ: " + str(results.score)
 	
 func assign_msg(results : OrderResults) -> void:
 	cpu_cores.text = results.cpu_cores_msg
