@@ -16,5 +16,6 @@ func _ready() -> void:
 	pass
 
 func _on_button_pressed() -> void:
+	MusicManager.play_sfx(MusicManager.REMOVE_FROM_CART_SFX_PATH)
 	item_removal.emit(part_data)
 	queue_free()

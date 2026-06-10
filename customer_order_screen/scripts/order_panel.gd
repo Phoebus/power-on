@@ -19,7 +19,7 @@ func appear() -> void:
 	tween.tween_property(self, "scale", Vector2.ONE, scale_duration).set_trans(Tween.TRANS_SINE)
 
 func _on_start_order_pressed() -> void:
-	MusicManager.stop_sfx()
+	MusicManager.play_sfx(MusicManager.CLICK_SFX_PATH)
 	MusicManager.resume_music()
 	MusicManager.set_filter(false)
 	SceneSwitcher.to_shop(OrderHandler.current_order)
