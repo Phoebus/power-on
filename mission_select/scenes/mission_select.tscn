@@ -52,7 +52,7 @@ anchor_right = 0.92
 anchor_bottom = 0.82
 grow_horizontal = 2
 grow_vertical = 2
-columns = 5
+columns = 3
 
 [node name="MissionButton" type="Button" parent="GridContainer" unique_id=1073811208]
 custom_minimum_size = Vector2(300, 100)
@@ -85,44 +85,4 @@ theme = ExtResource("5_dwqvo")
 text = "Επιπεδο 3"
 script = ExtResource("3_0b6am")
 mission_order = ExtResource("7_20pvo")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton4" type="Button" parent="GridContainer" unique_id=1649768409]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 4"
-script = ExtResource("3_0b6am")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton5" type="Button" parent="GridContainer" unique_id=459277817]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 5"
-script = ExtResource("3_0b6am")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton6" type="Button" parent="GridContainer" unique_id=1239385430]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 6"
-script = ExtResource("3_0b6am")
-metadata/_custom_type_script = "uid://gvmybxksqh1g"
-
-[node name="MissionButton7" type="Button" parent="GridContainer" unique_id=879562453]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme = ExtResource("5_dwqvo")
-text = "Επιπεδο 7"
-script = ExtResource("3_0b6am")
 metadata/_custom_type_script = "uid://gvmybxksqh1g"
