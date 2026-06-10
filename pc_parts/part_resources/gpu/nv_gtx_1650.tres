@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_f1ei4")
 vram = 4
+gpu_speed = 1
 name = "NVIDIA GTX 1650"
 price = 150
 id = "gpu_001"

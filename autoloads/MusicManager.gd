@@ -9,7 +9,7 @@ const SWOOP_SFX_PATH : String = "res://assets/audio/swoop.ogg"
 const DEFAULT_VOLUME_DB : float = -10.0
 const FILTER_CUTOFF_MUFFLED : float = 600.0
 const FILTER_CUTOFF_CLEAR : float = 20000.0
-const FILTER_TWEEN_DURATION : float = 3.0
+const FILTER_TWEEN_DURATION : float = 2.0
 
 var player : AudioStreamPlayer
 var sfx_player : AudioStreamPlayer

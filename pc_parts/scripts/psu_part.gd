@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func popup_init() -> void:
 	description.text = data.description
-	watt.text = "[indent]Watt : " + str(data.power_supply) + "[/indent]"
+	watt.text = "[indent]Power Supply : " + str(data.power_supply) + "[/indent]"
 	certification.text = "[indent]Certification : " + Globals.PSU_CERTIFICATION.keys()[data.certification] + "[/indent]"
 
 func _on_button_pressed() -> void:

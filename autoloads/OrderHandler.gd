@@ -92,7 +92,6 @@ func perform_checks() -> OrderResults:
 		results.cpu_cores_msg = "Passed!"
 		results.score += 1
 	
-	# TODO Better detection needed.
 	if (player_cpu.get(0).specialization != current_order.cpu_specialization) or (player_cpu.get(0).specialization == Globals.CPU_SPECIALIZATION.ALL):
 		results.cpu_specialization_msg = current_order.cpu_specialization_fail_msg
 	else:

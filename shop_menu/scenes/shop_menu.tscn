@@ -2,13 +2,13 @@
 
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="1_d3ese"]
 [ext_resource type="PackedScene" uid="uid://cpln3k7i4f1nl" path="res://shop_menu/scenes/category_panel.tscn" id="2_pjsta"]
-[ext_resource type="Texture2D" uid="uid://dwkm3t22g7b6t" path="res://assets/placeholder/cpu.png" id="3_8wcmf"]
-[ext_resource type="Texture2D" uid="uid://bnlpa2uw2ys6f" path="res://assets/placeholder/gpu.png" id="4_camqv"]
+[ext_resource type="Texture2D" uid="uid://dxfv1kkwoyue3" path="res://assets/part_images/cpu/cpu_general.png" id="3_4vsqy"]
 [ext_resource type="PackedScene" uid="uid://digmyfamy70yk" path="res://shop_menu/scenes/cart_panel.tscn" id="4_ihr8w"]
-[ext_resource type="Texture2D" uid="uid://c80x4lwdtqkw1" path="res://assets/placeholder/ram.png" id="5_rdanw"]
-[ext_resource type="Texture2D" uid="uid://jwksas87lrpw" path="res://assets/placeholder/storage.png" id="6_21imm"]
+[ext_resource type="Texture2D" uid="uid://b4cblrnrm6ut6" path="res://assets/part_images/gpu/gpu_general.png" id="4_wcmyo"]
+[ext_resource type="Texture2D" uid="uid://bu6ywj6046geg" path="res://assets/part_images/ram/ram_general.png" id="5_7y01w"]
 [ext_resource type="Script" uid="uid://64hyaaahb8au" path="res://shop_menu/scripts/part_display_handler.gd" id="6_camqv"]
-[ext_resource type="Texture2D" uid="uid://dtqigkan5o321" path="res://assets/placeholder/psu.png" id="7_0wujw"]
+[ext_resource type="Texture2D" uid="uid://5amievx70xjk" path="res://assets/part_images/storage/storage_general.png" id="6_xcg64"]
+[ext_resource type="Texture2D" uid="uid://hmkct7lk4mj" path="res://assets/part_images/psu/psu_general.png" id="7_vxm8c"]
 [ext_resource type="PackedScene" uid="uid://bnibnak55b0pa" path="res://pc_parts/scenes/cpu_part.tscn" id="8_t1g3y"]
 [ext_resource type="PackedScene" uid="uid://dmw6qwiwcishh" path="res://pc_parts/scenes/gpu_part.tscn" id="10_hk5il"]
 [ext_resource type="Resource" uid="uid://b78w0yehqxrpc" path="res://pc_parts/part_resources/cpu/amd_5_5.tres" id="11_2yjpj"]
@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://ci0p81gg0k2cy" path="res://pc_parts/part_resources/cpu/amd_5_7.tres" id="12_lrgqe"]
 [ext_resource type="Resource" uid="uid://c5wf6a76vrj62" path="res://pc_parts/part_resources/cpu/amd_9_7.tres" id="13_4vsqy"]
 [ext_resource type="PackedScene" uid="uid://btwckepgpa470" path="res://pc_parts/scenes/psu_part.tscn" id="13_21imm"]
+[ext_resource type="Script" uid="uid://c3wkfpb7u70hx" path="res://shop_menu/scripts/return_button.gd" id="13_wcmyo"]
 [ext_resource type="PackedScene" uid="uid://b6mboww2sfcqa" path="res://pc_parts/scenes/storage_part.tscn" id="14_0wujw"]
 [ext_resource type="Script" uid="uid://uwej0ruufnrx" path="res://shop_menu/scripts/money_spent_label.gd" id="14_m2ei0"]
 [ext_resource type="Resource" uid="uid://orbduv6rd5yn" path="res://pc_parts/part_resources/cpu/intel_5_12.tres" id="14_wcmyo"]
@@ -88,30 +89,35 @@ theme = ExtResource("1_d3ese")
 [node name="category_panel" parent="Panel/VBoxContainer" unique_id=1333305782 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-category_image = ExtResource("3_8wcmf")
+category_name = "CPU"
+category_image = ExtResource("3_4vsqy")
 
 [node name="category_panel2" parent="Panel/VBoxContainer" unique_id=952855746 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-category_image = ExtResource("4_camqv")
+category_name = "GPU"
+category_image = ExtResource("4_wcmyo")
 category_type = 1
 
 [node name="category_panel3" parent="Panel/VBoxContainer" unique_id=802583833 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-category_image = ExtResource("5_rdanw")
+category_name = "RAM"
+category_image = ExtResource("5_7y01w")
 category_type = 2
 
 [node name="category_panel4" parent="Panel/VBoxContainer" unique_id=1376773861 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-category_image = ExtResource("6_21imm")
+category_name = "STORAGE"
+category_image = ExtResource("6_xcg64")
 category_type = 5
 
 [node name="category_panel5" parent="Panel/VBoxContainer" unique_id=376775438 instance=ExtResource("2_pjsta")]
 layout_mode = 2
 size_flags_vertical = 3
-category_image = ExtResource("7_0wujw")
+category_name = "PSU"
+category_image = ExtResource("7_vxm8c")
 category_type = 4
 
 [node name="cart_panel" parent="Panel" unique_id=555252501 instance=ExtResource("4_ihr8w")]
@@ -168,7 +174,7 @@ anchor_top = 0.875
 anchor_right = 0.984375
 anchor_bottom = 0.9351852
 theme = ExtResource("1_d3ese")
-text = "Συναρμολογηση!"
+text = "ΣΥΝΑΡΜΟΛΟΓΗΣΗ"
 script = ExtResource("16_dwk53")
 metadata/_edit_use_anchors_ = true
 
@@ -183,10 +189,10 @@ anchor_left = 0.03
 anchor_top = 0.12
 anchor_right = 0.97
 anchor_bottom = 0.88
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 184.0
 theme = ExtResource("1_d3ese")
 metadata/_edit_use_anchors_ = true
 
@@ -204,8 +210,7 @@ anchor_left = 0.8802083
 anchor_top = 0.7962963
 anchor_right = 0.984375
 anchor_bottom = 0.8564815
-text = "Υπενθυμιση 
-Παραγγελιας"
+text = "ΥΠΕΝΘΥΜΙΣΗ ΠΑΡΑΓΓΕΛΙΑΣ"
 autowrap_mode = 3
 script = ExtResource("57_lrgqe")
 metadata/_edit_use_anchors_ = true
@@ -222,10 +227,10 @@ anchor_left = 0.03
 anchor_top = 0.06
 anchor_right = 0.97
 anchor_bottom = 0.94
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 384.0
 theme = ExtResource("1_d3ese")
 metadata/_edit_use_anchors_ = true
 
@@ -235,6 +240,18 @@ theme = ExtResource("1_d3ese")
 theme_type_variation = &"PopupText"
 text = "PlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholder"
 vertical_alignment = 1
+
+[node name="ReturnButton" type="Button" parent="Panel" unique_id=1640470939]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017708333
+anchor_top = 0.018518519
+anchor_right = 0.121875
+anchor_bottom = 0.0787037
+theme = ExtResource("1_d3ese")
+text = "ΕΠΙΣΤΡΟΦΗ"
+script = ExtResource("13_wcmyo")
+metadata/_edit_use_anchors_ = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=767358338]
 clip_contents = false
@@ -535,3 +552,4 @@ data = ExtResource("48_1p5od")
 
 [connection signal="pressed" from="Panel/BuildButton" to="Panel/BuildButton" method="_on_pressed"]
 [connection signal="pressed" from="Panel/ReminderButton" to="Panel/ReminderButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/ReturnButton" to="Panel/ReturnButton" method="_on_pressed"]
