@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://dyfd6lkkiunyq"]
 
-[ext_resource type="Texture2D" uid="uid://tptmobk1be54" path="res://assets/placeholder/customers/leonk.png" id="1_gyk5n"]
+[ext_resource type="Texture2D" uid="uid://ce7jmp03dhfes" path="res://assets/customers/gordon_freeman_papa.png" id="1_gyk5n"]
 [ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order.gd" id="1_xar8l"]
 
 [resource]

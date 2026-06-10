@@ -17,7 +17,7 @@ border_width_left = 32
 border_width_top = 32
 border_width_right = 32
 border_width_bottom = 32
-border_color = Color(0.54509807, 0.6431373, 0.3647059, 1)
+border_color = Color(0.64461935, 0.6280473, 0.59379935, 1)
 border_blend = true
 
 [resource]
