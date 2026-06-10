@@ -16,15 +16,17 @@ func _ready() -> void:
 func add_part(part_data : PartGeneralData) -> void:
 	if not OrderHandler.player_build.has(part_data):
 		OrderHandler.add_part_to_arrays(part_data)
-		
+
 		var new_item : CartPartRow = in_cart_part_row.instantiate().with_data(part_data)
 		part_list.add_child(new_item)
-		new_item.item_removal.connect(on_item_removal)	
+		new_item.item_removal.connect(on_item_removal)
+		MusicManager.play_sfx(MusicManager.CHA_CHING_SFX_PATH)
 		on_item_added.emit(part_data)
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
+			MusicManager.play_sfx(MusicManager.CLICK_SFX_PATH)
 			popup.show()
 
 func on_item_removal(part_data : PartGeneralData) -> void:
