@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_0huc1")
 vram = 12
+gpu_speed = 4
 name = "NVIDIA RTX 4070 Ti"
 price = 750
 id = "gpu_007"

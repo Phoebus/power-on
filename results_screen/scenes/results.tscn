@@ -91,11 +91,11 @@ fit_content = true
 scroll_active = false
 vertical_alignment = 1
 
-[node name="HBox2" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu" unique_id=1594546000]
+[node name="HBox2" type="HBoxContainer" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu" unique_id=690618701]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="CpuSpecialization" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox2" unique_id=1963370921]
+[node name="CpuSpecialization" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox2" unique_id=230959956]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -108,12 +108,12 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="CpuSpecializationExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox2" unique_id=1244689792]
+[node name="CpuSpecializationExplanation" type="RichTextLabel" parent="Panel/Margin/BaseVBox/Scroll/ScrollVBox/Cpu/HBox2" unique_id=838090800]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "You ddint pass because blah blah blah blah blah"
+text = "sdfsdfsdfsdf"
 fit_content = true
 scroll_active = false
 vertical_alignment = 1

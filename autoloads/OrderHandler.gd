@@ -1,5 +1,7 @@
 extends Node
 
+const pass_text : String = "Σωστό!"
+
 var current_order : OrderBasic
 var player_build : Array[PartGeneralData]
 var player_cpu : Array[CpuSpecs]
@@ -89,71 +91,71 @@ func perform_checks() -> OrderResults:
 	if player_cpu.get(0).cores < current_order.cpu_cores:
 		results.cpu_cores_msg = current_order.cpu_cores_fail_msg
 	else:
-		results.cpu_cores_msg = "Passed!"
+		results.cpu_cores_msg = pass_text
 		results.score += 1
 	
-	if (player_cpu.get(0).specialization != current_order.cpu_specialization) or (player_cpu.get(0).specialization == Globals.CPU_SPECIALIZATION.ALL):
-		results.cpu_specialization_msg = current_order.cpu_specialization_fail_msg
-	else:
-		results.cpu_specialization_msg = "Passed!"
+	if player_cpu.get(0).specialization == OrderHandler.current_order.cpu_specialization:
+		results.cpu_specialization_msg = pass_text
 		results.score += 1
+	else:
+		results.cpu_specialization_msg = current_order.cpu_specialization_fail_msg
 
 	# GPU
 	if player_gpu.get(0).vram < current_order.gpu_vram:
 		results.gpu_vram_msg = current_order.gpu_vram_fail_msg
 	else:
-		results.gpu_vram_msg = "Passed!"
+		results.gpu_vram_msg = pass_text
 		results.score += 1
 	
 	if player_gpu.get(0).gpu_speed < current_order.gpu_speed:
 		results.gpu_speed_msg = current_order.gpu_speed_fail_msg
 	else:
-		results.gpu_speed_msg = "Passed!"
+		results.gpu_speed_msg = pass_text
 		results.score += 1
 	
 	# RAM
 	if player_ram.get(0).capacity < current_order.ram_size:
 		results.ram_size_msg = current_order.ram_size_fail_msg
 	else:
-		results.ram_size_msg = "Passed!"
+		results.ram_size_msg = pass_text
 		results.score += 1
 	
 	if player_ram.get(0).generation == Globals.RAM_GENERATION.DDR4 and current_order.ram_generation == Globals.RAM_GENERATION.DDR5:
 		results.ram_generation_msg = current_order.ram_generation_fail_msg
 	else:
-		results.ram_generation_msg = "Passed!"
+		results.ram_generation_msg = pass_text
 		results.score += 1
 	
 	if player_ram.get(0).speed < current_order.ram_speed:
 		results.ram_speed_msg = current_order.ram_speed_fail_msg
 	else:
-		results.ram_speed_msg = "Passed!"
+		results.ram_speed_msg = pass_text
 		results.score += 1
 	
 	# PSU
 	if not check_enough_power():
 		results.psu_power_supply_msg = current_order.psu_power_supply_fail_msg
 	else:
-		results.psu_power_supply_msg = "Passed!"
+		results.psu_power_supply_msg = pass_text
 		results.score += 1
 	
 	if player_psu.get(0).certification < current_order.psu_certification:
 		results.psu_certification_msg = current_order.psu_certification_fail_msg
 	else:
-		results.psu_certification_msg = "Passed!"
+		results.psu_certification_msg = pass_text
 		results.score += 1
 	
 	# Storage
 	if player_storage.get(0).capacity < current_order.storage_size:
 		results.storage_size_msg = current_order.storage_size_fail_msg
 	else:
-		results.storage_size_msg = "Passed!"
+		results.storage_size_msg = pass_text
 		results.score += 1	
 	
 	if player_storage.get(0).type == Globals.STORAGE_TYPE.HDD and (current_order.storage_type == Globals.STORAGE_TYPE.SSD or current_order.storage_type == Globals.STORAGE_TYPE.SSD_NVME):
 		results.storage_type_msg = current_order.storage_type_fail_msg
 	else:
-		results.storage_type_msg = "Passed!"
+		results.storage_type_msg = pass_text
 		results.score += 1 
 
 	if results.score < current_order.pass_score:

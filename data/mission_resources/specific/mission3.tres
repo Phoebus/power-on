@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="OrderBasic" format=3 uid="uid://dyfd6lkkiunyq"]
+
+[ext_resource type="Texture2D" uid="uid://tptmobk1be54" path="res://assets/placeholder/customers/leonk.png" id="1_gyk5n"]
+[ext_resource type="Script" uid="uid://dg8o68jfl5nq" path="res://data/mission_resources/order.gd" id="1_xar8l"]
+
+[resource]
+script = ExtResource("1_xar8l")
+id = "Mission3"
+customer_rect = ExtResource("1_gyk5n")
+pass_score = 8
+description = "Θα ήθελα τον καλύτερο gaming υπολογιστή που μπορείτε να μου δώσετε σύμφωνα με τα λεφτά που μπορώ να διαθέσω"
+reminder_description = "Υπολογιστής για απαιτητικά παιχνίδια"
+budget = 2000
+cpu_cores = 12
+cpu_specialization = 1
+gpu_vram = 12
+gpu_speed = 4
+ram_size = 32
+ram_generation = 1
+ram_speed = 5
+storage_size = 2000
+storage_type = 1
+psu_certification = 3
+cpu_cores_fail_msg = "Ανεπαρκής πυρήνες περιορίζουν τις εργασίες που μπορούν να πραγματοποιηθούν ταυτόχρονα στο υπολογιστή, έτσι δημιουργείται καθυστέρηση"
+cpu_specialization_fail_msg = "Ένας επεξεργαστής που ειδικεύεται στο gaming θα μπορούσε να παρέχει καλύτερη απόδοση κορυφής και πιο αποτελεσματική διαχείριση ενέργειας"
+gpu_vram_fail_msg = "Ανεπαρκής μνήμη VRAM στην κάρτα γραφικών θα κάνει μερικά παιχνίδια να μην μπορούν να τρέξουν ή να τρέχουν με περιορισμένη γραφική ανάλυση"
+gpu_speed_fail_msg = "Μία αργή κάρτα γραφικών θα οδηγήσει σε μείωση της απόδοσης στα παιχνίδια με πιο απαιτητικά γραφικά"
+ram_size_fail_msg = "Ανεπαρκής μνήμη RAM θα κάνει μερικά παιχνίδια να μην μπορούν να τρέξουν"
+ram_generation_fail_msg = "Μνήμη RAM παλαιότερης γενιάς οδηγεί σε πολύ χαμηλότερη απόδοση"
+ram_speed_fail_msg = "Αργή RAM δημιουργεί καθυστέρηση ακόμη και σε απλές λειτουργίες του υπολογιστή με αποτέλεσμα τη μείωση της απόδοσης κατά τη διάρκεια του παιχνιδιού"
+storage_type_fail_msg = "Ο τύπος του αποθηκευτικού χώρου επηρεάζει την ταχύτητα του υπολογιστεί κάθε φορά που εκτελείται η διαδικασία αποθήκευσης αρχείων. Ένας αργός τύπος δημιουργεί καθυστέρηση όταν το παιχνίδι προσπαθεί να αποθηκεύσει πληροφορίες"
+storage_size_fail_msg = "Ανεπαρκής αποθηκευτικός χώρος περιορίζει τα παιχνίδια που μπορούμε να έχουμε εγκατεστημένα στον υπολογιστή"
+psu_power_supply_fail_msg = "Ανεπαρκής ηλεκτρική ενέργεια προς τα μέλη του υπολογιστή μειώνει την απόδοσή τους και μπορεί να οδηγήσει σε crashes κατά τη λειτουργία πιο απαιτητικών παιχνιδιών"
+psu_certification_fail_msg = "Η πιστοποίηση του τροφοδοτικού δείχνει την αξιοπιστία του, δηλαδή τη δυνατότητα του να αποδίδει κανονικά κατά τη διάρκεια μεγάλου φόρτου εργασίας και για πολλές ώρες"
+metadata/_custom_type_script = "uid://dg8o68jfl5nq"

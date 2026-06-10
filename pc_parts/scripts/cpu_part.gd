@@ -16,9 +16,9 @@ func popup_init() -> void:
 	power.text = "[indent]Power Draw : " + str(data.power_draw) + "[/indent]"
 	var integraphics_text : String
 	if data.has_integrated_graphics:
-		integraphics_text = "Yes"
+		integraphics_text = "ΝΑΙ"
 	else:
-		integraphics_text = "No"
+		integraphics_text = "ΟΧΙ"
 	integraphics.text = "[indent]Integrated Graphics : " + str(integraphics_text) + "[/indent]"
 	description.text = data.description
 	cores.text = "[indent]Cores : " + str(data.cores) + "[/indent]"

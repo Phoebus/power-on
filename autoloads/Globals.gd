@@ -11,7 +11,7 @@ signal part_panel_clicked(data : PartGeneralData)
 signal mission_button_clicked(order : OrderBasic)
 
 const SAVE_PATH : String = "user://save_data.save"
-var save_data : Dictionary[String, bool] = {"Level1" : true, "Level2" : false, "Level3" : false, "Level4" : false, "Level5" : false}
+var save_data : Dictionary[String, bool] = {"Mission1" : true, "Mission2" : false, "Mission3" : false}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
