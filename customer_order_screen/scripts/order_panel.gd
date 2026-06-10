@@ -11,7 +11,7 @@ func _ready() -> void:
 	scale = Vector2.ZERO
 
 	order_description.text = OrderHandler.current_order.description
-	order_budget.text = "Διαθεσιμο Ποσο : " + str(OrderHandler.current_order.budget)
+	order_budget.text = "Διαθεσιμο Ποσο : " + str(OrderHandler.current_order.budget) + "$"
 
 func appear() -> void:
 	visible = true
