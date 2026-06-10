@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://7ipy5c3fl85x" path="res://pc_parts/scripts/gpu_part.gd" id="1_gjl6a"]
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="3_idjyg"]
 [ext_resource type="Theme" uid="uid://c30jlkqnsilg5" path="res://pc_parts/part_resources/part_card_theme.tres" id="4_pky0d"]
-[ext_resource type="Texture2D" uid="uid://if2byjdjwg20" path="res://assets/blue_plus.png" id="5_8i8qe"]
 
 [node name="GpuPart" type="Control" unique_id=753525489]
 layout_mode = 3
@@ -32,10 +31,10 @@ anchor_left = 0.03
 anchor_top = 0.048
 anchor_right = 0.97
 anchor_bottom = 0.952
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 784.0
+offset_bottom = 484.0
 theme = ExtResource("4_pky0d")
 metadata/_edit_use_anchors_ = true
 
@@ -93,8 +92,8 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-icon = ExtResource("5_8i8qe")
-flat = true
+theme = ExtResource("3_idjyg")
+theme_type_variation = &"PartPanelBtn"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="pressed" from="PopupPanel/MarginContainer/Button" to="." method="_on_button_pressed"]

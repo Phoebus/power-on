@@ -5,7 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="3_h1k6w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lp4pf"]
-bg_color = Color(0.925, 0.886, 0.831, 0.877)
+bg_color = Color(0.89351445, 0.8389364, 0.7622891, 1)
 border_width_left = 12
 border_width_top = 12
 border_width_right = 12

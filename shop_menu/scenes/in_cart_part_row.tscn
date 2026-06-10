@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dvsj0k8o32rt"]
 
 [ext_resource type="Script" uid="uid://dr7nklc5f03w0" path="res://shop_menu/scripts/in_cart_part_row.gd" id="1_0tnxo"]
-[ext_resource type="Texture2D" uid="uid://bgmxiikqqbukc" path="res://assets/blue_minus.png" id="1_ji7n8"]
 [ext_resource type="Theme" uid="uid://c4kmtylhg822m" path="res://shop_menu/resources/shop_theme.tres" id="2_0m8ru"]
 
 [node name="InCartPartRow" type="HBoxContainer" unique_id=807783004]
@@ -33,8 +32,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 size_flags_stretch_ratio = 0.25
-icon = ExtResource("1_ji7n8")
-flat = true
+theme = ExtResource("2_0m8ru")
+theme_type_variation = &"CartPanelBtn"
 expand_icon = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
