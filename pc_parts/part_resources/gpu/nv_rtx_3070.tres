@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_4e6go")
 vram = 8
+gpu_speed = 3
 name = "NVIDIA RTX 3070"
 price = 450
 id = "gpu_005"

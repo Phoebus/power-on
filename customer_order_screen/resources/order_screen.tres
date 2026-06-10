@@ -3,7 +3,15 @@
 [ext_resource type="StyleBox" uid="uid://cwof1w3t0sexf" path="res://customer_order_screen/resources/button_stylebox.tres" id="2_bq0ht"]
 [ext_resource type="StyleBox" uid="uid://gl22vndnm3u2" path="res://customer_order_screen/resources/button_hover_stylebox.tres" id="2_r4yc4"]
 [ext_resource type="Texture2D" uid="uid://bq5gsimtcpe70" path="res://assets/backgrounds/order_screen.png" id="4_6gw6x"]
+[ext_resource type="Texture2D" uid="uid://u2jv4681li71" path="res://assets/visual_effects/tele_ring_2.png" id="4_tatl5"]
 [ext_resource type="FontFile" uid="uid://d3bqlg5qr0tyx" path="res://assets/fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf" id="5_tatl5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4s17"]
+texture = ExtResource("4_tatl5")
+expand_margin_left = 60.0
+expand_margin_top = 60.0
+expand_margin_right = 60.0
+expand_margin_bottom = 60.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tatl5"]
 texture = ExtResource("4_6gw6x")
@@ -30,6 +38,8 @@ Button/fonts/font = ExtResource("5_tatl5")
 Button/styles/hover = ExtResource("2_r4yc4")
 Button/styles/normal = ExtResource("2_bq0ht")
 Button/styles/pressed = ExtResource("2_bq0ht")
+ClickablePanelCont/base_type = &"PanelContainer"
+ClickablePanelCont/styles/panel = SubResource("StyleBoxTexture_u4s17")
 MarginContainer/constants/margin_bottom = 30
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30

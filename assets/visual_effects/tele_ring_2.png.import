@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctg58moelcdax"
-path="res://.godot/imported/phone.png-dc958c16e70286a0b7e3076b66d1b43b.ctex"
+uid="uid://u2jv4681li71"
+path="res://.godot/imported/tele_ring_2.png-9615c542ccd6a265c533c1273e7ebd54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/clickables/phone.png"
-dest_files=["res://.godot/imported/phone.png-dc958c16e70286a0b7e3076b66d1b43b.ctex"]
+source_file="res://assets/visual_effects/tele_ring_2.png"
+dest_files=["res://.godot/imported/tele_ring_2.png-9615c542ccd6a265c533c1273e7ebd54.ctex"]
 
 [params]
 
