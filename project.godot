@@ -17,8 +17,6 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://cvyud5bfhm7pi"
-
 [autoload]
 
 Globals="*uid://ha2shki7lxlo"
