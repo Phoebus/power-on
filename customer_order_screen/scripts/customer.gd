@@ -23,7 +23,7 @@ func _draw() -> void:
 		Vector2(w - SKEW, h),
 		Vector2(0.0, h)
 	])
-	draw_polygon(poly, PackedColorArray([Color.WHITE]))
+	draw_polygon(poly, PackedColorArray([Color(0.925, 0.886, 0.831, 1)]))
 	if portrait:
 		var pw : float = w - PORTRAIT_PADDING * 2.0
 		var ph : float = h - BORDER_WIDTH * 2.0

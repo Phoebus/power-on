@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dlvysb4xc0qjc"]
+
+[ext_resource type="Theme" uid="uid://b8ou818fj0xs0" path="res://exit_panel/scenes/exit_panel_theme.tres" id="1_8mwc6"]
+[ext_resource type="Script" uid="uid://bm52weaqhfn81" path="res://exit_panel/scenes/confirm_exit.gd" id="2_m0c2r"]
+
+[node name="ConfirmExit" type="PopupPanel" unique_id=1320554863]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(400, 300)
+theme = ExtResource("1_8mwc6")
+script = ExtResource("2_m0c2r")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1487742650]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+theme = ExtResource("1_8mwc6")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=111929774]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=840907065]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+theme = ExtResource("1_8mwc6")
+text = "ΣΙΓΟΥΡΑ ΘΕΛΕΙΣ ΝΑ ΚΛΕΙΣΕΙΣ ΤΟ ΠΑΙΧΝΙΔΙ;"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=933595810]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NoBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1562284521]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_8mwc6")
+text = "ΟΧΙ
+"
+
+[node name="YesBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=203372018]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "ΝΑΙ"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/NoBtn" to="." method="_on_no_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/YesBtn" to="." method="_on_yes_btn_pressed"]

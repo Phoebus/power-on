@@ -17,7 +17,7 @@ expand_margin_bottom = 60.0
 texture = ExtResource("4_6gw6x")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcwyi"]
-bg_color = Color(0.9254902, 0.8862745, 0.83137256, 1)
+bg_color = Color(0.925, 0.886, 0.831, 1)
 border_width_left = 32
 border_width_top = 32
 border_width_right = 32
@@ -30,6 +30,14 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 corner_detail = 16
 shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tatl5"]
+bg_color = Color(0.925, 0.886, 0.831, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 16
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
@@ -49,6 +57,8 @@ OrderPanelText/colors/default_color = Color(0.07123137, 0.07123139, 0.07123137, 
 OrderPanelText/font_sizes/normal_font_size = 52
 Panel/styles/panel = SubResource("StyleBoxTexture_tatl5")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_fcwyi")
+PhonePanelCont/base_type = &"PanelContainer"
+PhonePanelCont/styles/panel = SubResource("StyleBoxFlat_tatl5")
 RichTextLabel/font_sizes/normal_font_size = 34
 RichTextLabel/fonts/normal_font = ExtResource("5_tatl5")
 TakeOrderLabel/base_type = &"RichTextLabel"

@@ -13,11 +13,17 @@ signal mission_button_clicked(order : OrderBasic)
 const SAVE_PATH : String = "user://save_data.save"
 var save_data : Dictionary[String, bool] = {"Mission1" : true, "Mission2" : false, "Mission3" : false}
 
+#var close_game_popup_scn : PackedScene = preload("res://exit_panel/scenes/confirm_exit.tscn")
+#var close_game_popup : PopupPanel
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("Save before load " + str(save_data))
 	load_game()
 	print("Save after load " + str(save_data))
+
+	#close_game_popup = close_game_popup_scn.instantiate()
+	#close_game_popup.hide()
 
 func save_game() -> void:
 	var save_file : FileAccess = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -62,3 +68,8 @@ func emit_mission_button_clicked_signal(order : OrderBasic) -> void:
 
 func check_mission_available(id : String) -> bool:
 	return save_data[id]
+
+func _process(_delta: float) -> void:
+
+	if Input.is_key_pressed(KEY_ESCAPE):
+		ConfirmExit.show()

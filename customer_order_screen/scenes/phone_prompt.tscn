@@ -1,22 +1,7 @@
-[gd_scene format=3 uid="uid://bwhuselcsmhog"]
+[gd_scene format=3 uid="uid://3bxr2o2d66b5"]
 
-[ext_resource type="Script" uid="uid://dbl452qecf277" path="res://customer_order_screen/scripts/phone_prompt.gd" id="1"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
-content_margin_left = 14.0
-content_margin_top = 6.0
-content_margin_right = 14.0
-content_margin_bottom = 6.0
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[ext_resource type="Script" path="res://customer_order_screen/scripts/phone_prompt.gd" id="1"]
+[ext_resource type="Theme" uid="uid://c22x4tej8h8ow" path="res://customer_order_screen/resources/order_screen.tres" id="2_gvvpt"]
 
 [node name="PhonePrompt" type="Control" unique_id=673366177]
 custom_minimum_size = Vector2(160, 160)
@@ -35,13 +20,18 @@ offset_right = 315.5
 offset_bottom = 129.0
 grow_horizontal = 2
 scale = Vector2(1.1620036, 1.140956)
-theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+theme = ExtResource("2_gvvpt")
+theme_type_variation = &"PhonePanelCont"
 
-[node name="PickupLabel" type="Label" parent="LabelBg" unique_id=1689418778]
+[node name="PickupLabel" type="RichTextLabel" parent="LabelBg" unique_id=1968120636]
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme = ExtResource("2_gvvpt")
+theme_type_variation = &"OrderPanelText"
 text = "Πάρε Παραγγελία!"
+autowrap_mode = 0
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PhoneIcon" type="Label" parent="." unique_id=1003181664]
 layout_mode = 1
@@ -50,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = 10.0
-offset_right = 40.0
-offset_bottom = 90.0
+offset_left = -96.0
+offset_top = -15.0
+offset_right = 14.0
+offset_bottom = 95.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.25767034
